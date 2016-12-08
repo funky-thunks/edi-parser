@@ -1,0 +1,8 @@
+
+       C523 NUMBER OF UNIT DETAILS
+
+       Desc: Identification of number of units and its purpose.
+
+010    6350  Units quantity                            C      n..15
+020    6353  Unit type code qualifier                  C      an..3
+

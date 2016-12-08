@@ -1,0 +1,9 @@
+
+       C601 STATUS CATEGORY
+
+       Desc: To specify the category of the status.
+
+010    9015  Status category code                      M      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+

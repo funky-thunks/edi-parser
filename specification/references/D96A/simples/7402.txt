@@ -1,0 +1,7 @@
+
+   7402  Identity number
+
+   Desc: A value given to an object for identification purposes.
+
+   Repr: an..35
+

@@ -1,0 +1,8 @@
+
+   6246  Temperature setting
+
+   Desc: The actual temperature value in degrees Celsius (e.g. 008,
+         020).
+
+   Repr: n3
+

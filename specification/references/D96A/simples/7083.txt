@@ -1,0 +1,15 @@
+
+  7083  Configuration, coded
+
+  Desc: Code indicating the status of the sub-line item in the
+        configuration.
+
+  Repr: an..3
+
+   A      Added to the configuration
+             Self explanatory.
+   D      Deleted from the configuration
+             Self explanatory.
+   I      Included in the configuration
+             Self explanatory.
+

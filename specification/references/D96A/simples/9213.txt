@@ -1,0 +1,19 @@
+
+  9213  Type of duty regime, coded
+
+  Desc: Identification of the statement of the full/preferential
+        regime according to which duty is assessed.
+
+  Repr: an..3
+
+        1 Origin subject to EC/EFTA preference
+             Self explanatory.
+        2 Origin subject to other preference agreement
+             Self explanatory.
+        3 No preference origin
+             Self explanatory.
+        8 Excluded origin
+             Self explanatory.
+        9 Imposed origin
+             Self explanatory.
+

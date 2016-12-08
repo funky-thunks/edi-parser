@@ -1,0 +1,7 @@
+
+   5004  Monetary amount
+
+   Desc: Number of monetary units.
+
+   Repr: n..18
+

@@ -1,0 +1,10 @@
+
+   7130  Customer authorization number
+
+   Desc: Customer provided authorization number to allow supplier to
+         ship goods under specific freight conditions.  This number
+         will be transmitted back to customer in the dispatch advice
+         message.
+
+   Repr: an..17
+

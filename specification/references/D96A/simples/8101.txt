@@ -1,0 +1,22 @@
+
+  8101  Transit direction, coded
+
+  Desc: Identification of the point of origin and point of direction.
+
+  Repr: an..3
+
+   BS     Buyer to seller
+             Self explanatory.
+   SB     Seller to buyer
+             Self explanatory.
+   SC     Subcontractor to seller
+             Self explanatory.
+   SD     Seller to drop ship designated location
+             Self explanatory.
+   SF     Seller to freight forwarder
+             Self explanatory.
+   SS     Seller to subcontractor
+             Self explanatory.
+   ZZZ    Mutually defined
+             Self explanatory.
+

@@ -1,0 +1,11 @@
+
+  5495  Sub-line indicator, coded
+
+  Desc: Indication that the segment and/or segment group is used for
+        sub-line item information.
+
+  Repr: an..3
+
+        1 Sub-line information
+             Self explanatory.
+

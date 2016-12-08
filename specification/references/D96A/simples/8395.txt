@@ -1,0 +1,17 @@
+
+  8395  Returnable package freight payment responsibility, coded
+
+  Desc: To indicate responsibility for payment of return freight
+        charges for packaging that is returnable.
+
+  Repr: an..3
+
+        1 Paid by customer
+             Self explanatory.
+        2 Free
+             Self explanatory.
+        3 Paid by supplier
+             Self explanatory.
+   ZZZ    Mutually defined
+             Self explanatory.
+

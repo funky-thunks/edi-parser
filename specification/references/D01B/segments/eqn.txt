@@ -1,0 +1,9 @@
+
+       EQN  NUMBER OF UNITS
+
+       Function: To specify the number of units.
+
+010    C523 NUMBER OF UNIT DETAILS                     M    1
+       6350  Units quantity                            C      n..15
+       6353  Unit type code qualifier                  C      an..3
+

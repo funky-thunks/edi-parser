@@ -1,0 +1,9 @@
+
+      C536  CONTRACT AND CARRIAGE CONDITION
+
+      Desc: To identify a contract and carriage condition.
+
+010   4065   Contract and carriage condition, coded        M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

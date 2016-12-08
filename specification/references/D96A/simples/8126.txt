@@ -1,0 +1,8 @@
+
+   8126  Trem card number
+
+   Desc: The identification of a transport emergency card giving
+         advice for emergency actions.
+
+   Repr: an..10
+

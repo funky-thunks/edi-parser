@@ -1,0 +1,25 @@
+
+       FTX  FREE TEXT
+
+       Function: To provide free form or coded text information.
+
+010    4451 TEXT SUBJECT CODE QUALIFIER                M    1 an..3
+
+020    4453 FREE TEXT FUNCTION CODE                    C    1 an..3
+
+030    C107 TEXT REFERENCE                             C    1
+       4441  Free text value code                      M      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+040    C108 TEXT LITERAL                               C    1
+       4440  Free text value                           M      an..512
+       4440  Free text value                           C      an..512
+       4440  Free text value                           C      an..512
+       4440  Free text value                           C      an..512
+       4440  Free text value                           C      an..512
+
+050    3453 LANGUAGE NAME CODE                         C    1 an..3
+
+060    4447 FREE TEXT FORMAT CODE                      C    1 an..3
+

@@ -1,0 +1,12 @@
+
+  8077  Equipment supplier, coded
+
+  Desc: To indicate the party that is the supplier of the equipment.
+
+  Repr: an..3
+
+        1 Shipper supplied
+             The transport equipment is supplied by the shipper.
+        2 Carrier supplied
+             The transport equipment is supplied by the carrier.
+

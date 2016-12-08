@@ -1,0 +1,11 @@
+
+       C286 SEQUENCE INFORMATION
+
+       Desc: Identification of a sequence and source for
+             sequencing.
+
+010    1050  Sequence position identifier              M      an..10
+020    1159  Sequence identifier source code           C      an..3
+030    1131  Code list identification code             C      an..17
+040    3055  Code list responsible agency code         C      an..3
+

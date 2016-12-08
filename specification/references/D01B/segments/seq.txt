@@ -1,0 +1,14 @@
+
+       SEQ  SEQUENCE DETAILS
+
+       Function: To provide details relating to the sequence.
+
+010    1229 ACTION REQUEST/NOTIFICATION DESCRIPTION
+            CODE                                       C    1 an..3
+
+020    C286 SEQUENCE INFORMATION                       C    1
+       1050  Sequence position identifier              M      an..10
+       1159  Sequence identifier source code           C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+

@@ -1,0 +1,7 @@
+
+   5284  Unit price basis
+
+   Desc: Basis on which the unit price/rate applies.
+
+   Repr: n..9
+

@@ -1,0 +1,9 @@
+
+       C229 CHARGE CATEGORY
+
+       Desc: Identification of a category or a zone of charges.
+
+010    5237  Charge category code                      M      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+

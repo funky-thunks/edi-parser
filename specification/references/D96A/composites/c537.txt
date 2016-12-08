@@ -1,0 +1,9 @@
+
+      C537  TRANSPORT PRIORITY
+
+      Desc: To indicate the priority of requested transport service.
+
+010   4219   Transport priority, coded                     M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

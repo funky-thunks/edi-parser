@@ -1,0 +1,11 @@
+
+       C506 REFERENCE
+
+       Desc: Identification of a reference.
+
+010    1153  Reference code qualifier                  M      an..3
+020    1154  Reference identifier                      C      an..70
+030    1156  Document line identifier                  C      an..6
+040    4000  Reference version identifier              C      an..35
+050    1060  Revision identifier                       C      an..6
+

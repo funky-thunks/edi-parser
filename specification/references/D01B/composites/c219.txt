@@ -1,0 +1,9 @@
+
+       C219 MOVEMENT TYPE
+
+       Desc: Description of type of service for movement of
+             cargo.
+
+010    8335  Movement type description code            C      an..3
+020    8334  Movement type description                 C      an..35
+

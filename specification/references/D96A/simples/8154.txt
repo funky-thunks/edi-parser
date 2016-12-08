@@ -1,0 +1,8 @@
+
+   8154  Equipment size and type
+
+   Desc: Plain language description of the size and type of equipment
+         e.g. unit load device.
+
+   Repr: an..35
+

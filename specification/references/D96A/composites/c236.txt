@@ -1,0 +1,10 @@
+
+      C236  DANGEROUS GOODS LABEL
+
+      Desc: Markings identifying the type of hazardous goods and
+            similar information.
+
+010   8246   Dangerous goods label marking                 C  an..4
+020   8246   Dangerous goods label marking                 C  an..4
+030   8246   Dangerous goods label marking                 C  an..4
+

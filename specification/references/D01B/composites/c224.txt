@@ -1,0 +1,11 @@
+
+       C224 EQUIPMENT SIZE AND TYPE
+
+       Desc: Code and or name identifying size and type of
+             equipment. Code preferred.
+
+010    8155  Equipment size and type description code  C      an..10
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    8154  Equipment size and type description       C      an..35
+

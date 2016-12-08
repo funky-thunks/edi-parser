@@ -1,0 +1,13 @@
+
+  8341  Haulage arrangements, coded
+
+  Desc: Specification of the type of equipment haulage arrangements.
+
+  Repr: an..3
+
+        1 Carrier
+             Haulage arranged by carrier.
+        2 Merchant
+             Haulage arranged by merchant (shipper, consignee, or
+             their agent).
+

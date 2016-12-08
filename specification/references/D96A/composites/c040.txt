@@ -1,0 +1,11 @@
+
+      C040  CARRIER
+
+      Desc: Identification of a carrier by code and/or by name. Code
+            preferred.
+
+010   3127   Carrier identification                        C  an..17
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   3128   Carrier name                                  C  an..35
+

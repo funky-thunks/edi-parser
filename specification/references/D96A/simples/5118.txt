@@ -1,0 +1,8 @@
+
+   5118  Price
+
+   Desc: The monetary value associated with a purchase or sale of an
+         article, product or service.
+
+   Repr: n..15
+

@@ -1,0 +1,10 @@
+
+       C504 CURRENCY DETAILS
+
+       Desc: The usage to which a currency relates.
+
+010    6347  Currency usage code qualifier             M      an..3
+020    6345  Currency identification code              C      an..3
+030    6343  Currency type code qualifier              C      an..3
+040    6348  Currency rate value                       C      n..4
+

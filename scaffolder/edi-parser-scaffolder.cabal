@@ -1,0 +1,110 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3fe385f41f62ec5ef4db3f95458c629df273c5bf7976e206ce59839d95ba2738
+
+name:           edi-parser-scaffolder
+version:        20190607
+description:    Please see the README on GitHub at <https://github.com/githubuser/edi-parser-scaffolder#readme>
+homepage:       https://github.com/fretlink/edi-parser#readme
+bug-reports:    https://github.com/fretlink/edi-parser/issues
+author:         FretLink
+maintainer:     example@example.com
+copyright:      2019 FretLink
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/fretlink/edi-parser
+
+library
+  exposed-modules:
+      Text.Edifact.BundleReader
+      Text.Edifact.BundleReader.CodedSimples
+      Text.Edifact.BundleReader.Commons
+      Text.Edifact.BundleReader.Composites
+      Text.Edifact.BundleReader.Configuration
+      Text.Edifact.BundleReader.Extractor
+      Text.Edifact.BundleReader.Messages
+      Text.Edifact.BundleReader.Segments
+      Text.Edifact.BundleReader.Simples
+      Text.Edifact.Fetcher
+      Text.Edifact.Fetcher.Commons
+      Text.Edifact.Fetcher.Composites
+      Text.Edifact.Fetcher.Configuration
+      Text.Edifact.Fetcher.Messages
+      Text.Edifact.Fetcher.Segments
+      Text.Edifact.Fetcher.Simples
+      Text.Edifact.Scaffolder
+      Text.Edifact.Scaffolder.CodedSimples.Specification
+      Text.Edifact.Scaffolder.Commons
+      Text.Edifact.Scaffolder.Commons.Formatters
+      Text.Edifact.Scaffolder.Commons.Language
+      Text.Edifact.Scaffolder.Commons.Logging
+      Text.Edifact.Scaffolder.Commons.Parsing
+      Text.Edifact.Scaffolder.Commons.Text
+      Text.Edifact.Scaffolder.Commons.Types
+      Text.Edifact.Scaffolder.Composites
+      Text.Edifact.Scaffolder.Composites.Dependencies
+      Text.Edifact.Scaffolder.Composites.Elements
+      Text.Edifact.Scaffolder.Composites.Implementation
+      Text.Edifact.Scaffolder.Composites.Specification
+      Text.Edifact.Scaffolder.Composites.Types
+      Text.Edifact.Scaffolder.Messages
+      Text.Edifact.Scaffolder.Messages.Dependencies
+      Text.Edifact.Scaffolder.Messages.Elements
+      Text.Edifact.Scaffolder.Messages.Implementation
+      Text.Edifact.Scaffolder.Messages.Specification
+      Text.Edifact.Scaffolder.Messages.Types
+      Text.Edifact.Scaffolder.Root
+      Text.Edifact.Scaffolder.Segments
+      Text.Edifact.Scaffolder.Segments.Dependencies
+      Text.Edifact.Scaffolder.Segments.Elements
+      Text.Edifact.Scaffolder.Segments.Implementation
+      Text.Edifact.Scaffolder.Segments.Specification
+      Text.Edifact.Scaffolder.Segments.Types
+      Text.Edifact.Scaffolder.Simples
+      Text.Edifact.Scaffolder.Simples.Elements
+      Text.Edifact.Scaffolder.Simples.Implementation
+      Text.Edifact.Scaffolder.Simples.Representation
+      Text.Edifact.Scaffolder.Simples.Specification
+      Text.Edifact.Scaffolder.Simples.Types
+  other-modules:
+      Paths_edi_parser_scaffolder
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , directory
+    , filepath
+    , formatting
+    , mtl
+    , pandoc
+    , pandoc-types
+    , parsec
+    , process
+    , split
+    , text
+    , transformers
+    , zip-archive
+  default-language: Haskell2010
+
+executable edi-parser-scaffolder
+  main-is: Main.hs
+  other-modules:
+      Paths_edi_parser_scaffolder
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , edi-parser-scaffolder
+    , optparse-applicative
+  default-language: Haskell2010

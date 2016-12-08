@@ -1,0 +1,7 @@
+
+*  3224  Place/location
+
+   Desc: Name of place/location, other than 3164 City name.
+
+   Repr: an..70
+

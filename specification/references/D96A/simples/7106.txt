@@ -1,0 +1,9 @@
+
+   7106  Shipment flashpoint
+
+   Desc: Temperature in centigrade determined by the closed cup test
+         as per ISO 1523/73 where a vapour is given off that can be
+         ignited.
+
+   Repr: n3
+

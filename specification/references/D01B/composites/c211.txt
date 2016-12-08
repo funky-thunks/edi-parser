@@ -1,0 +1,11 @@
+
+       C211 DIMENSIONS
+
+       Desc: Specification of the dimensions of a transportable
+             unit.
+
+010    6411  Measurement unit code                     M      an..3
+020    6168  Length dimension value                    C      n..15
+030    6140  Width dimension value                     C      n..15
+040    6008  Height dimension value                    C      n..15
+

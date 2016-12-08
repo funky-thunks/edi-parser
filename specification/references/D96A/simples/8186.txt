@@ -1,0 +1,8 @@
+
+   8186  Substance identification number, lower part
+
+   Desc: The number for the Orange Placard (lower part) required on
+         the means of transport.
+
+   Repr: an4
+

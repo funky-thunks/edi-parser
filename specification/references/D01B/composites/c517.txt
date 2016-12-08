@@ -1,0 +1,10 @@
+
+       C517 LOCATION IDENTIFICATION
+
+       Desc: Identification of a location by code or name.
+
+010    3225  Location name code                        C      an..25
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    3224  Location name                             C      an..256
+

@@ -1,0 +1,14 @@
+
+       PCD  PERCENTAGE DETAILS
+
+       Function: To specify percentage information.
+
+010    C501 PERCENTAGE DETAILS                         M    1
+       5245  Percentage type code qualifier            M      an..3
+       5482  Percentage                                C      n..10
+       5249  Percentage basis identification code      C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+020    4405 STATUS DESCRIPTION CODE                    C    1 an..3
+

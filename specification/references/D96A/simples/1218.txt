@@ -1,0 +1,8 @@
+
+   1218  Number of originals of document required
+
+   Desc: Specification of the number of originals of a stipulated
+         document that are required.
+
+   Repr: n..2
+

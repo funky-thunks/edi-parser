@@ -1,0 +1,9 @@
+
+   1154  Reference number
+
+   Desc: Identification number the nature and function of which can be
+         qualified by an entry in data element 1153 Reference
+         qualifier.
+
+   Repr: an..35
+

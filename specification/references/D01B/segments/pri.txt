@@ -1,0 +1,15 @@
+
+       PRI  PRICE DETAILS
+
+       Function: To specify price information.
+
+010    C509 PRICE INFORMATION                          C    1
+       5125  Price code qualifier                      M      an..3
+       5118  Price amount                              C      n..15
+       5375  Price type code                           C      an..3
+       5387  Price specification code                  C      an..3
+       5284  Unit price basis value                    C      n..9
+       6411  Measurement unit code                     C      an..3
+
+020    5213 SUB-LINE ITEM PRICE CHANGE OPERATION CODE  C    1 an..3
+

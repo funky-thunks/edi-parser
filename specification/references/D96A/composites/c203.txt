@@ -1,0 +1,18 @@
+
+      C203  RATE/TARIFF CLASS
+
+      Desc: Identification of the applicable rate/tariff class.
+
+010   5243   Rate/tariff class identification              M  an..9
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   5242   Rate/tariff class                             C  an..35
+050   5275   Supplementary rate/tariff basis               C  an..6
+             identification
+060   1131   Code list qualifier                           C  an..3
+070   3055   Code list responsible agency, coded           C  an..3
+080   5275   Supplementary rate/tariff basis               C  an..6
+             identification
+090   1131   Code list qualifier                           C  an..3
+100   3055   Code list responsible agency, coded           C  an..3
+

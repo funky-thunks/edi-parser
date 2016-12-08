@@ -1,0 +1,9 @@
+
+      C082  PARTY IDENTIFICATION DETAILS
+
+      Desc: Identification of a transaction party by code.
+
+010   3039   Party id. identification                      M  an..35
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

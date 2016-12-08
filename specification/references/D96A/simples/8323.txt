@@ -1,0 +1,15 @@
+
+  8323  Transport movement, coded
+
+  Desc: Code indicating the movement of goods (e.g. import, export,
+        transit).
+
+  Repr: an..3
+
+        1 Export
+             Self explanatory.
+        2 Import
+             Self explanatory.
+        3 Transit
+             Self explanatory.
+

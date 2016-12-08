@@ -1,0 +1,12 @@
+
+      C960  REASON FOR CHANGE
+
+      Desc: Code and/or description of the reason for a change.
+
+      Note: This composite data element replaces composite C262 (which
+            has been deleted in this directory).
+
+010   4295   Change reason, coded                          C  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   4294   Change reason                                 C  an..35

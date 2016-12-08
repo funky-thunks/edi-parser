@@ -1,0 +1,8 @@
+
+   6066  Control value
+
+   Desc: Value obtained from summing the values specified by the
+         Control Qualifier throughout the message (Hash total).
+
+   Repr: n..18
+

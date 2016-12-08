@@ -1,0 +1,12 @@
+
+       C174 VALUE/RANGE
+
+       Desc: Measurement value and relevant minimum and maximum
+             values of the measurement range.
+
+010    6411  Measurement unit code                     M      an..3
+020    6314  Measurement value                         C      an..18
+030    6162  Range minimum value                       C      n..18
+040    6152  Range maximum value                       C      n..18
+050    6432  Significant digits quantity               C      n..2
+

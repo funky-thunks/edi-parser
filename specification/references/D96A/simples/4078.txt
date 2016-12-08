@@ -1,0 +1,8 @@
+
+   4078  Handling instructions
+
+   Desc: Instructions on how specified goods, packages or containers
+         should be handled.
+
+   Repr: an..70
+

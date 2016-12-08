@@ -1,0 +1,785 @@
+
+* 2005  Date/time/period qualifier
+
+  Desc: Code giving specific meaning to a date, time or period.
+
+  Repr: an..3
+
+        2 Delivery date/time, requested
+             Date on which buyer requests goods to be delivered.
+        3 Invoice date/time
+             [2376] Date when a Commercial Invoice is issued.
+        4 Order date/time
+             [2010] Date when an order is issued.
+        7 Effective date/time
+             Date and/or time at which specified event or document
+             becomes effective.
+        8 Order received date/time
+             Date/time when the purchase order is received by the
+             seller.
+        9 Processing date/time
+             Date/time of processing.
+       10 Shipment date/time, requested
+             Date on which goods should be shipped or despatched by
+             the supplier.
+#|     11 Despatch date and or time
+             (2170) Date/time on which the goods are or are expected
+             to be despatched or shipped.
+       12 Terms discount due date/time
+             Date by which payment should be made if discount terms
+             are to apply.
+       13 Terms net due date
+             Date by which payment must be made.
+       14 Payment date/time, deferred
+             Date/time when instalments are due.
+       15 Promotion start date/time
+             Date/time when promotion activities begin.
+       16 Promotion end date/time
+             Date/time when promotion activities end.
+       17 Delivery date/time, estimated
+             Date and/or time when the shipper of the goods expects
+             delivery will take place.
+       18 Installation date/time/period
+             Self explanatory.
+       20 Cheque date/time
+             Date/time when cheque is issued.
+       21 Charge back date/time
+             Description to be provided.
+       22 Freight bill date/time
+             Date/time when freight bill is issued.
+       35 Delivery date/time, actual
+             Date/time on which goods or consignment are delivered at
+             their destination.
+       36 Expiry date
+             Date of expiry of the validity of a referenced document,
+             price information or any other referenced data element
+             with a limited validity period.
+       37 Ship not before date/time
+             Goods should not be shipped before given date/time.
+       38 Ship not later than date/time
+             Date/time by which the goods should have been shipped.
+       39 Ship week of date
+             Date identifying the week during which goods should be
+             shipped.
+       42 Superseded date/time
+             Date/time being overlaid by a date given elsewhere.
+       44 Availability
+             Date/time when received item is available.
+       45 Compilation date and time
+             Date and time of the compilation.
+       46 Cancellation date
+             Date on which a document or message has been cancelled.
+       47 Statistical time series date
+             Date for statistical time series purposes.
+       48 Duration
+             Duration.
+       49 Deliver not before and not after dates
+             Deliver not before and not after a specific date range.
+       50 Goods receipt date/time
+             Date/time upon which the goods were received by a given
+             party.
+       51 Cumulative quantity start date
+             First Date for accumulation of delivery quantities.
+       52 Cumulative quantity end date
+             Last Date for accumulation of delivery quantities.
+       53 Buyer's local time
+             Time at the buyers location.
+       54 Seller's local time
+             Time at the sellers location.
+       55 Confirmed date/time
+             Date/time which has been confirmed.
+       58 Clearance date (Customs)
+             (3080) Date on which Customs formalities necessary to
+             allow goods to be exported, to enter home use, or to be
+             placed under another Customs procedure has been
+             accomplished (CCC).
+#|     59 Inbond movement authorization date
+             Inland movement authorization date.
+       60 Engineering change level date
+             Date the engineering level of goods is changed.
+       61 Cancel if not delivered by this date
+             Self explanatory.
+|      63 Delivery date/time, latest
+             Date identifying a point of time after which goods shall
+             not or will not be delivered.
+|      64 Delivery date/time, earliest
+             Date identifying a point in time before which the goods
+             shall not be delivered.
+       65 Delivery date/time, 1st schedule
+             Self explanatory.
+       67 Delivery date/time, current schedule
+             Delivery Date deriving from actual schedule.
+       69 Delivery date/time, promised for
+             [2138] Date by which, or period within which, the
+             merchandise should be delivered to the buyer, as agreed
+             between the seller and the buyer (generic term).
+|      71 Delivery date/time, requested for (after and including)
+             Delivery is requested to happen after or on given date.
+       72 Delivery date/time, promised for (after and including)
+             Delivery might take place earliest at given date.
+|      74 Delivery date/time, requested for (prior to and including)
+             Delivery is requested to happen prior to or including the
+             given date.
+       75 Delivery date/time, promised for (prior to and including)
+             Delivery might take place latest at given date.
+       76 Delivery date/time, scheduled for
+             Self explanatory.
+       79 Shipment date/time, promised for
+             Shipment might happen at given date/time.
+       81 Shipment date/time, requested for (after and including)
+             Shipment should happen earliest at given date.
+       84 Shipment date/time, requested for (prior to and including)
+             Shipment should take place latest at given date.
+       85 Shipment date/time, promised for (prior to and including)
+             Shipment might take place latest at given date.
+       89 Inquiry date
+             Self explanatory.
+       90 Report start date
+             Self explanatory.
+       91 Report end date
+             Self explanatory.
+       92 Contract effective date
+             Date when a contract becomes valid.
+       93 Contract expiry date
+             Date when a contract expires.
+       94 Production/manufacture date
+             Date on which goods are produced.
+       95 Bill of lading date
+             Date as specified on the bill of lading.
+       96 Discharge date/time
+             Date/time when goods should, might or have been
+             discharged from the means of transport.
+       97 Transaction creation date
+             Self explanatory.
+      101 Production date, no schedule established as of
+             Date as of there is no valid production schedule.
+      107 Deposit date/time
+             Self explanatory.
+      108 Postmark date/time
+             Self explanatory.
+      109 Receive at lockbox date
+             Self explanatory.
+      110 Ship date, originally scheduled
+             Self explanatory.
+      111 Manifest/ship notice date
+             Self explanatory.
+      113 Sample required date
+             Date as of a sample has to be available customer defined.
+      114 Tooling required date
+             Date as of a tool has to be available customer defined.
+      115 Sample available date
+             Date as of a sample will be available seller defined.
+      117 Delivery date/time, first
+             First possible date/time for delivery.
+      119 Test completion date
+             Date when a test has been completed.
+      123 Documentary credit expiry date/time
+             The latest date/time for presentation of the documents to
+             the bank where the credit expires.
+      124 Despatch note date
+             [2218] Date when a Despatch Note is issued.
+      125 Import licence date
+             [2292] Date when Import Licence is issued.
+      126 Contract date
+             [2326] Date when a Contract is agreed.
+|     128 Delivery date/time, last
+             Date when the last delivery should be or has been
+             accomplished.
+      129 Exportation date
+             Date when imported vessel/merchandise last left the
+             country of export for the country of import.
+      131 Tax point date
+             Date on which tax is due or calculated.
+      132 Arrival date/time, estimated
+             (2348) Date/time when carrier estimates that a means of
+             transport should arrive at the port of discharge or place
+             of destination.
+      133 Departure date/time, estimated
+             Date/time when carrier estimates that a means of
+             transport should depart at the place of departure.
+      134 Rate of exchange date/time
+             Date/time on which the exchange rate was fixed.
+      135 Telex date
+             Date identifying when a telex message was sent.
+      136 Departure date/time
+             [2280] Date (and time) of departure of means of
+             transport.
+      137 Document/message date/time
+             (2006) Date/time when a document/message is issued. This
+             may include authentication.
+      138 Payment date
+             [2034] Date on which an amount due is made available to
+             the creditor, in accordance with the terms of payment.
+      140 Payment due date
+             Date/time at which funds should be made available.
+      141 Presentation date of Goods declaration (Customs)
+             [2032] Date on which a Goods declaration is presented or
+             lodged with Customs.
+      143 Acceptance date/time of goods
+             [2126] Date on which the goods are taken over by the
+             carrier at the place of acceptance (CMR 4).
+      144 Quota date
+             Description to be provided.
+      146 Entry date, estimated (Customs)
+             Date on which the official date of Customs entry is
+             anticipated.
+      147 Expiry date of export licence
+             [2078] Date of expiry of the validity of an Export
+             Licence.
+      148 Acceptance date of Goods declaration (Customs)
+             [2036] Date on which a Goods declaration is accepted by
+             Customs in accordance with Customs legislation.
+      149 Invoice date, required
+             Date required for invoice issue.
+      150 Declaration/presentation date
+             Date when item has been or has to be declared/presented.
+      151 Importation date
+             Date on which goods are imported, as determined by the
+             governing Customs administration.
+      152 Exportation date for textiles
+             Date when imported textiles last left the country of
+             origin for the country of importation.
+      153 Cancellation date/time, latest
+             The latest date/time on which cancellation of the payment
+             order may be requested.
+      154 Acceptance date of document
+             Self explanatory.
+      155 Accounting period start date
+             Self explanatory.
+      156 Accounting period end date
+             Self explanatory.
+      157 Validity start date
+             Self explanatory.
+      158 Horizon start date
+             The first date of a period forming a horizon.
+      159 Horizon end date
+             The last date of a period forming a horizon.
+      160 Authorization date
+             Date when an authorization was given.
+      161 Release date of customer
+             Date the customer authorised the goods' release.
+      162 Release date of supplier
+             Date when the supplier released goods.
+      163 Processing start date/time
+             Date/Time when a specific process starts.
+      164 Processing end date/time
+             Date/Time when a specific process ends.
+      165 Tax period start date
+             Date when a tax period begins.
+      166 Tax period end date
+             Date when a tax period ends.
+      167 Charge period start date
+             The charge period's first date.
+      168 Charge period end date
+             The charge period's last date.
+      169 Lead time
+             Time required between order entry till earliest goods
+             delivery.
+      170 Settlement due date
+             More generic than 'payment due date' and therefore more
+             apt for reinsurance/insurance business.
+      171 Reference date/time
+             Date/time on which the reference was issued.
+      172 Hired from date
+             Date from which an item has been or will be hired.
+      173 Hired until date
+             Date until which an item has been or will be hired.
+      174 Advise after date/time
+             The information must be advised after the date/time
+             indicated.
+      175 Advise before date/time
+             The information must be advised before the date/time
+             indicated.
+      176 Advise completed date/time
+             The advise has been completed at the date indicated.
+      177 Advise on date/time
+             The information must be advised on the date/time
+             indicated.
+      178 Arrival date/time, actual
+             [2106] Date (and time) of arrival of means of transport.
+      179 Booking date/time
+             Date at which the booking was made.
+      180 Closing date/time
+             Final date for delivering cargo to a liner ship.
+      181 Positioning date/time of equipment
+             Date/time when equipment is positioned.
+      182 Issue date
+             Date when a document/message has been or will be issued.
+      183 Date, as at
+             Date related to a given context.
+      184 Notification date/time
+             Date/time of notification.
+      185 Commenced tank cleaning date/time
+             The date/and or time tank cleaning was started.
+      186 Departure date/time, actual
+             (2280) Date (and time) of departure of means of
+             transport.
+      187 Authentication date/time of document
+             Date/time when the document is signed or otherwise
+             authenticated.
+      188 Previous current account date
+             Self explanatory.
+      189 Departure date/time, scheduled
+             Date (and time) of scheduled departure of means of
+             transport.
+      190 Transhipment date/time
+             Date and time of the transfer of the goods from one means
+             of transport to another.
+      191 Delivery date/time, expected
+             Date/time on which goods are expected to be delivered.
+      192 Expiration date/time of customs document
+             Date on which validity of a customs document expires.
+      193 Execution date
+             The date when ordered bank initiated the transaction.
+      194 Start date/time
+             Date/time on which a period starts.
+      195 Expiry date of import licence
+             [2272] Date of expiry of the validity of an Import
+             Licence.
+      196 Departure date/time, earliest
+             Date/time of earliest departure of means of transport.
+      197 Laytime first day
+             First of a number of days allowed in a charter party of
+             the loading and discharging of cargo.
+      198 Laytime last day
+             Last of a number of days allowed in a charter party for
+             the loading and discharging of cargo.
+      199 Positioning date/time of goods
+             The date and/or time the goods have to be or have been
+             positioned.
+      200 Pick-up/collection date/time of cargo
+             Date/time at which the cargo is picked up.
+      201 Pick-up date/time of equipment
+             Date/time at which the equipment is picked up.
+      202 Posting date
+             The date when an entry is posted to an account.
+      203 Execution date/time, requested
+             The date/time on which the ordered bank is requested to
+             initiate the payment order, as specified by the
+             originator (e.g. the date of the debit).
+      204 Release date (Customs)
+             Date on which Customs releases merchandise to the carrier
+             or importer.
+      205 Settlement date
+             Date for settlement of financial transaction e.g.
+             foreign exchange securities.
+      206 End date/time
+             Date/time on which a period (from - to) ends.
+      207 Commenced pumping ballast date/time
+             Date/time on which the intake of materials to be carried
+             to improve the trim and the stability of the means of
+             transport, was commenced.
+      208 Departure date/time, ultimate
+             Date/time at which a means of transport has to depart
+             ultimately.
+      209 Value date
+             Date on which the funds are at the disposal of the
+             beneficiary or cease to be at the disposal of the
+             ordering customer.
+      210 Reinsurance current account period
+             Description to be provided.
+      211 360/30
+             Calculation is based on year of 360 days, month of 30
+             days.
+      212 360/28-31
+             Calculation is based on year of 360 days, month of 28-31
+             days.
+      213 365-6/30
+             Calculation is based on year of 365-6 days, month of 30
+             days.
+      214 365-6/28-31
+             Calculation is based on year of 365-6 days, month of 28-
+             31 days.
+      215 365/28-31
+             Calculation is based on year of 365 days, month of 28-31
+             days.
+      216 365/30
+             Calculation is based on year of 365 days, month of 30
+             days.
+      218 Authentication/validation date/time
+             Self explanatory.
+      219 Crossborder date/time
+             Date/time at which goods are transferred across a country
+             border.
+      221 Interest period
+             Number of days used for the calculation of interests.
+      222 Presentation date, latest
+             Latest date for presentation of a document.
+      223 Delivery date/time, deferred
+             New date and time of delivery calculated on basis of a
+             consignee's requirement (chargeable).
+      224 Permit to admit date
+             Date on which permission was granted to move merchandise
+             into a bonded warehouse or free trade zone.
+      225 Certification of weight date/time
+             Date/time at which the carrier proceeds to the weighting
+             of the goods.
+      226 Discrepancy date/time
+             Date/time at which a discrepancy has been found.
+      227 Beneficiary's banks due date
+             Date on which funds should be made available to the
+             beneficiary's bank.
+      228 Debit value date, requested
+             Date on which the account owner wants the debit value to
+             his account.
+      229 Hoses connected date/time
+             The date and/or time hoses were connected.
+      230 Hoses disconnected date/time
+             The date and/or time hoses were disconnected.
+      231 Arrival date/time, earliest
+             Date/time of earliest arrival of means of transport.
+      232 Arrival date/time, scheduled
+             Date (and time) of scheduled arrival of means of
+             transport.
+      233 Arrival date/time, ultimate
+             Date (and time) of ultimate arrival of means of
+             transport.
+      234 Collection date/time, earliest
+             The transport order may be issued before the goods are
+             ready for picking up. This date/time indicates from when
+             on the carrier can have access to the consignment.
+      235 Collection date/time, latest
+             In relation with the arrangements agreed between buyer
+             and seller or between sender and main transport it may be
+             necessary to specify the latest collection date/time.
+      236 Completed pumping ballast date/time
+             Date/time at which the intake of materials, to be carried
+             to improve the trim and the stability of the means of
+             transport, was completed.
+      237 Completed tank cleaning date/time
+             The date and/or time tank cleaning was completed.
+      238 Tanks accepted date/time
+             The date and/or time the tanks are to be or have been
+             accepted.
+      239 Tanks inspected date/time
+             The date and/or time the tanks are to be or have been
+             inspected.
+      240 Reinsurance accounting period
+             To identify a reinsurance account period via start and
+             end dates. Note: This period is not the same as
+             "reinsurance current account period".
+      242 Preparation date/time of document
+             Self explanatory.
+      243 Transmission date/time of document
+             Self explanatory.
+      244 Settlement date, planned
+             Self explanatory.
+      245 Underwriting year
+             Year in which the treaty was commenced.
+      246 Accounting year
+             Year considered for accounting of the treaty or portion
+             of the treaty.
+      247 Year of occurrence
+             Year in which a specific event (e.g. a loss) took place.
+      248 Loss date
+             Date on which a referenced (major) loss occurred.
+      249 Cash call date
+             Date on which a cash call was made for a loss suffered
+             and covered.
+      250 Re-exportation date
+             Re-export in case of temporary admission.
+      251 Re-importation date
+             Re-import in case of temporary admission.
+      252 Arrival date/time at initial port
+             Date/time that the conveyance arrives at the initial port
+             in the country of destination.
+      253 Departure date/time from last port of call
+             Date/time that conveyance departed from the last foreign
+             port of call.
+      254 Registration date of previous Customs declaration
+             Registration date of the Customs declaration for the
+             previous Customs procedure either in the same or another
+             country.
+      255 Availability due date
+             Date when ordered items should be available at a
+             specified location.
+      257 Calculation date
+             Self explanatory.
+      258 Guarantee date (Customs)
+             Date when guarantee is placed with Customs.
+      259 Conveyance registration date
+             Date when a vessel, vehicle or other means of transport
+             was registered by a competent authority.
+      260 Valuation date (Customs)
+             Date when Customs valuation was made.
+      261 Release date/time
+             Date/time assigned to identify the release of a set of
+             rules, conditions, conventions, productions, etc.
+      262 Closure date/time/period
+             Date/time/period when an enterprise is closed.
+      263 Invoicing period
+             Period for which an invoice is issued.
+      264 Release frequency
+             Frequency of a release.
+      265 Due date
+             Self explanatory.
+      266 Validation date
+             Self explanatory.
+      267 Rate/price date/time
+             Date/time on which a rate/price is determined.
+      268 Transit time/limits
+             Description to be provided.
+      270 Ship during date
+             The date identifying the period during or in which the
+             goods should be shipped.
+      271 Ship on or about date
+             Date on or about which goods should be shipped.
+      272 Documentary credit presentation period
+             The specification of the period of time, expressed in
+             number of days, after the date of issuance of the
+             transport document(s) within which the documents must be
+             presented.
+      273 Validity period
+             Dates (from/to)/period referenced documents are valid.
+      274 From date of order receipt to sample ready
+             Lead time is the defined timespan.
+      275 From date of tooling authorization to sample ready
+             Lead time is the defined timespan.
+      276 From date of receipt of tooling aids to sample ready
+             Lead time is the defined timespan.
+      277 From date of sample approval to first product shipment
+             Lead time is the defined timespan.
+      278 From date of order receipt to shipment
+             Lead time is the defined timespan.
+      279 From date of order receipt to delivery
+             Lead time is the defined timespan.
+      280 From last booked order to delivery
+             Lead time is the defined timespan.
+      281 Date of order lead time
+             Lead time is referenced to the date of order.
+      282 Confirmation date lead time
+             Lead time is referenced to the date of confirmation.
+      283 Arrival date/time of transport lead time
+             Lead time is referenced to the date a transport will
+             arrive or has arrived.
+      284 Before inventory is replenished based on stock check lead
+          time
+             Lead time is the defined timespan.
+      285 Invitation to tender date/time
+             Date/time on which the invitation to tender has been made
+             available to relevant parties.
+      286 Tender submission date/time
+             Date/time on which the tender was submitted.
+      287 Contract award date/time
+             Date/time on which the contract is awarded to a tenderer.
+      288 Price base date/time
+             Base date/time of prices.
+      290 Contractual start date/time
+             Date/time on which activities stated in the contract must
+             start.
+      291 Start date/time, planned
+             Self explanatory.
+      292 Works completion date/time, planned
+             Self explanatory.
+      293 Works completion date/time, actual
+             Self explanatory.
+      294 Hand over date/time, planned
+             Date/time on which hand over (i.e. the transfer of
+             responsibility for an object or activity such as
+             documentation, system etc. from one party to another) is
+             planned to take place.
+      295 Hand over date/time, actual
+             Date/time on which hand over (i.e. the transfer of
+             responsibility for an object or activity such as
+             documentation, system etc. from one party to another)
+             actually takes place.
+      296 Retention release date/time
+             Date/time on which the retention is released.
+      297 Retention release date/time, partial
+             Date/time on which the retention is partially released.
+      298 Escalation start date
+             Value date of the indexes appearing as denominators in an
+             escalation formula.
+      299 Price adjustment start date
+             Value date of the indexes appearing as denominators in a
+             price adjustment formula.
+      300 Price adjustment limit date
+             Limit value date of indexes used as numerators in a price
+             adjustment formula.
+      301 Value date of index
+             Date of validity of index values.
+      302 Publication date
+             Self explanatory.
+      303 Escalation date
+             Value date of indexes appearing as numerators in an
+             escalation formula.
+      304 Price adjustment date
+             Value date of indexes appearing as numerators in a price
+             adjustment formula.
+      305 Latest price adjustment date
+             Date on which the latest price adjustment took place.
+      306 Work period
+             Period of execution of works.
+      307 Payment instruction date/time
+             Date/time on which a payment instruction was given.
+      308 Payment valuation presentation date/time
+             Date/time on which the payment valuation is presented.
+      309 Blanks value date
+             The date on which the funds are at the disposal of the
+             receiving bank.
+      310 Received date/time
+             Date/time of receipt.
+      311 On
+             Fixed maturity day for deferred payment or time draft(s).
+      312 Ship not before and not after date/time
+             Shipment(s) of goods is/are to be made not before the
+             first specified date/time and not after the second
+             specified date/time.
+      313 Order to proceed date
+             Issue date of an instruction to start work.
+      314 Planned duration of works
+             Self explanatory.
+      315 Agreement to pay date
+             Date on which the debtor agreed to pay.
+      316 Valuation date/time
+             Date/time of valuation.
+      317 Reply date
+             Self explanatory.
+      318 Request date
+             Self explanatory.
+      319 Customer value date
+             Date at which funds are taken into account for interest
+             calculation (in debit or credit).
+      320 Declaration reference period
+             Reference period of a set of items reported on the same
+             declaration.
+      321 Promotion date/period
+             Date/period relevant for specific promotion activities.
+      322 Accounting period
+             Self-explanatory.
+      323 Horizon period
+             Period forming a (planning) horizon.
+      324 Processing date/period
+             Date/period a specific process happened/will happen.
+      325 Tax period
+             Period a tax rate/tax amount etc. is applicable.
+      326 Charge period
+             Period a specified charge is valid for.
+      327 Instalment payment due date
+             Self-explanatory.
+      328 Payroll deduction date/time
+             Date/time of a monetary deduction made from the salary of
+             a person on a payroll.
+      329 Birth date/time
+             Date/time when a person was born.
+      330 Joined employer date
+             Date when a person joins an employer.
+      331 Contributions ceasing date/time
+             Date/time when contributions cease.
+      332 Contribution period end date/time
+             Date/time when a contribution period ends.
+      333 Part-time working change date/time
+             Date/time when the proportion of part-time work changes.
+      334 Status change date/time
+             Date/time when a status changes.
+      335 Contribution period start date/time
+             Date/time when a contribution period commences.
+      336 Salary change effective date
+             Date when a change in salary becomes effective.
+      337 Left employer date
+             Date when a person leaves an employer.
+      338 Benefit change date/time
+             Date/time when a benefit provided by a service provider
+             is changed.
+      339 Category change date/time
+             Date/time when a change of category is made.
+      340 Joined fund date/time
+             Date/time when a person joins a fund.
+      341 Waiting time
+             The period of time between the moment at which one wants
+             an activity to begin and the moment at which this
+             activity can actually begin.
+      342 On-board date
+             The date goods have been loaded on board of a conveyance.
+      343 Date/time of discount termination
+             Date/time when the deduction from an amount comes to an
+             end.
+      344 Date/time of interest due
+             Date/time when the interest has to be paid.
+      345 Days of operation
+             Week days of operation.
+      346 Latest check-in time
+             Latest time of check-in.
+      347 Slaughtering start date
+             Date on which slaughtering commenced.
+      348 Packing start date
+             Date on which packing commenced.
+      349 Packing end date
+             Date on which packing completed.
+      350 Test start date
+             Date when a test has been started.
+      351 Inspection date
+             Date of inspection.
+      352 Slaughtering end date
+             Date on which slaughtering completed.
+      353 Accounting transaction date
+             Date to which an accounting transaction refers.
+      354 Activity period date range
+             A specific date range associated with an activity.
++     355 Contractual delivery date
+             The date of delivery contractually agreed between
+             parties.
++     356 Sales date, and or time, and or period
+             The date, and or time, and or period on which a sale took
+             place.
++     357 Cancel if not published by this date
+             Cancel if not published by this date.
++     358 Scheduled for delivery on or after
+             Scheduled for delivery on or after the specified date,
+             and or time.
++     359 Scheduled for delivery on or before
+             Scheduled for delivery on or before specified date and or
+             time.
++     360 Sell by date
+             The date by which a product should be sold.
++     361 Best before date
+             The best before date.
++     362 End availability date
+             The end date of availability.
++     363 Total shelf life period
+             A period indicating the total shelf life of a product.
++     364 Minimum shelf life remaining at time of despatch period
+             Period indicating the minimum shelf life remaining for a
+             product at the time of leaving the supplier.
++     365 Packaging date
+             The date on which the packaging of a product took place.
++     366 Inventory report date
+             Date on which a inventory report is made.
++     367 Previous meter reading date
+             Date on which the previous reading of a meter took place.
++     368 Latest meter reading date
+             Date on which the latest reading of a meter took place.
++     369 Date and or time of handling, estimated
+             The date and or time when the handling action is
+             estimated to take place.
++     370 Container equipment domestication date
+             The date on which foreign-built container equipment has
+             entered into the commerce of another country and has
+             become domestic equipment.
++     371 Hydrotest date
+             The date equipment has been hydrotested.
++     372 Equipment pre-trip date
+             The date on which equipment is pre-tripped.
++     373 Mooring, date and time
+             Date and time of mooring.
++     374 Road fund tax expiry date
+             The date of expiry of the road fund tax.
++     375 Date of first registration
+             Date of first registration.
++     376 Bi-annual terminal inspection date
+             The date on which a bi-annual inspection of a terminal
+             has taken or will take place.
++     377 Federal HighWay Administration (FHWA) inspection date
+             The date on which container equipment is to be or has
+             been inspected in accordance with the requirements of the
+             U.S. Federal Highway Administration.
++     378 Container Safety Convention (CSC) inspection date
+             The date on which container equipment is to be or has
+             been inspected as per the Container Safety Convention
+             (CSC).
++     379 Periodic inspection date
+             The date on which a periodic inspection has to take
+             place.
+   ZZZ    Mutually defined
+             Self explanatory.
+

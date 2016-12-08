@@ -1,0 +1,10 @@
+
+       C232 GOVERNMENT ACTION
+
+       Desc: Code indicating a type of government action.
+
+010    9415  Government agency identification code     C      an..3
+020    9411  Government involvement code               C      an..3
+030    9417  Government action code                    C      an..3
+040    9353  Government procedure code                 C      an..3
+

@@ -1,0 +1,7 @@
+
+   8332  Equipment plan
+
+   Desc: Description indicating equipment plan, e.g. FCL or LCL.
+
+   Repr: an..26
+

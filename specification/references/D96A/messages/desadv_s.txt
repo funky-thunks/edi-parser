@@ -1,0 +1,135 @@
+4.3    Message structure
+
+4.3.1  Segment table
+
+Pos    Tag Name                                      S   R
+
+           HEADER SECTION
+
+0010   UNH Message header                            M   1     
+0020   BGM Beginning of message                      M   1     
+0030   DTM Date/time/period                          C   10    
+0040   ALI Additional information                    C   5     
+0050   MEA Measurements                              C   5     
+0060   MOA Monetary amount                           C   5     
+
+0070       ----- Segment group 1  ------------------ C   10----------+
+0080   RFF Reference                                 M   1           |
+0090   DTM Date/time/period                          C   1-----------+
+
+0100       ----- Segment group 2  ------------------ C   10----------+
+0110   NAD Name and address                          M   1           |
+0120   LOC Place/location identification             C   10          |
+                                                                     |
+0130       ----- Segment group 3  ------------------ C   10---------+|
+0140   RFF Reference                                 M   1          ||
+0150   DTM Date/time/period                          C   1----------+|
+                                                                     |
+0160       ----- Segment group 4  ------------------ C   10---------+|
+0170   CTA Contact information                       M   1          ||
+0180   COM Communication contact                     C   5----------++
+
+0190       ----- Segment group 5  ------------------ C   10----------+
+0200   TOD Terms of delivery or transport            M   1           |
+0210   LOC Place/location identification             C   5           |
+0220   FTX Free text                                 C   5-----------+
+
+0230       ----- Segment group 6  ------------------ C   10----------+
+0240   TDT Details of transport                      M   1           |
+0250   PCD Percentage details                        C   6           |
+                                                                     |
+0260       ----- Segment group 7  ------------------ C   10---------+|
+0270   LOC Place/location identification             M   1          ||
+0280   DTM Date/time/period                          C   10---------++
+
+0290       ----- Segment group 8  ------------------ C   10----------+
+0300   EQD Equipment details                         M   1           |
+0310   MEA Measurements                              C   5           |
+0320   SEL Seal number                               C   25          |
+0330   EQA Attached equipment                        C   5           |
+                                                                     |
+0340       ----- Segment group 9  ------------------ C   10---------+|
+0350   HAN Handling instructions                     M   1          ||
+0360   FTX Free text                                 C   10---------++
+
+           DETAIL SECTION
+
+0370       ----- Segment group 10 ------------------ C   9999--------+
+0380   CPS Consignment packing sequence              M   1           |
+0390   FTX Free text                                 C   5           |
+                                                                     |
+0400       ----- Segment group 11 ------------------ C   9999-------+|
+0410   PAC Package                                   M   1          ||
+0420   MEA Measurements                              C   10         ||
+0430   QTY Quantity                                  C   10         ||
+                                                                    ||
+0440       ----- Segment group 12 ------------------ C   10--------+||
+0450   HAN Handling instructions                     M   1         |||
+0460   FTX Free text                                 C   10--------+||
+                                                                    ||
+0470 *     ----- Segment group 13 ------------------ C   1000------+||
+0480   PCI Package identification                    M   1         |||
+0490   RFF Reference                                 C   1         |||
+0500   DTM Date/time/period                          C   5         |||
+0510 * GIR Related identification numbers            C   99        |||
+                                                                   |||
+0520       ----- Segment group 14 ------------------ C   99-------+|||
+0530   GIN Goods identity number                     M   1        ||||
+0540   DLM Delivery limitations                      C   10-------+++|
+                                                                     |
+0550       ----- Segment group 15 ------------------ C   9999-------+|
+0560   LIN Line item                                 M   1          ||
+0570   PIA Additional product id                     C   10         ||
+0580   IMD Item description                          C   25         ||
+0590   MEA Measurements                              C   10         ||
+0600   QTY Quantity                                  C   10         ||
+0610   ALI Additional information                    C   10         ||
+0620   GIN Goods identity number                     C   100        ||
+0630   GIR Related identification numbers            C   100        ||
+0640   DLM Delivery limitations                      C   100        ||
+0650   DTM Date/time/period                          C   5          ||
+0660   FTX Free text                                 C   5          ||
+0670   MOA Monetary amount                           C   5          ||
+                                                                    ||
+0680       ----- Segment group 16 ------------------ C   10--------+||
+0690   RFF Reference                                 M   1         |||
+0700   DTM Date/time/period                          C   1---------+||
+                                                                    ||
+0710       ----- Segment group 17 ------------------ C   10--------+||
+0720   DGS Dangerous goods                           M   1         |||
+0730   QTY Quantity                                  C   1         |||
+0740   FTX Free text                                 C   5---------+||
+                                                                    ||
+0750       ----- Segment group 18 ------------------ C   100-------+||
+0760   LOC Place/location identification             M   1         |||
+0770   NAD Name and address                          C   1         |||
+0780   DTM Date/time/period                          C   1         |||
+0790   QTY Quantity                                  C   10--------+||
+                                                                    ||
+0800       ----- Segment group 19 ------------------ C   1000------+||
+0810   SGP Split goods placement                     M   1         |||
+0820   QTY Quantity                                  C   10--------+||
+                                                                    ||
+0830       ----- Segment group 20 ------------------ C   9999------+||
+0840   PCI Package identification                    M   1         |||
+0850   DTM Date/time/period                          C   5         |||
+0860   MEA Measurements                              C   10        |||
+0870   QTY Quantity                                  C   1         |||
+                                                                   |||
+0880       ----- Segment group 21 ------------------ C   10-------+|||
+0890   GIN Goods identity number                     M   1        ||||
+0900   DLM Delivery limitations                      C   100------+|||
+                                                                   |||
+0910       ----- Segment group 22 ------------------ C   10-------+|||
+0920   HAN Handling instructions                     M   1        ||||
+0930   FTX Free text                                 C   5        ||||
+0940   GIN Goods identity number                     C   1000-----++||
+                                                                    ||
+0950       ----- Segment group 23 ------------------ C   10--------+||
+0960   QVR Quantity variances                        M   1         |||
+0970   DTM Date/time/period                          C   5---------+++
+
+           SUMMARY SECTION
+
+0980   CNT Control total                             C   5     
+0990   UNT Message trailer                           M   1     

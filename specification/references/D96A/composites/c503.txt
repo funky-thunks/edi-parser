@@ -1,0 +1,11 @@
+
+      C503  DOCUMENT/MESSAGE DETAILS
+
+      Desc: Identification of document/message by number, status,
+            source and/or language.
+
+010   1004   Document/message number                       C  an..35
+020   1373   Document/message status, coded                C  an..3
+030   1366   Document/message source                       C  an..35
+040   3453   Language, coded                               C  an..3
+

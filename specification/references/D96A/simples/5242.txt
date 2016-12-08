@@ -1,0 +1,7 @@
+
+   5242  Rate/tariff class
+
+   Desc: Description of applicable rate/tariff class.
+
+   Repr: an..35
+

@@ -1,0 +1,11 @@
+
+       C235 HAZARD IDENTIFICATION PLACARD DETAILS
+
+       Desc: These numbers appear on the hazard identification
+             placard required on the means of transport.
+
+010    8158  Orange hazard placard upper part
+             identifier                                C      an..4
+020    8186  Orange hazard placard lower part
+             identifier                                C      an4
+

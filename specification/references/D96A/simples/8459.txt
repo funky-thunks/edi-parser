@@ -1,0 +1,18 @@
+
+  8459  Excess transportation responsibility, coded
+
+  Desc: Indication of responsibility for excess transportation.
+
+  Repr: an..3
+
+   A      Customer plant (receiving location)
+             Self explanatory.
+   B      Material release issuer
+             Self explanatory.
+   S      Supplier authority
+             Self explanatory.
+   X      Responsibility to be determined
+             Self explanatory.
+   ZZZ    Mutually defined
+             Self explanatory.
+

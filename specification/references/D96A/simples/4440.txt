@@ -1,0 +1,8 @@
+
+   4440  Free text
+
+   Desc: Free text field available to the message sender for
+         information.
+
+   Repr: an..70
+

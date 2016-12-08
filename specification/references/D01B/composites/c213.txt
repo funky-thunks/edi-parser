@@ -1,0 +1,12 @@
+
+       C213 NUMBER AND TYPE OF PACKAGES
+
+       Desc: Number and type of individual parts of a shipment.
+
+010    7224  Package quantity                          C      n..8
+020    7065  Package type description code             C      an..17
+030    1131  Code list identification code             C      an..17
+040    3055  Code list responsible agency code         C      an..3
+050    7064  Type of packages                          C      an..35
+060    7233  Packaging related description code        C      an..3
+

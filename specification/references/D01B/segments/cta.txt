@@ -1,0 +1,12 @@
+
+       CTA  CONTACT INFORMATION
+
+       Function: To identify a person or a department to whom
+                 communication should be directed.
+
+010    3139 CONTACT FUNCTION CODE                      C    1 an..3
+
+020    C056 DEPARTMENT OR EMPLOYEE DETAILS             C    1
+       3413  Department or employee name code          C      an..17
+       3412  Department or employee name               C      an..35
+

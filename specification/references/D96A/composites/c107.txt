@@ -1,0 +1,9 @@
+
+      C107  TEXT REFERENCE
+
+      Desc: Coded reference to a standard text and its source.
+
+010   4441   Free text, coded                              M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

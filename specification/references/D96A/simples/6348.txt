@@ -1,0 +1,8 @@
+
+   6348  Currency rate base
+
+   Desc: Multiplying factor used in expressing the number of currency
+         units.
+
+   Repr: n..4
+

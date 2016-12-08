@@ -1,0 +1,10 @@
+
+   3207  Country, coded
+
+   Desc: Identification of the name of a country or other geographical
+         entity as specified in ISO 3166.
+
+   Repr: an..3
+
+   Note: Use ISO 3166 two alpha country code.
+

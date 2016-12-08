@@ -1,0 +1,125 @@
+
+* 5245  Percentage qualifier
+
+  Desc: Identification of the usage of a percentage.
+
+  Repr: an..3
+
+        1 Allowance
+             (5424) Allowance expressed as a percentage.
+        2 Charge
+             (5424) Charge expressed as a percentage.
+        3 Allowance or charge
+             [5424] Allowance or charge expressed as a percentage.
+        4 Reinsurer's share
+             To indicate the share of the reinsurer in a treaty.
+        5 Entry percentage
+             To indicate the percentage used for the specified entry
+             (e.g. commission %, deposits % ...).
+        6 Quality/yield
+             (6318) The percentage of a specified material in the
+             total product.
+        7 Percentage of invoice
+             Self explanatory.
+        8 Reduction/surcharge percentage
+             Percentage to calculate a reduction/surcharge.
+        9 Adjustment
+             Self explanatory.
+       10 Bureau share
+             London insurance market bureau (bureau share in
+             reinsurance treaty).
+|      11 Buffer stock requirement
+             Anticipated additional consumption to safeguard against
+             unforeseen shortages or demands.
+       12 Discount
+             Discount expressed as a percentage.
+       13 Amount tolerance
+             Tolerance of amount in percentage.
+       14 Percentage of note
+             Percentage of debit or credit note.
+       15 Penalty percentage
+             Self explanatory.
+       16 Interest percentage
+             Self explanatory.
+       17 Part of documentary credit amount
+             Part of documentary credit amount in percentage subject
+             to sight payment, deferred payment or acceptance when the
+             documentary credit is available by mixed payment.
+       18 Percentage credit note
+             Percentage of a credit note.
+       19 Percentage debit note
+             Percentage of a debit note.
+       20 Percentage of insurance
+             Self explanatory.
+       21 Own risk percentage
+             Percentage of total amount which is not covered by credit
+             cover.
+       22 Transferred VAT percentage
+             VAT percentage rate for which accountability is being
+             transferred from one party to another. VAT means: Value
+             added tax.
+       23 Part time employment
+             The time a person is employed expressed as a percentage
+             of the equivalent full time employment.
+       24 Voluntary contribution
+             Contribution to a superannuation scheme which is not
+             compulsory, expressed as a percentage of salary.
+       25 Attribute factor
+             To indicate a mathematical factor, expressed as a
+             percentage , used to multiply a specified attribute item.
+       26 Additional contribution
+             Contribution to a scheme in addition to the normal
+             contribution, expressed as a percentage (in
+             superannuation usually expressed as a percentage of
+             salary).
+       27 Benefits allocation
+             Percentage of total benefits allocated to a person.
+       28 Attribute classification
+             To indicate the percentage of a specified attribute
+             classification (e.g. percentage contributed before a
+             defined year for superannuation purposes).
+       29 Renegotiation trigger upper limit
+             The percentage rise in a currency rate of exchange which
+             would result in renegotiation of prices.
+       30 Renegotiation trigger lower limit
+             The percentage fall in a currency rate of exchange which
+             would result in renegotiation of prices.
+       31 Material reduction factor
+             The percentage reduction in constituent material which
+             occurs in the production process.
+       32 Acceptable price difference
+             The maximum percentage increase or decrease resulting
+             from price recalculation which will not result in price
+             renegotiation.
+       33 Share of buyer's total requirement
+             The percentage of the buyer's total acquisition
+             requirement for the referenced or similar item which will
+             be ordered from the named supplier.
+       34 Price increase
+             The percentage increase in price of the referenced item
+             since the last notification.
+       35 Share of tool cost paid by buyer
+             The percentage of the cost of tooling which will be paid
+             by the buyer.
+       36 Volume capacity usage
+             Percentage of the volume capacity used.
+       37 Weight capacity usage
+             Percentage of the weight capacity used.
+       38 Loading length capacity usage
+             Percentage of the loading length capacity used.
+       39 Share of packaging cost paid by vendor
+             The percentage of the cost of packaging which will be
+             paid by the vendor.
+       40 Reduction percentage
+             Reduction from an amount/price expressed in a percentage.
+       41 Surcharge percentage
+             Additional amount expressed in a percentage.
+       42 Local content
+             To indicate the percentage of a products local (i.e.
+             domestic) content.
+       43 Chargeback
+             Percentage amount charged back.
+       44 Gross turnover commission
+             Percentage of gross turnover used to calculate
+             commission.
+

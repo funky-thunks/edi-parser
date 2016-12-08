@@ -1,0 +1,17 @@
+
+       ICD  INSURANCE COVER DESCRIPTION
+
+       Function: To describe the insurance cover.
+
+010    C330 INSURANCE COVER TYPE                       M    1
+       4497  Insurance cover type code                 M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+020    C331 INSURANCE COVER DETAILS                    M    1
+       4495  Insurance cover description code          C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       4494  Insurance cover description               C      an..35
+       4494  Insurance cover description               C      an..35
+

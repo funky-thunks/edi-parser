@@ -1,0 +1,8 @@
+
+   8158  Hazard identification number, upper part
+
+   Desc: The id. number for the Orange Placard (upper part) required
+         on the means of transport.
+
+   Repr: an..4
+

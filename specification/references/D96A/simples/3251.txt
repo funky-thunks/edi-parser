@@ -1,0 +1,9 @@
+
+   3251  Postcode identification
+
+   Desc: Code defining postal zones or addresses.
+
+   Repr: an..9
+
+   Note: Use code defined by appropriate national authority.
+

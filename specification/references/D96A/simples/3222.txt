@@ -1,0 +1,7 @@
+
+   3222  Related place/location one
+
+   Desc: Specification of the first related place/location by name.
+
+   Repr: an..70
+

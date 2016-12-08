@@ -1,0 +1,7 @@
+
+   6008  Height dimension
+
+   Desc: Height of pieces or packages stated for transport purposes.
+
+   Repr: n..15
+

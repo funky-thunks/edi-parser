@@ -1,0 +1,7 @@
+
+*  5482  Percentage
+
+   Desc: Value expressed as a percentage of a specified amount.
+
+   Repr: n..10
+

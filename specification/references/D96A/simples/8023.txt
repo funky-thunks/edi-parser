@@ -1,0 +1,12 @@
+
+   8023  Freight and charges identification
+
+   Desc: Coded description of freight charges and other charges (used
+         in combination with 1131/3055).
+
+   Repr: an..17
+
+   Note: Use UN/ECE Recommendation No. 23: Freight costs and charges. 
+         If not applicable, use appropriate code in combination with
+         1131/3055.
+

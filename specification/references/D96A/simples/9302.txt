@@ -1,0 +1,8 @@
+
+   9302  Sealing party
+
+   Desc: Clear text, representing the name of the issuer of the seal
+         number.
+
+   Repr: an..35
+

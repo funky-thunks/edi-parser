@@ -1,0 +1,8 @@
+
+   1000  Document/message name
+
+   Desc: Plain language identifier specifying the function of a
+         document/message.
+
+   Repr: an..35
+

@@ -1,0 +1,7 @@
+
+   6060  Quantity
+
+   Desc: Numeric value of a quantity.
+
+   Repr: n..15
+

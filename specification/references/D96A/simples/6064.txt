@@ -1,0 +1,8 @@
+
+   6064  Quantity difference
+
+   Desc: Numeric value of variance between ordered/shipped/invoiced
+         quantities.
+
+   Repr: n..15
+

@@ -1,0 +1,11 @@
+
+       C819 COUNTRY SUB-ENTITY DETAILS
+
+       Desc: To specify a part of a country (eg county or part of
+             a city).
+
+010    3229  Country sub-entity name code              C      an..9
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    3228  Country sub-entity name                   C      an..70
+

@@ -1,0 +1,899 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+---- Machine generated code.
+---- Output of edi-parser-scaffolder
+
+module Text.Edifact.D96A.Simples.S5025
+  ( simple5025
+  ) where
+
+import           Text.Edifact.Parsing
+import           Text.Edifact.Types   (Value)
+
+-- | Derived from this specification:
+--
+-- > * 5025  Monetary amount type qualifier
+-- >
+-- >   Desc: Indication of type of amount.
+-- >
+-- >   Repr: an..3
+-- >
+-- >         1 VAT, 1st value
+-- >              First VAT value if, for the same rate of VAT, there are 1
+-- >              to 3 different ways to set this value.
+-- >         2 VAT, 2nd value
+-- >              Second VAT value if, for the same rate of VAT, there are
+-- >              2 or 3 different ways to set this value.
+-- >         3 VAT, 3rd value
+-- >              Third VAT value if, for the same rate of VAT, there are 3
+-- >              different ways to set this value.
+-- >         4 Additional royalties (Customs)
+-- >              Royalties relating to the imported goods that the buyer
+-- >              must pay, either directly or indirectly, as a condition
+-- >              of sale, to the extent that they are not included in the
+-- >              price actually paid or payable.
+-- >         5 Adjusted amount
+-- >              The amount specified is the adjusted amount.
+-- >         6 Amount reference currency
+-- >              The owing amount in the currency used as reference in the
+-- >              transaction.
+-- >         7 Agreed charge
+-- >              Charges which parties agreed upon.
+-- >         8 Allowance or charge amount
+-- >              [5422] Total amount of allowance or charge.
+-- >         9 Amount due/amount payable
+-- >              Amount to be paid.
+-- >        10 Amount in charge currency
+-- >              Indicates that the amount is based on the charged
+-- >              currency.
+-- >        11 Amount paid
+-- >              Self explanatory.
+-- >        12 Amount remitted
+-- >              Amount which was remitted (see remittance advice).
+-- >        13 Amount subject to total monetary discount
+-- >              Self explanatory.
+-- >        14 Amount target currency
+-- >              The amount in the currency in which the amount is paid or
+-- >              has to be paid.
+-- >        15 Average ledger balance
+-- >              The addition of the balance all accounts divided by the
+-- >              number of accounts.
+-- >        16 Bank release fee
+-- >              Self explanatory.
+-- >        17 Batch total
+-- >              The complete quantity of anything needed for or made in
+-- >              one operation or lot.
+-- >        18 Brokerage
+-- >              Fee charged by a broker for acting on behalf of a third
+-- >              party.
+-- >        19 Buying commission
+-- >              Commission paid by the importer to his/her agent for the
+-- >              service of representing him/her in the purchase.
+-- >        20 Data value on carrier media (Customs)
+-- >              Value of data contained on the carrier media (e.g.
+-- >              magnetic tape).
+-- >        21 Cash discount
+-- >              Cash discount given by the seller to the buyer where
+-- >              payment is made in advance of receipt of goods.
+-- >        22 Cash on delivery amount
+-- >              Amount to be collected by carrier upon delivery of goods.
+-- >              This amount represents approximately the value of the
+-- >              goods.
+-- >        23 Charge amount
+-- >              Self explanatory.
+-- >        24 Charge summary total
+-- >              Code to indicate the total charges relating to a
+-- >              consignment.
+-- >        25 Charge/allowance basis
+-- >              The amount specified is the basis for calculation of
+-- >              charges/allowance.
+-- >        26 Charges collect fee
+-- >              Self explanatory.
+-- >        27 Charges in destination currency
+-- >              Collect charges payable in the currency of the country of
+-- >              destination.
+-- >        28 Collect charge summary total
+-- >              Self explanatory.
+-- >        29 Collect charges in destination currency
+-- >              Collect charges payable in the currency of the country of
+-- >              destination.
+-- >        30 Collect freight charge including VAT
+-- >              This is the total amount that has to be collected from
+-- >              the consignee or other intermediary intervening party -
+-- >              Including VAT-.
+-- >        31 Collect freight charge without VAT
+-- >              For legal accounting reasons the amount without VAT has
+-- >              to be announced, together with the amount of VAT.
+-- >        32 Collect other charges due agent total
+-- >              Self explanatory.
+-- >        33 Collect taxes total
+-- >              Self explanatory.
+-- >        34 Collected balance required
+-- >              A certain sum of money that must be kept in an account.
+-- >        35 Container cost
+-- >              Description to be provided.
+-- >        36 Converted amount
+-- >              The amount is converted from another currency.
+-- >        37 Credit on consignment
+-- >              Credit deducted from the total invoice amount for the
+-- >              value of goods not included in a consignment but included
+-- >              in the invoice.
+-- >        38 Invoice item amount
+-- >              (5068) Total sum charged in respect of a single Invoice
+-- >              item in accordance with the terms of delivery.
+-- >        39 Invoice total amount
+-- >              [5444] Total sum charged in respect of one or more
+-- >              Invoices in accordance with the terms of delivery.
+-- >        40 Customs value
+-- >              (5032) Value declared for Customs purposes on those goods
+-- >              in a consignment which are subject to the same Customs
+-- >              procedure, and have the same tariff/statistical heading,
+-- >              country information and duty regime.
+-- >        41 Assigned Customs value
+-- >              Goods value assigned by Customs.
+-- >        42 Total cash payments received by factor
+-- >              Total allocated amount of cash payments received by a
+-- >              factor.
+-- >        43 Declared total Customs value
+-- >              [5070] Total value declared for Customs purposes of all
+-- >              goods in a consignment, whether or not they are subject
+-- >              to the same Customs procedure, or have the same
+-- >              tariff/statistical heading, country information, and duty
+-- >              regime.
+-- >        44 Declared value for carriage
+-- >              (5036) Value, declared by the shipper or his agent solely
+-- >              for the purpose of varying the carrier's level of
+-- >              liability from that provided in the contract of carriage,
+-- >              in case of loss or damage to goods or delayed delivery.
+-- >        45 Deductible after importation charges (Customs)
+-- >              Charges (e.g. construction, assembly, erection,
+-- >              maintenance or technical assistance) after importation,
+-- >              which are included in the total invoice price, that may
+-- >              be deducted to arrive at a Customs value.
+-- >        46 Deductions (Customs)
+-- >              [5020] Allowable deductions from the Customs value basis
+-- >              used.
+-- >        47 Delivery fee
+-- >              Fees incurred by delivery.
+-- >        48 Deposit total
+-- >              The whole amount of money that one entrusts for
+-- >              safekeeping.
+-- >        49 Development necessary for production of imported goods
+-- >           (Customs)
+-- >              Value of engineering, development, artwork, design work
+-- >              and plans and sketches carried out elsewhere than in the
+-- >              Customs territory and necessary for the production of the
+-- >              imported goods.
+-- >        50 Disbursements
+-- >              Amount of disbursements to be collected by the carrier
+-- >              according to the order given by the shipper.
+-- >        51 Disbursements fee
+-- >              Fee charged for the collection of disbursements.
+-- >        52 Discount amount
+-- >              The amount specified is the discount amount.
+-- >        53 Discount amount due
+-- >              Self explanatory.
+-- >        54 Distribution service fee
+-- >              Self explanatory.
+-- >        55 Duty amount
+-- >              Self explanatory.
+-- >        56 Duty/tax/fee basis amount
+-- >              The amount specified is the basis for duty/tax or fee.
+-- >        57 Equivalent amount
+-- >              This amount is equivalent to the amount to be
+-- >              transferred, but in another currency.
+-- >        58 Fee amount
+-- >              Self explanatory.
+-- >        59 Fees paid year to date
+-- >              Payments made for goods thus far.
+-- >        60 Final (posted) amount
+-- >              The amount posted to an account, finally, after
+-- >              charges/allowances.
+-- >        61 Float (e.g. "cash float")
+-- >              The status of funds in the process of collection.
+-- >        62 Total payments on account received by a factor
+-- >              Total unallocated amount of payments received by a
+-- >              factor.
+-- >        63 FOB value
+-- >              Identifies the value of the shipment free on board, named
+-- >              port of shipment (see FOB Incoterm of ICC).
+-- >        64 Freight charge
+-- >              Amount to be paid for moving goods, by whatever means,
+-- >              from one place to another, inclusive discounts,
+-- >              allowances, rebates, adjustment factors and additional
+-- >              cost relating to freight costs (UN/ECE Recommendation no
+-- >              23).
+-- >        65 Total indirect amount payments made to a seller or his agent
+-- >           instead of to a factor
+-- >              Total indirect amount of payments made to a seller or his
+-- >              agent instead of to a factor.
+-- >        66 Goods item total
+-- >              Net price x quantity for the line item.
+-- >        67 Insurance
+-- >              Self explanatory.
+-- >        68 Insurance and transport charges (Customs)
+-- >              (5488)+(5292) Sum total of transport and insurances
+-- >              charges (CCC).
+-- >        69 Insurance and transport charges incurred outside Customs
+-- >           territory
+-- >              (5488)+(5292) Insurance and transport charges incurred
+-- >              outside a Customs territory (or a Customs union).
+-- >        70 Insurance charges (Customs)
+-- >              [5488] Amount of premium payable to the insurance company
+-- >              to insure the goods to the port or place of importation.
+-- >        71 Insurance charges incurred outside of Customs territory
+-- >              (5488) Insurance charges incurred outside a Customs
+-- >              territory (or a Customs union).
+-- >        72 Internal charges (Customs)
+-- >              Charges incurred within a Customs territory (or a Customs
+-- >              union).
+-- >        73 Total amount of payments booked to the collateral account
+-- >              Total amount of payments booked to the collateral
+-- >              account.
+-- >        74 Amount to be paid in advance
+-- >              Amount which is to be paid before goods are delivered or
+-- >              the service is rendered.
+-- >        75 Registered capital
+-- >              Registered amount of equity of a company.
+-- >        76 Investable balance
+-- >              To put left over money in something offering profitable
+-- >              returns.
+-- >        77 Invoice amount
+-- >              [5068] Total sum charged in respect of a single Invoice
+-- >              in accordance with the terms of delivery.
+-- >        78 Landing charges
+-- >              The charges incurred in landing the goods into store in
+-- >              the country of importation, excluding Customs duties and
+-- >              taxes.
+-- >        79 Total line items amount
+-- >              The sum of all the line item amounts.
+-- >        80 Licence fees related to imported goods (Customs)
+-- >              Licence fees relating to the imported goods that the
+-- >              buyer must pay, either directly or indirectly, as a
+-- >              condition of sale, to the extent that they are not
+-- >              included in the price actually paid or payable.
+-- >        81 Loading and handling cost
+-- >              Cost incurred by loading and handling.
+-- >        82 Lock box total
+-- >              The complete amount of funds that customers mailed in to
+-- >              a specific location. Often times funds are sent to a post-
+-- >              office lock box in their city.
+-- >        83 Lumpsum
+-- >              An agreed sum of money, which is paid in full at one
+-- >              time. This term is often used in connection with charter
+-- >              parties.
+-- >        84 Material consumed in production of imported goods (Customs)
+-- >              Value of materials consumed in the production of the
+-- >              imported goods.
+-- >        85 Maximum charge
+-- >              Self explanatory.
+-- >        86 Message total monetary amount
+-- >              Self explanatory.
+-- >        87 Minimum charge
+-- >              Self explanatory.
+-- >        88 National preference basis amount
+-- >              Amount giving the basis for national preference
+-- >              calculation.
+-- >        89 Negative collected balance
+-- >              Having a quantity of less than zero in an account.
+-- >        90 Negative ledger balance
+-- >              For an asset account, this would be when the account had
+-- >              a credit balance. For liability and owner's equity
+-- >              accounts, it would be when the account had a debit
+-- >              balance.
+-- >        91 Net adjustment
+-- >              The end-of-the-period total amount which is left after
+-- >              recording appropriate adjusting entries.
+-- >        92 Net fee position
+-- >              The payments left over after deductions or allowances
+-- >              have been made.
+-- >        93 Net year to date excess (deficit)
+-- >              A negative amount of an item.
+-- >        94 No amount of insurance
+-- >              No amount of insurance has been declared for a
+-- >              consignment.
+-- >        95 No declared value for carriage
+-- >              No value has been declared for purposes of carriage.
+-- >        96 No declared value for Customs
+-- >              No value has been declared for Customs purposes.
+-- >        97 Offer amount
+-- >              [5210] Total amount of an offer.
+-- >        98 Original amount
+-- >              Original amount, without charges, allowances or
+-- >              adjustment.
+-- >        99 Other charges at destination
+-- >              Code to indicate charges levied at destination.
+-- >       100 Other charges due agent
+-- >              Code to indicate that certain charges accrue to an agent.
+-- >       101 Other charges due carrier
+-- >              Code to indicate that certain charges accrue to a
+-- >              carrier.
+-- >       102 Other commissions
+-- >              Other commissions paid by the importer to his/her agent
+-- >              in relation to the goods being imported.
+-- >       103 Other deductible charges
+-- >              Other charges deducted from the total invoice value.
+-- >       104 Other transport charges
+-- >              (5292) Other charges paid for transport.
+-- >       105 Other valuation charges (Customs)
+-- >              Other valuation charges which are payable by reason of
+-- >              the importation or sale of the goods in the Customs
+-- >              territory.
+-- > |     106 Packing cost
+-- >              Cost for packing concerning labour and/or material.
+-- >       107 Packing cost (Customs)
+-- >              [5448] Costs incurred for all containers and coverings of
+-- >              whatever nature which are considered as being one for
+-- >              Customs purposes with the goods, and the cost of packing
+-- >              whether for labour or material.
+-- >       108 Parts incorporated in imported goods (Customs)
+-- >              Materials, components, parts and similar items
+-- >              incorporated in the imported goods.
+-- >       109 Payment discount amount
+-- >              Self-explanatory.
+-- >       110 Pick-up fee
+-- >              Fee incurring if item has been or will be picked up.
+-- >       111 Positive collected balance
+-- >              Having a quantity of greater than zero in an account.
+-- >       112 Positive ledger balance
+-- >              For an asset account, this would be when the account had
+-- >              a debit balance. For liability and owner's equity
+-- >              accounts, it would be when the account had a credit
+-- >              balance.
+-- >       113 Prepaid amount
+-- >              (5302) Amount which has been prepaid in advance.
+-- >       114 Prepaid charge summary total
+-- >              Total of all prepaid charges.
+-- >       115 Prepaid taxes total
+-- >              Total of all prepaid taxes.
+-- >       116 Purchase amount
+-- >              The cost of buying goods or services.
+-- >       117 Quantity discount
+-- >              Discount given for purchase of goods in bulk.
+-- >       118 Quota value
+-- >              Description to be provided.
+-- >       119 Received amount
+-- >              The amount is what the bank received, and the one before
+-- >              charges/allowances.
+-- >       120 Sales tax
+-- >              Identifies the amount of sales tax payable.
+-- >       121 Shipment value in domestic currency
+-- >              The cost of transportation in domestic currency.
+-- >       122 Specific amount payable
+-- >              Amount that the consignor agrees to be invoiced or to
+-- >              pay. This amount is part of the total charges applied to
+-- >              the consignment.
+-- >       123 Statistical value
+-- >              [5218] Value declared for statistical purposes of those
+-- >              goods in a consignment which have the same statistical
+-- >              heading and country of origin.
+-- >       124 Tax amount
+-- >              Tax imposed by government or other official authority
+-- >              related to the weight/volume charge or valuation charge.
+-- >       125 Taxable amount
+-- >              Self explanatory.
+-- >       126 To collect
+-- >              Description to be provided.
+-- >       127 Tools used in production of imported goods (Customs)
+-- >              Tools, dies, moulds and similar items used in the
+-- >              production of the imported goods.
+-- >       128 Total amount
+-- >              The amount specified is the total amount.
+-- >       129 Total amount subject to payment discount
+-- >              Part of the invoice amount which is subject to payment
+-- >              discount.
+-- >       130 Total charge due
+-- >              Total amount of charges payable to the carrier.
+-- >       131 Total charges/allowances
+-- >              The amount specified is the total of all
+-- >              charges/allowances.
+-- >       132 Total collect charges
+-- >              Total charges to be collected.
+-- >       133 Total collect charges at destination
+-- >              Total charges to be collected at destination.
+-- >       134 Total declared
+-- >              Description to be provided.
+-- >       135 Total freight due
+-- >              Total amount of freight costs payable to the carrier.
+-- >       136 Total invoice additional amount
+-- >              (5140) Amount to be added to the sum of invoice line
+-- >              amounts to arrive at the total invoice amount.
+-- >       138 Total monetary discount amount
+-- >              Total of monetary discount amounts.
+-- >       139 Total payment amount
+-- >              A complete charge for goods or services rendered.
+-- >       140 Total service charge
+-- >              The complete payment owed to one who has performed work
+-- >              for another.
+-- >       141 Cost, insurance and freight (CIF) value
+-- >              Identifies the value of cost, insurance and freight.
+-- >              (Refer to ICC Incoterm CIF for an expanded definition).
+-- >       142 Trade discount
+-- >              Discount given to any purchaser at a particular
+-- >              commercial level e.g. at wholesale or retail level.
+-- >       143 Transfer amount
+-- >              The amount which has been transferred from buyer to the
+-- >              sellers bank.
+-- >       144 Transport charges (Customs)
+-- >              (5292) Cost incurred by shipper in moving goods, by
+-- >              whatever means, from one place to another under the terms
+-- >              of the contract of carriage, see UN/ECE Recommendation No
+-- >              23. Synonym: freight charges (Customs).
+-- >       145 Transport charges incurred outside Customs territory
+-- >              (5292) Transport charges incurred outside a Customs
+-- >              territory (or a Customs union).
+-- >       146 Unit price
+-- >              (5110) Reporting monetary amount is a "per unit" amount.
+-- >       147 Acceptable quotation fluctuation amount
+-- >              The maximum increase or decrease in constituent material
+-- >              fluctuation which will not result in an item price
+-- >              renegotiation.
+-- >       148 Total payments under guarantee
+-- >              Total amount paid under guarantee, such as under a
+-- >              factor's guarantee.
+-- >       149 Valuation charge
+-- >              A charge based on the value of goods or cargo.
+-- >       150 Value added tax
+-- >              [5490] Amount in national currency resulting from the
+-- >              application, at the appropriate rate, of value added tax
+-- >              (or similar tax) to the invoice amount subject to such
+-- >              tax.
+-- >       151 Value insured
+-- >              Representation in figures of the total sum covered by an
+-- >              insurance for a particular shipment.
+-- >       152 Subsequent resale of imported goods (Customs)
+-- >              Value of any part of the proceeds of any subsequent
+-- >              resale, disposal or use of the imported goods that
+-- >              accrues, directly or indirectly, to the seller.
+-- >       153 Weight charge
+-- >              A charge based on the weight of goods or cargo.
+-- >       154 Amount to be collected
+-- >              Self explanatory.
+-- >       155 Standard duty
+-- >              Standard Customs duty that would apply if special
+-- >              provisions did not apply.
+-- >       156 G-Amount
+-- >              Amount out of total invoice amount being paid into a
+-- >              blocked account.
+-- >       157 Insurance value
+-- >              (5010) Value for which the goods are insured.
+-- >       158 Insurance and transport charges incurred inside Customs
+-- >           territory
+-- >              (5488)+(5292) Charges to be paid for moving goods, by
+-- >              whatever means, from the point of entry into the Customs
+-- >              territory (within a Customs union: to the point of entry
+-- >              in the final destination country).
+-- >       159 Licence (value deducted)
+-- >              Amount in the currency of the licence to be written off
+-- >              from the total licence value.
+-- >       160 Other costs
+-- >              (5346) Costs, other than packing, freight and insurance
+-- >              costs, specified separately.
+-- >       161 Duty, tax or fee amount
+-- >              Amount of duty, tax or fee.
+-- >       162 Customs duty paid
+-- >              Amount which can be deducted from the stated invoice
+-- >              price where that price includes the Customs duty amount.
+-- >       163 Wage tax share
+-- >              Wage tax share of total amount to be paid directly to
+-- >              tax collector.
+-- >       164 Social securities premiums share
+-- >              Social securities share of total amount to be paid
+-- >              directly to the social securities collector.
+-- >       165 Adjustment amount
+-- >              Amount being the balance of the amount to be adjusted and
+-- >              the adjusted amount.
+-- >       166 Guarantee amount (Customs)
+-- >              Amount of the guarantee placed with Customs.
+-- >       167 Actual versus calculated price difference
+-- >              Difference between actual and calculated price.
+-- >       168 Tax sub-totals
+-- >              Self explanatory.
+-- >       169 Alternate currency total amount
+-- >              Self-explanatory.
+-- >       170 Document amount
+-- >              Description to be provided.
+-- >       171 Total reassignments of factored invoices
+-- >              Total amount of factored invoices and credit notes
+-- >              reassigned to the seller or to another factor.
+-- >       172 Stated amount
+-- >              Description to be provided.
+-- >       173 Minimum amount
+-- >              Lowest possible value; minimum.
+-- >       174 Balance brought forward
+-- >              Opening balance of the account brought forward from the
+-- >              prior accounting period.
+-- >       175 Message total additional amount
+-- >              Description to be provided.
+-- >       176 Message total duty/tax/fee amount
+-- >              Total of all duty/tax/fee amounts.
+-- >       177 Message total amount prepaid
+-- >              Total of all prepaid amounts within the message.
+-- >       178 Exact amount
+-- >              Specific amount.
+-- >       179 Maximum amount
+-- >              Highest possible value; maximum.
+-- >       180 Amount up to
+-- >              Highest possible value; up to.
+-- >       181 Amount not exceeding
+-- >              Highest possible value; not exceeding.
+-- >       182 Any other specification/tolerance
+-- >              Any further qualification of the amount.
+-- >       183 No specification/tolerance
+-- >              No further qualification of the amount.
+-- >       184 Final net acquisition cost
+-- >              Self explanatory.
+-- >       185 Labor cost
+-- >              Self explanatory.
+-- >       186 Material cost
+-- >              Self explanatory.
+-- >       187 Other cost
+-- >              Self explanatory.
+-- >       188 Overhead cost
+-- >              Self explanatory.
+-- >       189 Packaging cost
+-- >              Self explanatory.
+-- >       190 Prototype set up cost
+-- >              Self explanatory.
+-- >       192 Raw material per cart cost
+-- >              Self explanatory.
+-- >       193 Raw material per unit of measure cost
+-- >              Self explanatory.
+-- >       194 Total die model cost
+-- >              Self explanatory.
+-- >       195 Total gauge cost
+-- >              Self explanatory.
+-- >       196 Total material including purchased components cost
+-- >              Self explanatory.
+-- >       197 Total purchased components cost
+-- >              Self explanatory.
+-- >       198 Total tooling cost
+-- >              Self explanatory.
+-- >       199 Delivery limitation amount
+-- >              Self explanatory.
+-- >       200 Minimum amount due
+-- >              Self explanatory.
+-- >       201 Penalty amount
+-- >              Self explanatory.
+-- >       202 Interest amount
+-- >              Self explanatory.
+-- >       203 Line item amount
+-- >              Goods item total minus allowances plus charges for line
+-- >              item. See also Code 66.
+-- >       204 Allowance amount
+-- >              Self explanatory.
+-- >       205 Additional amount covered: freight costs
+-- >              Additional amount (freight costs) which is also covered
+-- >              under the documentary credit.
+-- >       206 Additional amount covered: inspection costs
+-- >              Additional amount (inspection costs) which is also
+-- >              covered under the documentary credit.
+-- >       207 Additional amount covered: insurance costs
+-- >              Additional amount (insurance costs) which is also covered
+-- >              under the documentary credit.
+-- >       208 Additional amount covered: interest
+-- >              Additional amount (interest) which is also covered under
+-- >              the documentary credit.
+-- >       209 Agent commission amount
+-- >              Amount which has to be paid to an agent.
+-- >       210 Credit note amount
+-- >              Amount of a credit note.
+-- >       211 Debit note amount
+-- >              Amount of a debit note.
+-- >       212 Documentary credit amount
+-- >              Amount of the documentary credit.
+-- >       213 Part of documentary credit amount
+-- >              Part of documentary credit amount subject to sight
+-- >              payment, deferred payment or acceptance when the
+-- >              documentary credit is available by mixed payment.
+-- >       214 Advance payment at the beginning of works
+-- >              Amount paid to the contractor at the beginning of works
+-- >              in the construction to be deducted later.
+-- >       215 Deduction of advance payment amount at the beginning of
+-- >           works
+-- >              Progressive deduction of advance payment, as works go on.
+-- >       216 Advance payment amount on building material
+-- >              Self explanatory.
+-- >       217 Deduction of the advance payment amount on building material
+-- >              Self explanatory.
+-- >       218 Advance payment amount on stock
+-- >              Self explanatory.
+-- >       219 Deduction of the advance payment amount on stock
+-- >              Self explanatory.
+-- >       220 Amount subject to guarantee retention
+-- >              Amount participating in the assessment basis of a
+-- >              guarantee retention.
+-- >       221 Amount not subject of guarantee retention
+-- >              Amount not participating in the assessment basis of a
+-- >              guarantee retention.
+-- >       222 Amount subject to contractual retention
+-- >              Amount participating in the assessment basis of a
+-- >              contractual retention.
+-- >       223 Works amount, initial
+-- >              Total amount of works in the initial contract.
+-- >       224 Works amount, variations
+-- >              Total amount of contract variations, not including the
+-- >              amount planned on initial contract.
+-- >       225 Works amount, total
+-- >              Total amount of works, including initial contract and
+-- >              variations.
+-- >       226 Retention amount
+-- >              Self explanatory.
+-- >       227 Deposit
+-- >              Part of the amount of retention, not covered by guarantee
+-- >              of retention, and thus deducted from the amount paid to
+-- >              the contractor until release of retention.
+-- >       228 Deposit refund
+-- >              Refund of deposit, due to an increase of the guarantee of
+-- >              retention amount, or a decrease of the amount of
+-- >              retention.
+-- >       229 Guarantee on retention refund
+-- >              Refund of deposit, due to partial or complete release of
+-- >              retention.
+-- >       230 Amount subject to escalation
+-- >              Amount which is used as the basis for the calculation of
+-- >              the escalation.
+-- >       231 Amount subject to escalation, initial
+-- >              Amount in the initial contract which is used as the basis
+-- >              for the calculation of the escalation.
+-- >       232 Amount of variations subject to escalation
+-- >              Amount of variations which is used as the basis for the
+-- >              calculation of the escalation.
+-- >       233 Amount not subject to escalation
+-- >              Amount which is not included in the calculation of the
+-- >              escalation.
+-- >       234 Amount not subject to escalation, initial
+-- >              Amount in the initial contract which is not included in
+-- >              the calculation of the escalation.
+-- >       235 Amount of variations not subject to escalation
+-- >              Amount of variations which is not included in the
+-- >              calculation of the escalation.
+-- >       236 Amount subject to price adjustment
+-- >              Amount which is used as the basis for price adjustment
+-- >              calculation.
+-- >       237 Amount subject to price adjustment, initial
+-- >              Amount in the initial contract which is used as the basis
+-- >              for the price adjustment calculation.
+-- >       238 Amount of variations subject to price adjustment
+-- >              Amount of variations which is used as the basis for price
+-- >              adjustment calculation.
+-- >       239 Amount not subject to price adjustment
+-- >              Amount which is not included in the calculation of the
+-- >              price adjustment.
+-- >       240 Amount not subject to price adjustment, initial
+-- >              Amount in the initial contract which is not included in
+-- >              the calculation of the price adjustment.
+-- >       241 Amount of variations not subject to price adjustment
+-- >              Amount of variations which is not included in the
+-- >              calculation of the price adjustment.
+-- >       242 Escalation amount
+-- >              Difference between initial amount and current amount.
+-- >       243 Provisional escalation amount
+-- >              Difference between initial amount and provisional current
+-- >              amount.
+-- >       244 Price adjustment amount
+-- >              Difference between initial amount and revised amount.
+-- >       245 Provisional price adjustment amount
+-- >              Difference between initial amount and provisional revised
+-- >              amount.
+-- >       246 Price revaluation amount
+-- >              Amount of escalation and price adjustment.
+-- >       247 Provisional price revaluation amount
+-- >              Provisional amount of escalation and price adjustment.
+-- >       248 Contractual retention amount total
+-- >              Retention on a basis contractually fixed.
+-- >       249 Valuation amount
+-- >              Amount of valuation.
+-- >       250 Deduction amount of direct payments to subcontractors
+-- >              Deduction of amounts directly paid to subcontractors.
+-- >       251 Amortization total amount
+-- >              Indication of final monetary amount for amortization.
+-- >       252 Amortization order amount
+-- >              Indication of actual share of the monetary amount for
+-- >              amortization.
+-- >       253 Amortization cumulated amount
+-- >              Indication of actual cumulated monetary amount of
+-- >              previous and actual amortization order amount.
+-- >       254 Current credit cover
+-- >              Limit for current credit cover.
+-- >       255 New credit cover
+-- >              Limit for new credit cover.
+-- >       256 Order cover
+-- >              Credit cover for an individual order or shipment.
+-- >       257 Amount subject to dispute
+-- >              The amount that is being disputed.
+-- >       258 Charge amount for information
+-- >              The stated charge amount is only for information. The
+-- >              amount will be debited due to agreement.
+-- >       259 Total charges
+-- >              Self-explanatory.
+-- >       260 Total allowances
+-- >              Self-explanatory.
+-- >       261 Alternate currency amount
+-- >              Self-explanatory.
+-- >       262 Instalment amount
+-- >              Amount paid or due for a single instalment of an
+-- >              instalment payment scheme.
+-- >       263 Outstanding amount
+-- >              Amount still remaining outstanding for payment.
+-- >       264 Gross contribution amount
+-- >              Gross amount contributed. This may include commissions or
+-- >              allowances.
+-- >       265 Commission amount
+-- >              Amount of any commission.
+-- >       266 Net contribution amount
+-- >              Amount contributed net of any commission or other
+-- >              allowances .
+-- >       267 Regular contribution amount
+-- >              Specified contribution amount regularly paid.
+-- >       268 Previous regular contribution amount
+-- >              Specified contribution amount regularly paid before a
+-- >              change .
+-- >       269 Variation amount
+-- >              Difference from a nominated amount.
+-- >       270 Notional salary
+-- >              A salary amount specified for a particular category of
+-- >              employees.
+-- >       271 Nominal salary
+-- >              The salary amount without special allowances or other
+-- >              cash benefits.
+-- >       272 Taxable salary
+-- >              The salary amount which is taxable.
+-- >       273 Superannuation salary
+-- >              Salary used for superannuation benefit/contribution
+-- >              purposes .
+-- >       274 Total remuneration
+-- >              The amount of the total value of a person's remuneration.
+-- >       275 Other salary
+-- >              The amount of other salary or allowances in addition to a
+-- >              base salary.
+-- >       276 Annual salary
+-- >              Self-explanatory.
+-- >       277 Total contributions amount
+-- >              Sum of individual contributions.
+-- >       278 Voluntary contribution amount
+-- >              The amount is for a non-compulsory contribution.
+-- >       279 Instalment first amount
+-- >              First of a number of due amounts if payment by instalment
+-- >              is agreed.
+-- >       280 Instalment current amount
+-- >              Current amount of a number of due amounts if payment by
+-- >              instalment is agreed.
+-- >       281 Instalment last amount
+-- >              Last of a number of due amounts if payment by instalment
+-- >              is agreed.
+-- >       282 Current maintenance fee
+-- >              Current amount of a number of amounts due on maintenance
+-- >              contract.
+-- >       283 Current leasing fee
+-- >              Current amount of a number of amounts due on lease
+-- >              contracts.
+-- >       284 Day works amount
+-- >              The amount of work calculated on the basis of manpower
+-- >              time and supply cost.
+-- >       285 Manufacturer's bonus
+-- >              Allowance given as a manufacturer's bonus.
+-- >       286 Administration charge
+-- >              Charge made for an administration activity.
+-- >       287 Fuel charge
+-- >              Charge relating to fuel supplied.
+-- >       288 Registration plate charge
+-- >              The charge relating to the normal supply of vehicle
+-- >              registration plates.
+-- >       289 Subtotal amount
+-- >              Total amount of money that is part of a complete amount.
+-- >       290 Dumping export value
+-- >              The export value calculated for the purposes of assessing
+-- >              dumping duty.
+-- >       291 Foreign inland freight
+-- >              The amount of inland freight incurred in delivering the
+-- >              goods to the place of export.
+-- >       292 Concession amount
+-- >              The amount of any concession. To allow the nomination of
+-- >              the difference between the amount of duty plus tax paid
+-- >              and the amount that would have been payable without an
+-- >              end-use security being applied.
+-- >       293 Chargeback
+-- >              Invoice amount charged back to seller.
+-- >       294 Charge per credit cover
+-- >              Unit charge per credit cover established.
+-- >       295 Charge per unused credit cover
+-- >              Unit charge per unused credit cover.
+-- >       296 Total authorised deduction
+-- >              Total amount of authorised deductions from payment of
+-- >              invoices.
+-- >       297 Total chargebacks
+-- >              Total amount charged back to the seller.
+-- >       298 Total offsets
+-- >              Total amount offset against other items on the seller's
+-- >              or buyer's account.
+-- > |     299 Total special entries
+-- >              Total amount to be treated as special booking entry by
+-- >              the beneficiary.
+-- >       300 Balance carried forward
+-- >              Closing balance of the account to be carried forward to
+-- >              the next accounting period.
+-- >       301 Total outstanding invoices past due
+-- >              Total amount of outstanding invoices past due.
+-- >       302 Off balance disputed items
+-- >              Total amount of disputed invoices/credit notes.
+-- >       303 Commission invoices
+-- >              Amount of commission invoices.
+-- >       304 Other charges
+-- >              Miscellaneous charges.
+-- >       305 Amount remittances
+-- >              Amount of money remitted.
+-- >       306 Total amount of payment commission invoices
+-- >              Total amount of commission invoices paid.
+-- >       307 Total amount of payment other charges invoices
+-- >              Total amount of invoices for miscellaneous charges paid.
+-- >       308 Total amount credit notes
+-- >              Total amount of credit notes.
+-- >       309 Total adjustment invoices
+-- >              Total amount of adjustments to invoices.
+-- >       310 Total adjustment credit notes
+-- >              Total amount of adjustments to credit notes.
+-- >       311 Total adjustment payments
+-- >              Total amount of adjustments to payments.
+-- >       312 Base unit value
+-- >              Value per base unit.
+-- >       313 International freight
+-- >              The amount of freight paid for moving goods between place
+-- >              of export and place of import.
+-- >       314 Own risk amount
+-- >              Amount for own credit risk, not covered by credit cover.
+-- >       315 Opening balance
+-- >              The amount of the opening balance.
+-- >       316 Insurance premium
+-- >              Premium amount including commission without insurance tax
+-- >              and fees.
+-- >       317 Insurance commission
+-- >              Amount due to an intermediary to be chargeable to an
+-- >              insurer for obtaining insurance business.
+-- >       318 Insurance tax
+-- >              Insurance tax amount on insurance premium and fees.
+-- >       319 Fee of insurer
+-- >              Amount to be paid to an insurer as a handling charge.
+-- >       320 Fee of intermediary
+-- >              Amount to be paid to an intermediary as a handling fee.
+-- > +     321 Debit flow
+-- >              Debit flow amount applying to an account.
+-- > +     322 Closing balance payable
+-- >              Outstanding payable amount of the account at the end of
+-- >              the reporting period.
+-- > +     323 Opening balance payable
+-- >              Outstanding payable amount of the account at the
+-- >              beginning of the reporting period.
+-- > +     324 Opening balance receivable
+-- >              Outstanding receivable amount of the account at the
+-- >              beginning of the reporting period.
+-- > +     325 Closing balance receivable
+-- >              Outstanding receivable payable amount of the account at
+-- >              the end of the reporting period.
+-- > +     326 Net assets and liabilities
+-- >              Position amount of the assets and liabilities at
+-- >              reporting date.
+-- > +     327 Adjustment to debit flow
+-- >              Adjustment to debit flow amount.
+-- > +     328 Adjustment to credit flow
+-- >              Adjustment to a credit flow amount.
+-- > +     329 Credit flow
+-- >              Credit flow amount applying to an account.
+-- > +     330 Total prepaid other charges due carrier
+-- >              The total of prepaid other charges due to carrier.
+-- > +     331 Total collect weight charge
+-- >              The total collect charge based on weight.
+-- > +     332 Total prepaid weight charge
+-- >              The total prepaid charge based on weight.
+-- > +     333 Total collect other charges due carrier
+-- >              The total of collect other charges due to carrier.
+-- > +     334 Total prepaid other charges due agent
+-- >              The total of prepaid other charges due to agent.
+-- > +     335 Total collect valuation charge
+-- >              The total collect valuation charge.
+-- > +     336 Total prepaid valuation charge
+-- >              The total prepaid valuation charge.
+-- >    ZZZ    Mutually defined
+-- >              Mutually defined monetary amount.
+simple5025 :: Parser Value
+simple5025 = simple "5025" (alphaNumeric `upTo` 3)

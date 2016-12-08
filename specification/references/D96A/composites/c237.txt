@@ -1,0 +1,11 @@
+
+      C237  EQUIPMENT IDENTIFICATION
+
+      Desc: Marks (letters and/or numbers) identifying equipment used
+            for transport such as a container.
+
+010   8260   Equipment identification number               C  an..17
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   3207   Country, coded                                C  an..3
+

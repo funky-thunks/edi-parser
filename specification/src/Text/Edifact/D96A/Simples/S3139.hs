@@ -1,0 +1,246 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+---- Machine generated code.
+---- Output of edi-parser-scaffolder
+
+module Text.Edifact.D96A.Simples.S3139
+  ( simple3139
+  ) where
+
+import           Text.Edifact.Parsing
+import           Text.Edifact.Types   (Value)
+
+-- | Derived from this specification:
+--
+-- >   3139  Contact function, coded
+-- >
+-- >   Desc: Code specifying the function of a contact (e.g. department or
+-- >         person).
+-- >
+-- >   Repr: an..3
+-- >
+-- >    AA     Insurance contact
+-- >              Department/person to contact for matters regarding
+-- >              insurance.
+-- >    AB     Workshop contact
+-- >              Department/person to contact for matters regarding the
+-- >              workshop.
+-- >    AC     Accepting contact
+-- >              Department/person in charge of accepting incoming goods.
+-- >    AD     Accounting contact
+-- >              Department/person responsible for the accounts payable
+-- >              function within a corporation.
+-- >    AE     Contract contact
+-- >              Department/person to contact for matters regarding
+-- >              contracts.
+-- >    AF     Land registry contact
+-- >              Department/person to contact for matters regarding land
+-- >              registry.
+-- >    AG     Agent
+-- >              Department/person of the agent which acts on behalf of
+-- >              another party.
+-- >    AH     Coordination contact
+-- >              Department/person to contact for matters regarding
+-- >              technical coordination of works.
+-- >    AI     Project management contact
+-- >              Department/person to contact for matters regarding
+-- >              project management on behalf of the contractor.
+-- >    AJ     Investment contact
+-- >              Department/person to contact for matters regarding
+-- >              investments.
+-- >    AK     Works management contact
+-- >              Department/person to contact for matters regarding
+-- >              management of works on behalf of the owner.
+-- >    AL     Personnel contact
+-- >              Department/person to contact for matters regarding
+-- >              personnel (human resources).
+-- >    AM     Claims contact
+-- >              Department/person to contact for matters regarding
+-- >              claims.
+-- >    AN     Laboratory contact
+-- >              Department/person to contact for laboratory matters.
+-- >    AO     Plant/equipment contact
+-- >              Department/person to contact for matters regarding
+-- >              plant/equipment.
+-- >    AP     Accounts payable contact
+-- >              Department/person responsible for the accounts payable
+-- >              function within a corporation.
+-- >    AQ     Quantity surveyor contact
+-- >              Department/person to contact for matters regarding
+-- >              quantity surveying.
+-- >    AR     Accounts receivable contact
+-- >              Department/person responsible for the accounts receivable
+-- >              within a corporation.
+-- >    AS     Public relations contact
+-- >              Department/person to contact for matters regarding public
+-- >              relations.
+-- >    AT     Technical contact
+-- >              Department/person to contact for matters regarding
+-- >              technical issues.
+-- >    AU     City works authority contact
+-- >              Department/person to contact for matters regarding city
+-- >              works.
+-- >    AV     Maintenance contact
+-- >              Department/person to contact for matters regarding
+-- >              maintenance.
+-- >    AW     Town planning contact
+-- >              Department/person to contact for matters regarding town `
+-- >              planning.
+-- >    AX     Traffic authority contact
+-- >              Department/person to contact for matters regarding
+-- >              traffic.
+-- >    AY     Electricity supply contact
+-- >              Department/person to contact for matters regarding
+-- >              electricity supply.
+-- >    AZ     Gas supply contact
+-- >              Department/person to contact for matters regarding gas
+-- >              supply.
+-- >    BA     Water supply contact
+-- >              Department/person to contact for matters regarding water
+-- >              supply.
+-- >    BB     Telecommunications network contact
+-- >              Department/person to contact for matters regarding
+-- >              telecommunications network.
+-- >    BC     Banking contact
+-- >              Contact person for bank.
+-- >    BD     New developments contact
+-- >              Department/person to contact for matters regarding new
+-- >              developments (e.g. construction).
+-- >    BE     Transport infrastructure authority
+-- >              Department/person to contact for matters regarding
+-- >              transport infrastructure.
+-- >    BF     Service contact
+-- >              Department/person to be contacted in service matters.
+-- >    BU     Ultimate consignee
+-- >              Department/designated on the invoice or packing list as
+-- >              the final recipient of the stated merchandise.
+-- >    CA     Carrier
+-- >              (3126) Party undertaking or arranging transport of goods
+-- >              between named points.
+-- >    CB     Changed by
+-- >              Person who made the change.
+-- >    CC     Responsible person for information production
+-- >              Responsible person to contact for matters regarding the
+-- >              production of information.
+-- >    CD     Responsible person for information dissemination
+-- >              Responsible person to contact for matters regarding
+-- >              information dissemination.
+-- >    CE     Head of unit for computer data processing
+-- >              Head of unit to contact for matters regarding computer
+-- >              data processing.
+-- >    CF     Head of unit for information production
+-- >              Head of unit to contact for matters regarding the
+-- >              production of information.
+-- >    CG     Head of unit for information dissemination
+-- >              Head of unit to contact for matters regarding
+-- >              dissemination of information.
+-- >    CN     Consignee
+-- >              (3132) Party to which goods are consigned.
+-- >    CO     Consignor
+-- >              (3336) Party which, by contract with a carrier, consigns
+-- >              or sends goods with the carrier, or has them conveyed by
+-- >              him. Synonym: shipper/sender.
+-- >    CP     Responsible person for computer data processing
+-- >              Responsible person to contact for matters regarding
+-- >              computer data processing.
+-- >    CR     Customer relations
+-- >              Individual responsible for customer relations.
+-- >    CW     Confirmed with
+-- >              Person with whom the contents of the purchase order has
+-- >              been discussed and agreed (e.g. by telephone) prior to
+-- >              the sending of this message.
+-- >    DE     Department/employee to execute export procedures
+-- >              Self explanatory.
+-- >    DI     Department/employee to execute import procedures
+-- >              Self explanatory.
+-- >    DL     Delivery contact
+-- >              Department/person responsible for delivery.
+-- >    EB     Entered by
+-- >              Name of an individual who made the entry.
+-- >    EC     Education coordinator
+-- >              Person in charge of coordination of education.
+-- >    ED     Engineering contact
+-- >              Department/person to contact for matters regarding
+-- >              engineering.
+-- >    EX     Expeditor
+-- >              Party to be contacted where goods are (to be) expedited.
+-- >    GR     Goods receiving contact
+-- >              Department/person responsible for receiving the goods at
+-- >              the place of delivery.
+-- >    HE     Emergency dangerous goods contact
+-- >              Party who is to be contacted to intervene in case of
+-- >              emergency.
+-- >    HG     Dangerous goods contact
+-- >              Department/person to be contacted for details about the
+-- >              transportation of dangerous goods/hazardous material.
+-- >    HM     Hazardous material contact
+-- >              Department/person responsible for hazardous material
+-- >              control.
+-- >    IC     Information contact
+-- >              Department/person to contact for questions regarding
+-- >              transactions.
+-- >    IN     Insurer contact
+-- >              Self explanatory.
+-- >    LB     Place of delivery contact
+-- >              Self explanatory.
+-- >    LO     Place of collection contact
+-- >              Self explanatory.
+-- >    MC     Material control contact
+-- >              Department/person responsible for the
+-- >              controlling/inspection of goods.
+-- >    MD     Material disposition contact
+-- >              Department/person responsible for the
+-- >              disposition/scheduling of goods.
+-- >    MH     Material handling contact
+-- >              Self explanatory.
+-- >    MR     Message recipient contact
+-- >              Self explanatory.
+-- >    MS     Message sender contact
+-- >              Self explanatory.
+-- >    NT     Notification contact
+-- >              Self explanatory.
+-- >    OC     Order contact
+-- >              An individual to contact for questions regarding this
+-- >              order.
+-- >    PA     Prototype coordinator
+-- >              Description to be provided.
+-- >    PD     Purchasing contact
+-- >              Department/person responsible for issuing this purchase
+-- >              order.
+-- >    PE     Payee contact
+-- >              Self explanatory.
+-- >    PM     Product management contact
+-- >              Department/person to contact for questions regarding this
+-- >              order.
+-- >    QA     Quality assurance contact
+-- >              Quality assurance contact within an organization.
+-- >    QC     Quality coordinator contact
+-- >              Quality coordinator contact within an organization.
+-- >    RD     Receiving dock contact
+-- >              The receiving dock contact within an organization.
+-- >    SA     Sales administration
+-- >              Name of the sales administration contact within a
+-- >              corporation.
+-- >    SC     Schedule contact
+-- >              Name of the scheduling contact within a corporation.
+-- >    SD     Shipping contact
+-- >              The shipping department contact within an organization.
+-- >    SR     Sales representative or department
+-- >              The sales representative or department contact within an
+-- >              organization.
+-- >    SU     Supplier contact
+-- >              Department/person to be contacted at the supplier.
+-- >    TA     Traffic administrator
+-- >              The traffic administrator contact within an organization.
+-- >    TD     Test contact
+-- >              Department/person responsible for testing contact.
+-- >    TI     Technical documentation recipient
+-- >              Department/person to receive technical documentation.
+-- >    TR     Transport contact
+-- >              Department/person in charge of transportation.
+-- >    WH     Warehouse
+-- >              The warehouse contact within an organization.
+-- >    ZZZ    Mutually defined
+-- >              Self explanatory.
+simple3139 :: Parser Value
+simple3139 = simple "3139" (alphaNumeric `upTo` 3)

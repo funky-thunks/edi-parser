@@ -1,0 +1,11 @@
+
+       TMP  TEMPERATURE
+
+       Function: To specify the temperature setting.
+
+010    6245 TEMPERATURE TYPE CODE QUALIFIER            M    1 an..3
+
+020    C239 TEMPERATURE SETTING                        C    1
+       6246  Temperature value                         C      n..15
+       6411  Measurement unit code                     C      an..3
+

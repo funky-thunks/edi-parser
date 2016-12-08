@@ -1,0 +1,10 @@
+
+   7419  Hazardous material class code, identification
+
+   Desc: Code specifying the kind of hazard for a material.
+
+   Repr: an..4
+
+   Note: Association defined code.  May be used in combination with
+         1131/3055.
+

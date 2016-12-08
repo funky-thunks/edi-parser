@@ -1,0 +1,8 @@
+
+   3128  Carrier name
+
+   Desc: Name of party undertaking or arranging transport of goods
+         between named points.
+
+   Repr: an..35
+

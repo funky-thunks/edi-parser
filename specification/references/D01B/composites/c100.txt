@@ -1,0 +1,13 @@
+
+       C100 TERMS OF DELIVERY OR TRANSPORT
+
+       Desc: Terms of delivery or transport code from a specified
+             source.
+
+010    4053  Delivery or transport terms description
+             code                                      C      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    4052  Delivery or transport terms description   C      an..70
+050    4052  Delivery or transport terms description   C      an..70
+

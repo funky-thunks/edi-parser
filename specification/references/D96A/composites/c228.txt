@@ -1,0 +1,9 @@
+
+      C228  TRANSPORT MEANS
+
+      Desc: Code and/or name identifying the type of means of
+            transport.
+
+010   8179   Type of means of transport identification     C  an..8
+020   8178   Type of means of transport                    C  an..17
+

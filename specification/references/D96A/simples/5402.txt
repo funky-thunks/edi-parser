@@ -1,0 +1,8 @@
+
+   5402  Rate of exchange
+
+   Desc: The rate at which one specified currency is expressed in
+         another specified currency.
+
+   Repr: n..12
+

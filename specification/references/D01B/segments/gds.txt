@@ -1,0 +1,11 @@
+
+       GDS  NATURE OF CARGO
+
+       Function: To indicate the type of cargo as a general
+                 classification.
+
+010    C703 NATURE OF CARGO                            C    1
+       7085  Cargo type classification code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+

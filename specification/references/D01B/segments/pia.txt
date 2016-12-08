@@ -1,0 +1,38 @@
+
+       PIA  ADDITIONAL PRODUCT ID
+
+       Function: To specify additional or substitutional item
+                 identification codes.
+
+010    4347 PRODUCT IDENTIFIER CODE QUALIFIER          M    1 an..3
+
+020    C212 ITEM NUMBER IDENTIFICATION                 M    1
+       7140  Item identifier                           C      an..35
+       7143  Item type identification code             C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+030    C212 ITEM NUMBER IDENTIFICATION                 C    1
+       7140  Item identifier                           C      an..35
+       7143  Item type identification code             C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+040    C212 ITEM NUMBER IDENTIFICATION                 C    1
+       7140  Item identifier                           C      an..35
+       7143  Item type identification code             C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+050    C212 ITEM NUMBER IDENTIFICATION                 C    1
+       7140  Item identifier                           C      an..35
+       7143  Item type identification code             C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+060    C212 ITEM NUMBER IDENTIFICATION                 C    1
+       7140  Item identifier                           C      an..35
+       7143  Item type identification code             C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+

@@ -1,0 +1,9 @@
+
+       C239 TEMPERATURE SETTING
+
+       Desc: The temperature under which the goods are (to be)
+             stored or shipped.
+
+010    6246  Temperature value                         C      n..15
+020    6411  Measurement unit code                     C      an..3
+

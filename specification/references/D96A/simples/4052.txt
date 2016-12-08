@@ -1,0 +1,9 @@
+
+   4052  Terms of delivery or transport
+
+   Desc: Terms agreed between two parties (e.g. seller/buyer,
+         shipper/carrier) under which a product or service is
+         provided.
+
+   Repr: an..70
+

@@ -1,0 +1,55 @@
+name: edi-parser-specification
+version: 20190607
+synopsis: Support for subset of the Edifact specification
+description: Please see README.md
+category: Text
+author: FretLink
+maintainer: example@example.com
+copyright: 2019 FretLink
+github: fretlink/edi-parser
+
+extra-source-files:
+- README.md
+
+dependencies:
+- edi-parser-core
+
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wall
+  - -Werror
+  dependencies:
+  - base >=4.7 && <5
+
+executables:
+  edi-parser-specification:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - base
+    - edi-parser-specification
+    - text
+
+tests:
+  edi-parser-specification-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Werror
+    dependencies:
+    - base
+    - edi-parser-specification
+    - parsec
+    - HUnit
+    - test-framework
+    - test-framework-hunit
+    - text

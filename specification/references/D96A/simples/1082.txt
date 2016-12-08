@@ -1,0 +1,8 @@
+
+   1082  Line item number
+
+   Desc: Serial number designating each separate item within a series
+         of articles.
+
+   Repr: n..6
+

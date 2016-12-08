@@ -1,0 +1,8 @@
+
+   9308  Seal number
+
+   Desc: The number of a custom seal or another seal affixed to the
+         containers or other transport unit.
+
+   Repr: an..10
+

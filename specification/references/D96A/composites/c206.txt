@@ -1,0 +1,9 @@
+
+      C206  IDENTIFICATION NUMBER
+
+      Desc: The identification of an object.
+
+010   7402   Identity number                               M  an..35
+020   7405   Identity number qualifier                     C  an..3
+030   4405   Status, coded                                 C  an..3
+

@@ -1,0 +1,9 @@
+
+       C076 COMMUNICATION CONTACT
+
+       Desc: Communication number of a department or employee in
+             a specified channel.
+
+010    3148  Communication address identifier          M      an..512
+020    3155  Communication address code qualifier      M      an..3
+

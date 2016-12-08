@@ -1,0 +1,10 @@
+
+      C502  MEASUREMENT DETAILS
+
+      Desc: Identification of measurement type.
+
+010   6313   Measurement dimension, coded                  C  an..3
+020   6321   Measurement significance, coded               C  an..3
+030   6155   Measurement attribute, coded                  C  an..3
+040   6154   Measurement attribute                         C  an..70
+

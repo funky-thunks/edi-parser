@@ -1,0 +1,7 @@
+
+   3232  Related place/location two
+
+   Desc: Specification of a second related place/location by name.
+
+   Repr: an..70
+

@@ -1,0 +1,109 @@
+
+* 4221  Discrepancy, coded
+
+  Desc: Code defining the disposition of any difference between the
+        quantity ordered and invoiced, or shipped and invoiced for a
+        line item or transaction.
+
+  Repr: an..3
+
++  AA     Item discontinued by wholesaler
+             The wholesaler no longer offers the ordered product.
++  AB     Item no longer produced
+             The item ordered has been discontinued and is no longer
+             in production.
++  AC     Over-shipped
+             Code indicating that there was an excess quantity of
+             goods in a shipment relative to the order.
++  AD     Item out of stock at manufacturer
+             The item is out of stock at manufacturer.
++  AE     Delivered but not advised
+             Shipment or goods have been delivered without any advance
+             notification of delivery.
++  AF     Goods delivered damaged
+             Part or all of the goods in a shipment were delivered
+             damaged.
++  AG     Delivered too late
+             Delivered but at a later date than the delivery date
+             under the agreed conditions or stipulated in the order.
+   AN     Available now - no shipping schedule
+             Self explanatory.
+   AS     Available now - scheduled to ship (date)
+             Self explanatory.
+   BK     Back ordered from previous order
+             Self explanatory.
+   BP     Shipment partial - back order to follow
+             Self explanatory.
+   CA     Customer inquiry - all items
+             Self explanatory.
+   CC     Shipment complete
+             Self explanatory.
+   CE     Shipment includes extra items to meet price break
+             Self explanatory.
+   CI     Customer inquiry - shipped items only
+             Self explanatory.
+   CK     Cancelled from previous order
+             Self explanatory.
+   CM     Shipment complete with additional quantity
+             Self explanatory.
+   CN     Next carrier, PVE - (date)
+             Self explanatory.
+   CO     Customer inquiry - unshipped items only
+             Self explanatory.
+   CP     Shipment partial - considered complete, no backorder
+             Self explanatory.
+   CS     Shipment complete with substitution
+             Self explanatory.
+   IC     Item cancelled
+             Self explanatory.
+   IS     Item represents substitution from original order
+             Self explanatory.
+   LS     Last shipment (date)
+             Self explanatory.
+   NF     Not yet published
+             Self explanatory.
+   NN     Not in process - no shipping schedule
+             Self explanatory.
+   NS     Not in process - schedule to ship (date)
+             Self explanatory.
+   OF     Order sent to factory for production (date)
+             Self explanatory.
+   OM     Item sent to factory for production (date)
+             Self explanatory.
+   OP     Out of print
+             Self explanatory.
+   OS     Item out of stock because of strike of force majeure
+             Self explanatory.
+   OW     Item out of stock at wholesaler
+             Self explanatory.
+   PA     Purchase order inquiry - all items
+             Self explanatory.
+   PD     Purchase order complete
+             Self explanatory.
+   PI     Purchase order inquiry - shipped items only
+             Self explanatory.
+   PK     Packed-to-date (date)
+             Self explanatory.
+   PN     In process - no shipping schedule
+             Self explanatory.
+   PO     Purchase order inquiry - unshipped items only
+             Self explanatory.
+   PP     Purchase order inquiry - specific items
+             Self explanatory.
+   PS     In process - scheduled to ship (date)
+             Self explanatory.
+   RA     Item rationed
+             Self explanatory.
+   SL     Shipped-to-date (date)
+             Self explanatory.
+   SP     Scheduled for production at factory
+             Self explanatory.
+   SS     Split shipment
+             Shipment is only part of the ordered quantity.
+   TW     Item temporary discontinued by wholesaler
+             Self explanatory.
+   UR     Unsolicited report
+             Self explanatory.
+   ZZZ    Mutually defined
+             Self explanatory.
+

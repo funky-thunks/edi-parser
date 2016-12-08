@@ -1,0 +1,20 @@
+
+  9303  Sealing party, coded
+
+  Desc: Identification of the issuer of the seal number.
+
+  Repr: an..3
+
+   CA     Carrier
+             Party undertaking or arranging transport of goods between
+             named points.
+   CU     Customs
+             Self explanatory.
+   SH     Shipper
+             Party which, by contract with a carrier, consigns or
+             sends goods with the carrier, or has them conveyed by
+             him.
+   TO     Terminal operator
+             Party which handles the loading and unloading of marine
+             vessels.
+

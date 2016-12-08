@@ -1,0 +1,7 @@
+
+   9012  Status reason
+
+   Desc: Provides the reason behind a status event.
+
+   Repr: an..35
+

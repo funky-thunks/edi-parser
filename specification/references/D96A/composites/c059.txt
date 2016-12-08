@@ -1,0 +1,11 @@
+
+    * C059  STREET
+
+      Desc: Street address and/or PO Box number in a structured
+            address: one to three lines.
+
+010   3042   Street and number/p.o. box                    M  an..35
+020   3042   Street and number/p.o. box                    C  an..35
+030   3042   Street and number/p.o. box                    C  an..35
+040 + 3042   Street and number/p.o. box                    C  an..35
+

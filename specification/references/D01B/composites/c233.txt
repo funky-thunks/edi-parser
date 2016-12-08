@@ -1,0 +1,13 @@
+
+       C233 SERVICE
+
+       Desc: To identify a service (which may constitute an
+             additional component to a basic contract).
+
+010    7273  Service requirement code                  M      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    7273  Service requirement code                  C      an..3
+050    1131  Code list identification code             C      an..17
+060    3055  Code list responsible agency code         C      an..3
+

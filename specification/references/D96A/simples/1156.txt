@@ -1,0 +1,8 @@
+
+   1156  Line number
+
+   Desc: Number of the line in the document/message referenced in 1154
+         Reference number.
+
+   Repr: an..6
+

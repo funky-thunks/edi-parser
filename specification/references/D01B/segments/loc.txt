@@ -1,0 +1,28 @@
+
+       LOC  PLACE/LOCATION IDENTIFICATION
+
+       Function: To identify a place or a location and/or related
+                 locations.
+
+010    3227 LOCATION FUNCTION CODE QUALIFIER           M    1 an..3
+
+020    C517 LOCATION IDENTIFICATION                    C    1
+       3225  Location name code                        C      an..25
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       3224  Location name                             C      an..256
+
+030    C519 RELATED LOCATION ONE IDENTIFICATION        C    1
+       3223  First related location name code          C      an..25
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       3222  First related location name               C      an..70
+
+040    C553 RELATED LOCATION TWO IDENTIFICATION        C    1
+       3233  Second related location name code         C      an..25
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       3232  Second related location name              C      an..70
+
+050    5479 RELATION CODE                              C    1 an..3
+

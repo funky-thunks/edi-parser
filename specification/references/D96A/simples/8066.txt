@@ -1,0 +1,7 @@
+
+   8066  Mode of transport
+
+   Desc: Method of transport used for the carriage of the goods.
+
+   Repr: an..17
+

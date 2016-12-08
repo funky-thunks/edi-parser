@@ -1,0 +1,8 @@
+
+   7164  Hierarchical id. number
+
+   Desc: A unique number assigned by the sender to identify a level
+         within a hierarchical structure.
+
+   Repr: an..12
+

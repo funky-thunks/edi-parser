@@ -1,0 +1,9 @@
+
+   3413  Department or employee identification
+
+   Desc: Internal identification code.
+
+   Repr: an..17
+
+   Note: Code specified by organisation concerned.
+

@@ -1,0 +1,10 @@
+
+       C212 ITEM NUMBER IDENTIFICATION
+
+       Desc: Goods identification for a specified source.
+
+010    7140  Item identifier                           C      an..35
+020    7143  Item type identification code             C      an..3
+030    1131  Code list identification code             C      an..17
+040    3055  Code list responsible agency code         C      an..3
+

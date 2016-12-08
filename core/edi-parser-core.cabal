@@ -1,0 +1,80 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: ac9aca9d28ed9aecc58673e920756536a610462adfc7c396aac1a00fa8ea526c
+
+name:           edi-parser-core
+version:        20190607
+synopsis:       Example parser for EDI files
+description:    Please see README.md
+category:       Text
+homepage:       https://github.com/fretlink/edi-parser#readme
+bug-reports:    https://github.com/fretlink/edi-parser/issues
+author:         FretLink
+maintainer:     example@example.com
+copyright:      2019 FretLink
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/fretlink/edi-parser
+
+library
+  exposed-modules:
+      Text.Edifact.Common
+      Text.Edifact.Common.Composites
+      Text.Edifact.Common.Segments
+      Text.Edifact.Common.Segments.UNA
+      Text.Edifact.Common.Segments.UNB
+      Text.Edifact.Common.Segments.UNH
+      Text.Edifact.Common.Segments.UNS
+      Text.Edifact.Common.Segments.UNT
+      Text.Edifact.Common.Segments.UNZ
+      Text.Edifact.Common.Simples
+      Text.Edifact.Inspect
+      Text.Edifact.Parsing
+      Text.Edifact.Parsing.Combinators
+      Text.Edifact.Parsing.Commons
+      Text.Edifact.Parsing.Primitives
+      Text.Edifact.Types
+  other-modules:
+      Paths_edi_parser_core
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Werror
+  build-depends:
+      base >=4.7 && <5
+    , data-default
+    , formatting
+    , mtl
+    , parsec
+    , scientific
+    , text
+    , time
+  default-language: Haskell2010
+
+test-suite edi-parser-core-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Parsing.CombinatorsTest
+      Parsing.PrimitivesTest
+      ParsingTest
+      Paths_edi_parser_core
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:
+      HUnit
+    , base
+    , edi-parser-core
+    , parsec
+    , test-framework
+    , test-framework-hunit
+    , text
+  default-language: Haskell2010

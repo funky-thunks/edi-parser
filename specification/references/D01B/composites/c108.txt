@@ -1,0 +1,11 @@
+
+       C108 TEXT LITERAL
+
+       Desc: Free text; one to five lines.
+
+010    4440  Free text value                           M      an..512
+020    4440  Free text value                           C      an..512
+030    4440  Free text value                           C      an..512
+040    4440  Free text value                           C      an..512
+050    4440  Free text value                           C      an..512
+

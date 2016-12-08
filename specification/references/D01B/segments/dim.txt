@@ -1,0 +1,13 @@
+
+       DIM  DIMENSIONS
+
+       Function: To specify dimensions.
+
+010    6145 DIMENSION TYPE CODE QUALIFIER              M    1 an..3
+
+020    C211 DIMENSIONS                                 M    1
+       6411  Measurement unit code                     M      an..3
+       6168  Length dimension value                    C      n..15
+       6140  Width dimension value                     C      n..15
+       6008  Height dimension value                    C      n..15
+

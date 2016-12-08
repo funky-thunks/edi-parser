@@ -1,0 +1,7 @@
+
+   6162  Range minimum
+
+   Desc: Minimum of a range.
+
+   Repr: n..18
+

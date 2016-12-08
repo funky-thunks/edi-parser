@@ -1,0 +1,9 @@
+
+      C235  HAZARD IDENTIFICATION
+
+      Desc: Identification of the Orange placard required on the means
+            of transport.
+
+010   8158   Hazard identification number, upper part      C  an..4
+020   8186   Substance identification number, lower part   C  an4
+

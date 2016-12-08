@@ -1,0 +1,7 @@
+
+   3042  Street and number/p.o. box
+
+   Desc: Street and number in plain language, or Post Office Box No.
+
+   Repr: an..35
+

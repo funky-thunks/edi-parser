@@ -1,0 +1,9 @@
+
+       C554 RATE/TARIFF CLASS DETAIL
+
+       Desc: Identification of the applicable rate/tariff class.
+
+010    5243  Rate or tariff class description code     C      an..9
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+

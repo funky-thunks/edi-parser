@@ -1,0 +1,12 @@
+
+      C509  PRICE INFORMATION
+
+      Desc: Identification of price type, price and related details.
+
+010   5125   Price qualifier                               M  an..3
+020   5118   Price                                         C  n..15
+030   5375   Price type, coded                             C  an..3
+040   5387   Price type qualifier                          C  an..3
+050   5284   Unit price basis                              C  n..9
+060   6411   Measure unit qualifier                        C  an..3
+

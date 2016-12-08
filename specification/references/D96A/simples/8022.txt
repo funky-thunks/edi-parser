@@ -1,0 +1,8 @@
+
+   8022  Freight and charges
+
+   Desc: Plain language statement describing freight and other
+         charges.
+
+   Repr: an..26
+

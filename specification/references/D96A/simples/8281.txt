@@ -1,0 +1,14 @@
+
+  8281  Transport ownership, coded
+
+  Desc: Code indicating the ownership of the means of transport.
+
+  Repr: an..3
+
+        1 Transport for the owner's account
+             The owner of the transported goods is also the owner of
+             the means of transport or rented it for this transport.
+        2 Transport for another account
+             The owner of the transported goods does not own the means
+             of transport or has not rented it for this transport.
+

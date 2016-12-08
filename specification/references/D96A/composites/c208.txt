@@ -1,0 +1,9 @@
+
+      C208  IDENTITY NUMBER RANGE
+
+      Desc: Goods item identification numbers, start and end of
+            consecutively numbered range.
+
+010   7402   Identity number                               M  an..35
+020   7402   Identity number                               C  an..35
+

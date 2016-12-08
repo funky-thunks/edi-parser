@@ -1,0 +1,9 @@
+
+   1312  Consignment load sequence number
+
+   Desc: To indicate the sequence of loading in which the consignments
+         are loaded in a piece of equipment or in a means of transport
+         (e.g. truck).
+
+   Repr: n..4
+

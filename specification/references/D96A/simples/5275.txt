@@ -1,0 +1,10 @@
+
+   5275  Supplementary rate/tariff basis identification
+
+   Desc: Code identifying supplementary rate/tariff.
+
+   Repr: an..6
+
+   Note: User or association defined code.  May be used in combination
+         with 1131/3055.
+

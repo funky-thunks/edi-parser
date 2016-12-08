@@ -1,0 +1,11 @@
+
+       C501 PERCENTAGE DETAILS
+
+       Desc: Percentage relating to a specified basis.
+
+010    5245  Percentage type code qualifier            M      an..3
+020    5482  Percentage                                C      n..10
+030    5249  Percentage basis identification code      C      an..3
+040    1131  Code list identification code             C      an..17
+050    3055  Code list responsible agency code         C      an..3
+

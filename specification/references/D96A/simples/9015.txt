@@ -1,0 +1,10 @@
+
+  9015  Status type, coded
+
+  Desc: Code identifying the type of status event.
+
+  Repr: an..3
+
+        1 Transport
+             Status type is related to transport.
+

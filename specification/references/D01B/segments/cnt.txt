@@ -1,0 +1,10 @@
+
+       CNT  CONTROL TOTAL
+
+       Function: To provide control total.
+
+010    C270 CONTROL                                    M    1
+       6069  Control total type code qualifier         M      an..3
+       6066  Control total value                       M      n..18
+       6411  Measurement unit code                     C      an..3
+

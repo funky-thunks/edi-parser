@@ -1,0 +1,20 @@
+
+  8339  Packing group, coded
+
+  Desc: Identification of a packing group by code.
+
+  Repr: an..3
+
+        1 Great danger
+             Packaging meeting criteria to pack hazardous materials
+             with great danger. Group I according to IATA/IMDG/ADR/RID
+             regulations.
+        2 Medium danger
+             Packaging meeting criteria to pack hazardous materials
+             with great danger. Group II according to
+             IATA/IDMG/ADR/RID regulations.
+        3 Minor danger
+             Packaging meeting criteria to pack hazardous materials
+             with great danger. Group III according to
+             IATA/IDMG/ADR/RID regulations.
+

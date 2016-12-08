@@ -1,0 +1,47 @@
+
+       GID  GOODS ITEM DETAILS
+
+       Function: To indicate totals of a goods item.
+
+010    1496 GOODS ITEM NUMBER                          C    1 n..5
+
+020    C213 NUMBER AND TYPE OF PACKAGES                C    1
+       7224  Package quantity                          C      n..8
+       7065  Package type description code             C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       7064  Type of packages                          C      an..35
+       7233  Packaging related description code        C      an..3
+
+030    C213 NUMBER AND TYPE OF PACKAGES                C    1
+       7224  Package quantity                          C      n..8
+       7065  Package type description code             C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       7064  Type of packages                          C      an..35
+       7233  Packaging related description code        C      an..3
+
+040    C213 NUMBER AND TYPE OF PACKAGES                C    1
+       7224  Package quantity                          C      n..8
+       7065  Package type description code             C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       7064  Type of packages                          C      an..35
+       7233  Packaging related description code        C      an..3
+
+050    C213 NUMBER AND TYPE OF PACKAGES                C    1
+       7224  Package quantity                          C      n..8
+       7065  Package type description code             C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       7064  Type of packages                          C      an..35
+       7233  Packaging related description code        C      an..3
+
+060    C213 NUMBER AND TYPE OF PACKAGES                C    1
+       7224  Package quantity                          C      n..8
+       7065  Package type description code             C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       7064  Type of packages                          C      an..35
+       7233  Packaging related description code        C      an..3
+

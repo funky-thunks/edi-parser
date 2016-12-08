@@ -1,0 +1,11 @@
+
+       C524 HANDLING INSTRUCTIONS
+
+       Desc: Instruction for the handling of goods, products or
+             articles in shipment, storage etc.
+
+010    4079  Handling instruction description code     C      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    4078  Handling instruction description          C      an..70
+

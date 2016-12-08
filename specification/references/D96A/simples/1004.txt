@@ -1,0 +1,8 @@
+
+   1004  Document/message number
+
+   Desc: Reference number assigned to the document/message by the
+         issuer.
+
+   Repr: an..35
+

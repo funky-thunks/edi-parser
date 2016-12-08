@@ -1,0 +1,12 @@
+
+  4517  Seal condition, coded
+
+  Desc: To indicate the condition of a seal.
+
+  Repr: an..3
+
+        1 In right condition
+             The seal is in right condition.
+        2 Damaged
+             The seal is damaged.
+

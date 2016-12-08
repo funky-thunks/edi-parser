@@ -1,0 +1,16 @@
+
+    | C210  MARKS & LABELS
+
+    | Desc: Shipping marks on packages in free text; one to ten lines.
+
+010   7102   Shipping marks                                M  an..35
+020   7102   Shipping marks                                C  an..35
+030   7102   Shipping marks                                C  an..35
+040   7102   Shipping marks                                C  an..35
+050   7102   Shipping marks                                C  an..35
+060   7102   Shipping marks                                C  an..35
+070   7102   Shipping marks                                C  an..35
+080   7102   Shipping marks                                C  an..35
+090   7102   Shipping marks                                C  an..35
+100   7102   Shipping marks                                C  an..35
+

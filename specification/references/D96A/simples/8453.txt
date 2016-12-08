@@ -1,0 +1,10 @@
+
+   8453  Nationality of means of transport, coded
+
+   Desc: Coded name of the country in which a means of transport is
+         registered.
+
+   Repr: an..3
+
+   Note: Use ISO 3166 alpha two country code.
+

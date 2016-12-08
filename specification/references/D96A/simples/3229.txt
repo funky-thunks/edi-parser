@@ -1,0 +1,10 @@
+
+   3229  Country sub-entity identification
+
+   Desc: Identification of the name of sub-entities (state, province)
+         defined by appropriate governmental agencies.
+
+   Repr: an..9
+
+   Note: Use code defined by appropriate national authority.
+

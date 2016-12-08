@@ -1,0 +1,7 @@
+
+   6350  Number of units
+
+   Desc: Number of units of a certain type.
+
+   Repr: n..15
+

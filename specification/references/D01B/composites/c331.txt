@@ -1,0 +1,11 @@
+
+       C331 INSURANCE COVER DETAILS
+
+       Desc: To provide the insurance cover details.
+
+010    4495  Insurance cover description code          C      an..17
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    4494  Insurance cover description               C      an..35
+050    4494  Insurance cover description               C      an..35
+

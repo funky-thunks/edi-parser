@@ -1,0 +1,7 @@
+
+   6152  Range maximum
+
+   Desc: Maximum of a range.
+
+   Repr: n..18
+

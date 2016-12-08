@@ -1,0 +1,11 @@
+
+      C522  INSTRUCTION
+
+      Desc: To specify an instruction.
+
+010   4403   Instruction qualifier                         M  an..3
+020   4401   Instruction, coded                            C  an..3
+030   1131   Code list qualifier                           C  an..3
+040   3055   Code list responsible agency, coded           C  an..3
+050   4400   Instruction                                   C  an..35
+

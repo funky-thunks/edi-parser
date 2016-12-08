@@ -1,0 +1,7 @@
+
+   6168  Length dimension
+
+   Desc: Length of pieces or packages stated for transport purposes.
+
+   Repr: n..15
+

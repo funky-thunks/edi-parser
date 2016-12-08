@@ -1,0 +1,8 @@
+
+      C279  QUANTITY DIFFERENCE INFORMATION
+
+      Desc: Information on quantity difference.
+
+010   6064   Quantity difference                           M  n..15
+020   6063   Quantity qualifier                            C  an..3
+

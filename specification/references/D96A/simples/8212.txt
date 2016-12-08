@@ -1,0 +1,10 @@
+
+   8212  Id. of the means of transport
+
+   Desc: Identification of the means of transport by name or number.
+
+   Repr: an..35
+
+   Note: Use relevant code.  May be used in combination with
+         1131/3055.
+

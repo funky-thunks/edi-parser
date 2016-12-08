@@ -1,0 +1,12 @@
+
+       C516 MONETARY AMOUNT
+
+       Desc: Amount of goods or services stated as a monetary
+             amount in a specified currency.
+
+010    5025  Monetary amount type code qualifier       M      an..3
+020    5004  Monetary amount                           C      n..35
+030    6345  Currency identification code              C      an..3
+040    6343  Currency type code qualifier              C      an..3
+050    4405  Status description code                   C      an..3
+

@@ -1,0 +1,9 @@
+
+      C205  HAZARD CODE
+
+      Desc: The identification of the dangerous goods in code.
+
+010   8351   Hazard code identification                    M  an..7
+020   8078   Hazard substance/item/page number             C  an..7
+030   8092   Hazard code version number                    C  an..10
+

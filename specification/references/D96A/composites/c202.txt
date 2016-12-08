@@ -1,0 +1,11 @@
+
+      C202  PACKAGE TYPE
+
+      Desc: Type of package by name or by code from a specified
+            source.
+
+010   7065   Type of packages identification               C  an..17
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   7064   Type of packages                              C  an..35
+

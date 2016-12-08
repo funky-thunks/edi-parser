@@ -1,0 +1,7 @@
+
+   7140  Item number
+
+   Desc: A number allocated to a group or item.
+
+   Repr: an..35
+

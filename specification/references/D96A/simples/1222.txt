@@ -1,0 +1,8 @@
+
+   1222  Configuration level
+
+   Desc: Number indicating the level of an object which is in a
+         hierarchy.
+
+   Repr: n..2
+

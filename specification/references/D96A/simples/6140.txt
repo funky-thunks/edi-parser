@@ -1,0 +1,7 @@
+
+   6140  Width dimension
+
+   Desc: Width of pieces or packages stated for transport purposes.
+
+   Repr: n..15
+

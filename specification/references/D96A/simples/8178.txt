@@ -1,0 +1,8 @@
+
+   8178  Type of means of transport
+
+   Desc: Description of the type of the means of transport being
+         utilized.
+
+   Repr: an..17
+

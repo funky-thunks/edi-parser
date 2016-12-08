@@ -1,0 +1,10 @@
+
+      C601  STATUS TYPE
+
+      Desc: To specify the type of status in relation to an industry
+            sector or business function.
+
+010   9015   Status type, coded                            M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

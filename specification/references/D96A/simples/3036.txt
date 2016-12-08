@@ -1,0 +1,7 @@
+
+   3036  Party name
+
+   Desc: Name of a party involved in a transaction.
+
+   Repr: an..35
+

@@ -1,0 +1,12 @@
+
+       C222 TRANSPORT IDENTIFICATION
+
+       Desc: Code and/or name identifying the means of transport.
+
+010    8213  Transport means identification name
+             identifier                                C      an..9
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    8212  Transport means identification name       C      an..35
+050    8453  Transport means nationality code          C      an..3
+

@@ -1,0 +1,7 @@
+
+*| 3148  Communication number
+
+|  Desc: The communication number.
+
+   Repr: an..512
+

@@ -1,0 +1,9 @@
+
+      C703  NATURE OF CARGO
+
+      Desc: Rough classification of a type of cargo.
+
+010   7085   Nature of cargo, coded                        M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

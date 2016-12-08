@@ -1,0 +1,11 @@
+
+      C215  SEAL ISSUER
+
+      Desc: Identification of the issuer of a seal on equipment either
+            by code or by name.
+
+010   9303   Sealing party, coded                          C  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   9302   Sealing party                                 C  an..35
+

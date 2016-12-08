@@ -1,0 +1,8 @@
+
+   1496  Goods item number
+
+   Desc: Serial number differentiating each separate goods item entry
+         of a consignment as contained in one document/declaration.
+
+   Repr: n..5
+

@@ -1,0 +1,11 @@
+
+      C827  TYPE OF MARKING
+
+      Desc: Specification of the type of marking that reflects the
+            method that was used and the conventions adhered to for
+            marking (e.g. of packages).
+
+010   7511   Type of marking, coded                        M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

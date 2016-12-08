@@ -1,0 +1,8 @@
+
+      C220  MODE OF TRANSPORT
+
+      Desc: Method of transport code or name. Code preferred.
+
+010   8067   Mode of transport, coded                      C  an..3
+020   8066   Mode of transport                             C  an..17
+

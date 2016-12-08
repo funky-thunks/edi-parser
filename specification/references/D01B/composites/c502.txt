@@ -1,0 +1,10 @@
+
+       C502 MEASUREMENT DETAILS
+
+       Desc: Identification of measurement type.
+
+010    6313  Measured attribute code                   C      an..3
+020    6321  Measurement significance code             C      an..3
+030    6155  Non-discrete measurement name code        C      an..17
+040    6154  Non-discrete measurement name             C      an..70
+

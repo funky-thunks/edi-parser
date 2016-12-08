@@ -1,0 +1,15 @@
+
+  5213  Sub-line price change, coded
+
+  Desc: Code indicating disposition of the price change of a sub-line
+        item.
+
+  Repr: an..3
+
+   A      Added to the baseline item unit price
+             Self explanatory.
+   I      Included in the baseline item unit price
+             Self explanatory.
+   S      Subtracted from the baseline item unit price
+             Self explanatory.
+

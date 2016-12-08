@@ -1,0 +1,10 @@
+
+       C270 CONTROL
+
+       Desc: Control total for checking integrity of a message or
+             part of a message.
+
+010    6069  Control total type code qualifier         M      an..3
+020    6066  Control total value                       M      n..18
+030    6411  Measurement unit code                     C      an..3
+

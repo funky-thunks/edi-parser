@@ -1,0 +1,12 @@
+
+       C401 EXCESS TRANSPORTATION INFORMATION
+
+       Desc: To provide details of reason for, and responsibility
+             for, use of transportation other than normally
+             utilized.
+
+010    8457  Excess transportation reason code         M      an..3
+020    8459  Excess transportation responsibility code M      an..3
+030    7130  Customer shipment authorisation
+             identifier                                C      an..17
+

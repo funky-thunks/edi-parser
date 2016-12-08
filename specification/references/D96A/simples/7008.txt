@@ -1,0 +1,7 @@
+
+   7008  Item description
+
+   Desc: Plain language description of articles or products.
+
+   Repr: an..35
+

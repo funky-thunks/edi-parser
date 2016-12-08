@@ -1,0 +1,284 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+---- Machine generated code.
+---- Output of edi-parser-scaffolder
+
+module Text.Edifact.D96A.Simples.S4183
+  ( simple4183
+  ) where
+
+import           Text.Edifact.Parsing
+import           Text.Edifact.Types   (Value)
+
+-- | Derived from this specification:
+--
+-- > * 4183  Special conditions, coded
+-- >
+-- >   Desc: Indication of a specific condition.
+-- >
+-- >   Repr: an..3
+-- >
+-- >         1 Item for national preference
+-- >              Item concerned is applicable to national preference
+-- >              calculation.
+-- >         2 Item qualifying for payment discount
+-- >              Item concerned is applicable for settlement/payment
+-- >              discount calculation.
+-- >         3 Item not qualifying for payment discount
+-- >              Item concerned is not applicable for settlement/payment
+-- >              discount calculation.
+-- >         5 Item not to be included in bonus calculation
+-- >              Item concerned is not applicable for bonus calculation.
+-- >         6 Subject to bonus
+-- >              Item concerned is applicable for bonus calculation.
+-- >         7 Subject to commission
+-- >              Item concerned is applicable for commission calculation.
+-- >         8 Subject to discount
+-- >              Item concerned is applicable for discount calculation.
+-- >         9 Freely available in EEC
+-- >              Self explanatory.
+-- >        10 Subject to settlement discount
+-- >              Item concerned is applicable for the overall settlement
+-- >              discount.
+-- >        11 Price includes excise
+-- >              Self explanatory.
+-- >        12 Price includes tax
+-- >              Self explanatory.
+-- >        13 Price include duty
+-- >              Self explanatory.
+-- >        14 Not subject to commission
+-- >              Item concerned is not applicable for commission
+-- >              calculation.
+-- >        15 Not subject to discount
+-- >              Item concerned is not applicable for discount
+-- >              calculation.
+-- >        16 Subject to embargo restriction
+-- >              Item concerned is subject to embargo restriction.
+-- >        17 Item not subject to embargo restrictions
+-- >              Item concerned is not subject to embargo restriction.
+-- >        18 Item subject to national export restrictions
+-- >              Item concerned requires export declaration.
+-- >        19 Item not subject to national export restrictions
+-- >              Item concerned does not require export declaration.
+-- >        20 Item subject to import restrictions
+-- >              Item concerned is liable to import restrictions defined
+-- >              by relevant national authority.
+-- >        21 Item not subject to import restrictions
+-- >              Item concerned is not liable to import restrictions
+-- >              defined by relevant national authority.
+-- >        22 Signed
+-- >              Document has to be signed.
+-- >        23 Authenticated
+-- >              Document/message has to have official or regulatory
+-- >              approval.
+-- >        24 Original(s) to be certified
+-- >              Original document/message is to be certified by an
+-- >              official, or otherwise qualified, organization or person.
+-- >        25 Original(s) to be legalized
+-- >              Original document/message is to be issued under the legal
+-- >              requirements of a governmental authority.
+-- >        26 Quote documentary credit number
+-- >              The documentary credit number of the issuing bank must be
+-- >              quoted on the document.
+-- >        27 Full set bill of lading
+-- >              Full set of bill of lading is required.
+-- >        28 Full set bill of lading less one original
+-- >              Full set of bill of lading, less one original bill of
+-- >              lading, is required.
+-- >        29 Full set bill of lading less two originals
+-- >              Full set of bill of lading, less two originals bill of
+-- >              lading, is required.
+-- >        30 Shipped on board
+-- >              Transport document is to be marked "shipped on board".
+-- >        31 Freight prepaid to be marked
+-- >              Transport document is to be marked "freight prepaid".
+-- >        32 Freight collect to be marked
+-- >              Transport document is to be marked "freight collect".
+-- >        33 Issued to order and blank endorsed
+-- >              Document is to be issued to order and must be blank
+-- >              endorsed.
+-- >        34 Issued and endorsed to the order of
+-- >              Document is to be issued and endorsed to the order of a
+-- >              specified party.
+-- >        35 Consigned to
+-- >              Transport document is to be consigned to a specified
+-- >              party.
+-- >        36 Notify
+-- >              Transport document is to be marked "notify party".
+-- >        37 Issued by
+-- >              Document is to be issued by a specified party.
+-- >        38 Charter party allowed
+-- >              Charter party bill of lading is allowed.
+-- >        39 Loading on deck allowed
+-- >              Loading of goods on deck is allowed.
+-- >        40 Quote actual flight date and flight number
+-- >              Document/message must evidence the actual flight date and
+-- >              the flight number certifying air transportation and
+-- >              countersigned by the respective airline company.
+-- >        41 House AWB allowed
+-- >              House air waybill is allowed.
+-- >        42 Express post receipt
+-- >              Express post receipt is required.
+-- >        43 Air parcel post receipt
+-- >              Air parcel post receipt is required.
+-- >        44 Parcel post receipt
+-- >              Parcel post receipt is required.
+-- >        45 Issued to bearer
+-- >              Document is to be issued to bearer.
+-- >        46 Full set of insurance certificate
+-- >              Full set of insurance certificate is required.
+-- >        47 Full set of insurance policy
+-- >              Full set of insurance policy is required.
+-- >        48 Addressed to
+-- >              Document is to be addressed to a specified party.
+-- >        49 Transmission by telecommunication
+-- >              Document is to be transmitted by telecommunication.
+-- >        50 Bill of exchange drawn on
+-- >              Bill of exchange is to be drawn on "party".
+-- >        51 Bill of exchange in duplicate
+-- >              Bill of exchange is to be issued as drawn in duplicate.
+-- >        52 Insurance certificate alternative
+-- >              Alternative to insurance certificate.
+-- >        53 Insurance policy alternative
+-- >              Alternative to insurance policy.
+-- >        54 Original(s) and copies to be certified
+-- >              Original and copies of document/message is to be
+-- >              certified by an official, or otherwise qualified,
+-- >              organization or person.
+-- >        55 Original(s) and copies to be legalized
+-- >              Original and copies of document/message is to be issued
+-- >              under the legal requirements or a governmental authority.
+-- >        56 Consolidators AWB allowed
+-- >              Consolidators air waybill is allowed.
+-- >        57 Full set
+-- >              Full set of a document is required.
+-- >        58 Full set less one original
+-- >              Full set of a document, less one original, is required.
+-- >        59 Full set less two originals
+-- >              Full set of a document, less two originals, is required.
+-- >        60 Goods despatched to
+-- >              Document must show that the goods have been despatched to
+-- >              a specified party.
+-- >        61 Insurance certificate allowed
+-- >              Presentation of an insurance certificate instead of an
+-- >              insurance policy is allowed.
+-- >        62 Issued to
+-- >              Document is to be issued to a specified party.
+-- >        63 Original(s) and copy(ies) signed
+-- >              Original(s) and copy(ies) of the document must be signed.
+-- >        64 Original(s) signed
+-- >              Original(s) of the document must be signed.
+-- >        65 No disposal clause
+-- >              The shipper hereby irrevocably renounces any right to
+-- >              vary the identity of the consignee of these goods during
+-- >              transit.
+-- >        66 Delivery without change of ownership
+-- >              There is no change of ownership of the goods after they
+-- >              are received by the consignee.
+-- >        67 Delivery with change of ownership
+-- >              There is a change of ownership of the goods after they
+-- >              are received by the consignee.
+-- >        68 Supply for outright purchase/sale
+-- >              Goods are supplied under outright purchase/sale
+-- >              condition.
+-- >        69 Supply for consignment
+-- >              Goods are supplied for consignment purposes.
+-- >        70 Supply for sale 'on approval' or after trial
+-- >              The sale of the goods will only be finalised after trial
+-- >              or approval.
+-- >        71 Exchange of goods compensated in kind
+-- >              Goods are delivered on the basis of a compensation
+-- >              kind.
+-- >        72 Sale for export by foreigner travelling in member state
+-- >           concerned
+-- >              A cross border delivery of goods to be sold by a
+-- >              foreigner travelling in the European Economic Community
+-- >              member state concerned.
+-- >        73 Samples
+-- >              The delivered goods are samples.
+-- >        74 Temporary export, loan or hire
+-- >              Loaned or hired goods delivered on a temporary export
+-- >              basis.
+-- >        75 Temporary export, leasing
+-- >              Leased goods delivered on a temporary export basis.
+-- >        76 Temporary export, operation for job processing
+-- >              Goods temporarily exported for operation for job
+-- >              processing.
+-- >        77 Temporary export, repair and maintenance against payment
+-- >              Goods temporarily exported for a chargeable repair or
+-- >              maintenance reason.
+-- >        78 Temporary export, repair and maintenance free of charge
+-- >              Goods temporarily exported for a free of charge repair or
+-- >              maintenance reason.
+-- >        79 Reimport following job processing
+-- >              Goods reimported after they have been used for job
+-- >              processing.
+-- >        80 Reimport following repair and maintenance against payment
+-- >              Goods reimported after a temporary export for a
+-- >              chargeable repair or maintenance reason.
+-- >        81 Reimport following repair and maintenance free of charge
+-- >              Goods reimported after a temporary export for a
+-- >              free of charge repair or maintenance reason.
+-- >        82 Supply of goods under joint production contract for defence
+-- >           purposes
+-- >              Goods supplied under joint production contact for
+-- >              defence purposes condition.
+-- >        83 Supply of goods under joint production contract for civil
+-- >           purposes
+-- >              Goods supplied under joint production contact for
+-- >              civil purposes condition.
+-- >        84 Supply of goods for warehousing for foreign account
+-- >              Goods supplied for warehousing for foreign account.
+-- >        85 Supply of goods as gifts by country of despatch and food aid
+-- >           under European Economic Community regulation
+-- >              Goods supplied as gifts by country of despatch and food
+-- >              aid under European Economic Community regulation.
+-- >        86 Supply of goods for disaster relief equipment
+-- >              Goods supplied as disaster relief equipment.
+-- >        87 Supply of goods as transactions without compensation
+-- >              Goods supplied as transactions without compensation
+-- >              (financial or otherwise) involving goods which will not
+-- >              be re-exported or compensated by the importation of
+-- >              equivalent goods.
+-- >        88 Supply of goods as returned consignment on which payment has
+-- >           been made
+-- >              Goods supplied as returned consignment on which payment
+-- >              has been made.
+-- >        89 Supply of goods as returned consignment on which no payment
+-- >           has been made
+-- >              Goods supplied as returned consignment on which no
+-- >              payment has been made.
+-- >        90 Supply of goods in standard exchange giving rise to payment
+-- >              Goods supplied in standard exchange giving rise to
+-- >              payment.
+-- >        91 Supply of goods in standard exchange not giving rise to
+-- >           payment
+-- >              Goods supplied in standard exchange not giving rise to
+-- >              payment.
+-- >        92 Supply of goods/services in standard exchange under warranty
+-- >              Goods/services provided in standard exchange under
+-- >              warranty.
+-- >        93 Goods
+-- >              The special conditions for the tax declaration are linked
+-- >              to the fact that the line item relates to goods.
+-- >        94 Service
+-- >              The special conditions for the tax declaration are linked
+-- >              to the fact that the line item is a service.
+-- >        95 Financial regulation
+-- >              The special conditions are linked to the fact that the
+-- >              line item is a financial regulation.
+-- > +      96 Promotional advertising
+-- >              A media press communication informing about a promotion.
+-- > +      97 Promotional price
+-- >              Reduction in price for a specified period of time for
+-- >              promotional purposes.
+-- > +      98 Promotional shelf display
+-- >              Product in promotion is displayed in a special shelf or
+-- >              display.
+-- > +      99 Safety data sheet required to accompany goods when moved
+-- >              Material safety data sheet is required to accompany the
+-- >              goods when they are moved.
+-- > +     100 Multiple delivery points
+-- >              An order that has more than one specified delivery point.
+simple4183 :: Parser Value
+simple4183 = simple "4183" (alphaNumeric `upTo` 3)

@@ -1,0 +1,9 @@
+
+   3453  Language, coded
+
+   Desc: Code of language (ISO 639-1988).
+
+   Repr: an..3
+
+   Note: Use ISO 639-1988.
+

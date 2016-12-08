@@ -1,0 +1,11 @@
+
+   3223  Related place/location one identification
+
+   Desc: Specification of the first related place/location by code.
+
+   Repr: an..25
+
+   Note: Use UN/ECE Recommendation No. 16: UNLOCODE.  If not
+         applicable, use appropriate code set in combination with
+         1131/3055.
+

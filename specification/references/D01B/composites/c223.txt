@@ -1,0 +1,9 @@
+
+       C223 DANGEROUS GOODS SHIPMENT FLASHPOINT
+
+       Desc: Temperature at which a vapor can be ignited as per
+             ISO 1523/73.
+
+010    7106  Shipment flashpoint value                 C      n3
+020    6411  Measurement unit code                     C      an..3
+

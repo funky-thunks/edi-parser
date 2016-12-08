@@ -1,0 +1,9 @@
+
+   5479  Relation, coded
+
+   Desc: To specify the relationship between two or more items.
+
+   Repr: an..3
+
+   Note: Code values to be provided.
+

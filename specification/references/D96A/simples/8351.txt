@@ -1,0 +1,9 @@
+
+   8351  Hazard code identification
+
+   Desc: Dangerous goods code.
+
+   Repr: an..7
+
+   Note: Use relevant code list.
+

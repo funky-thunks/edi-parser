@@ -1,0 +1,7 @@
+
+   3164  City name
+
+   Desc: Name of a city (a town, a village) for addressing purposes.
+
+   Repr: an..35
+

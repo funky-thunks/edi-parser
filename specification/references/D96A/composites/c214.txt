@@ -1,0 +1,12 @@
+
+    * C214  SPECIAL SERVICES IDENTIFICATION
+
+      Desc: Identification of a special service by a code from a
+            specified source or by description.
+
+010   7161   Special services, coded                       C  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   7160   Special service                               C  an..35
+050 + 7160   Special service                               C  an..35
+

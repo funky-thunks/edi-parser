@@ -1,0 +1,21 @@
+
+  4455  Back order, coded
+
+  Desc: Code to identify the back order agreement.
+
+  Repr: an..3
+
+   B      Back order only if new item (book industry - not yet
+          published only)
+             Item on back order due to unpublished status.
+   F      Factory ship
+             Ship directly from factory to purchaser.
+   N      No back order
+             Back order is unacceptable.
+   W      Warehouse ship
+             Ship directly from warehouse.
+   Y      Back order if out of stock
+             Acceptable to put on back order if out of stock.
+   ZZZ    Mutually defined
+             Self explanatory.
+

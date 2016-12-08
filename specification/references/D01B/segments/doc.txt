@@ -1,0 +1,26 @@
+
+       DOC  DOCUMENT/MESSAGE DETAILS
+
+       Function: To identify documents and details directly
+                 related to it.
+
+010    C002 DOCUMENT/MESSAGE NAME                      M    1
+       1001  Document name code                        C      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       1000  Document name                             C      an..35
+
+020    C503 DOCUMENT/MESSAGE DETAILS                   C    1
+       1004  Document identifier                       C      an..35
+       1373  Document status code                      C      an..3
+       1366  Document source description               C      an..70
+       3453  Language name code                        C      an..3
+       1056  Version identifier                        C      an..9
+       1060  Revision identifier                       C      an..6
+
+030    3153 COMMUNICATION MEDIUM TYPE CODE             C    1 an..3
+
+040    1220 DOCUMENT COPIES REQUIRED QUANTITY          C    1 n..2
+
+050    1218 DOCUMENT ORIGINALS REQUIRED QUANTITY       C    1 n..2
+

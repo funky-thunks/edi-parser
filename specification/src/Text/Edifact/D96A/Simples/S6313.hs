@@ -1,0 +1,533 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+---- Machine generated code.
+---- Output of edi-parser-scaffolder
+
+module Text.Edifact.D96A.Simples.S6313
+  ( simple6313
+  ) where
+
+import           Text.Edifact.Parsing
+import           Text.Edifact.Types   (Value)
+
+-- | Derived from this specification:
+--
+-- > * 6313  Measurement dimension, coded
+-- >
+-- >   Desc: Specification of the type of dimension to be measured.
+-- >
+-- >   Repr: an..3
+-- >
+-- >    A      Consolidated weight
+-- >              Description to be provided.
+-- >    AAA    Unit net weight
+-- >              [6160] Weight (mass) of goods including any packing
+-- >              normally going with them to a buyer in a retail sale.
+-- >    AAB    Unit gross weight
+-- >              [6292] Weight (mass) of goods including packing but
+-- >              excluding the carrier's equipment.
+-- >    AAC    Total net weight
+-- >              Self explanatory.
+-- >    AAD    Total gross weight
+-- >              [6292] Weight (mass) of goods including packing but
+-- >              excluding the carrier's equipment.
+-- >    AAE    Item gross weight
+-- >              Gross weight at line item level.
+-- >    AAF    Net net weight
+-- >              [6048] Weight (mass) of the goods themselves without any
+-- >              packing.
+-- > X  AAG    Gross weight (item level)
+-- >              Self explanatory.
+-- > X  AAH    Customs line item measurement
+-- >              Description to be provided.
+-- > X  AAI    Visa quantity
+-- >              Measurement reportable for visaed merchandise.
+-- >    AAL    Net weight
+-- >              [6160] Weight (mass) of goods including any packing
+-- >              normally going with them to a buyer in a retail sale.
+-- >    AAM    Gross tonnage of the vessel
+-- >              [6300] The measure of the overall size of a ship
+-- >              determined in accordance with the provisions of the
+-- >              International Convention on Tonnage Measurement of Ships,
+-- >              1969.
+-- >    AAN    Net tonnage of the vessel
+-- >              [6302] The measure of the useful capacity of a ship
+-- >              determined in accordance with the provisions of the
+-- >              International Convention on Tonnage Measurement of Ships,
+-- >              1969.
+-- >    AAO    Humidity
+-- >              Self-explanatory.
+-- >    AAP    Voltage
+-- >              Self-explanatory.
+-- >    AAQ    Power consumption
+-- >              Value of energy consumption.
+-- >    AAR    Heat dissipation
+-- >              Self-explanatory.
+-- >    AAS    Air flow
+-- >              Self-explanatory.
+-- >    AAT    Shock impact
+-- >              Self-explanatory.
+-- >    AAU    Operative temperature
+-- >              Temperature identified system or process works according
+-- >              to specifications.
+-- >    AAV    Non operative temperature
+-- >              Temperature identified system or process does not work
+-- >              according to specifications.
+-- >    AAW    Gross volume
+-- >              The observed volume unadjusted for factors such as
+-- >              temperature or gravity.
+-- >    AAX    Net volume
+-- >              The observed volume after adjustment for factors such as
+-- >              temperature or gravity.
+-- >    AAY    Water content
+-- >              Water content in product.
+-- >    AAZ    Tensile stress
+-- >              Self explanatory.
+-- >    ABA    Fibrosity
+-- >              Self explanatory.
+-- >    ABB    Gauge length
+-- >              Self explanatory.
+-- >    ABC    Radius
+-- >              Self explanatory.
+-- >    ABD    Straightness
+-- >              Straightness of the item.
+-- >    ABE    Strain
+-- >              Self explanatory.
+-- > X  ABF    Test piece dimensions
+-- >              The size of the test piece that was tested.
+-- > X  ABG    Average reading
+-- >              Average reading of the test being reported on.
+-- > X  ABH    External dimension
+-- >              The outer measurement of the referenced item or package.
+-- > X  ABI    Internal dimension
+-- >              The inner measurement of the referenced item or package.
+-- >    ABJ    Volume
+-- >              The amount of air space taken up by the entity
+-- >              identified in the 6311 qualifier.
+-- > X  ABK    Loading meter
+-- >              A measurement dimension given in loading meters.
+-- > X  ABL    Retail container dimension
+-- >              Single physical dimension of a retail container.
+-- > X  ABM    Retail container size
+-- >              Size of a retail container in terms of volume.
+-- > X  ABN    Other US Government agency application
+-- >              Application of an other US government agency.
+-- > X  ABO    Measurement
+-- >              [6314]  Value of the measured unit.
+-- > X  ABQ    Percentage of alcohol (by volume)
+-- >              The percentage of alcohol contained in a liquid.
+-- > X  ABR    Dimensions total weight
+-- >              Total weight resulting from the dimensions.
+-- >    ABS    Item weight
+-- >              Weight at line item level.
+-- > X  ABU    Licence (quantity deducted)
+-- >              Quantity to be written off from the total license amount.
+-- > X  ABV    Cargo loaded
+-- >              Total tonnage of cargo loaded onto the conveyance.
+-- > X  ABW    Cargo discharged
+-- >              Total tonnage of cargo unloaded from the conveyance.
+-- >    ABX    Weight of conveyance
+-- >              Tonnage of conveyance.
+-- >    ABY    Conveyance summer dead weight
+-- >              Registered summer dead weight total tonnage of the
+-- >              vessel.
+-- >    ABZ    Containerized cargo on vessel's weight
+-- >              Total weight of containerized cargo on vessel.
+-- >    ACA    Non-containerized cargo on vessel's weight
+-- >              Total weight of non-containerized cargo on vessel.
+-- > X  ACB    1st specified tariff quantity
+-- >              Primary reportable quantity associated with a tariff
+-- >              number.
+-- > X  ACC    2nd specified tariff quantity
+-- >              Secondary reportable quantity associated with a tariff
+-- >              number.
+-- > X  ACD    3rd specified tariff quantity
+-- >              Third reportable quantity associated with a tariff
+-- >              number.
+-- >    ACE    Weight ascertained
+-- >              [4240]  Endorsement of the true weight (mass) as
+-- >              ascertained or verified by the railway (CIM 81).
+-- > X  ACF    Chemistry
+-- >              Measurement related to a chemical measurement system.
+-- >    ACG    Chargeable weight
+-- >              The weight on which charges are based.
+-- > X  ACH    Core notch dimensions
+-- >              Dimensions of a core notch.
+-- > X  ACI    Core size
+-- >              A measurement indicating the core size of an object.
+-- > X  ACJ    Decision result value
+-- >              A measurement in relation to value representing a
+-- >              decision result.
+-- > X  ACK    Dimensional tolerance
+-- >              Tolerance in relation to a dimension.
+-- > X  ACL    Discrete measurement value
+-- >              Value of a discrete measurement.
+-- > X  ACM    Dimension used in price extension
+-- >              Dimension used in relation to a price.
+-- >    ACN    Estimated gross weight
+-- >              Estimated weight (mass) of goods, including packing and
+-- >              excluding carrier's.
+-- > X  ACO    Environmental conditions
+-- >              The data values to be reported reflect the environmental
+-- >              conditions surrounding a situation including but not
+-- >              limited to test environments.
+-- >    ACP    Estimated volume
+-- >              Estimated size or measure of anything in three
+-- >              dimensions.
+-- > X  ACQ    Footage
+-- >              Length measurement in feet.
+-- > X  ACR    Interpolated value
+-- >              A value interpolated from a number of values.
+-- >    ACS    Vessel overall length
+-- >              Total overall length of the vessel.
+-- > X  ACT    Limited coil measurement
+-- >              Value limiting the measurement of a coil.
+-- > X  ACU    Lift limitation
+-- >              A measurement indicating the lift capacity limitation.
+-- >    ACV    Loading meters
+-- >              The length in a vehicle, whereby the complete width and
+-- >              height over that length is needed for the goods.
+-- >    ACW    Number of axles
+-- >              Number of axles of movable equipment or means of
+-- >              transport on wheels.
+-- >    ACX    Payload
+-- >              The revenue-producing load carried by a means of
+-- >              transport.
+-- > X  ACY    Parting cut (sawcut)
+-- >              A measurement related to the cutting of items.
+-- > X  ACZ    Physical dimensions
+-- >              A measurement indicating the physical dimensions of an
+-- >              object.
+-- > X  ADA    Package limitations
+-- >              A measurement indicating limitation associated with
+-- >              packages.
+-- > X  ADB    Platform limitation
+-- >              A measurement indicating limitation in relation to a
+-- >              platform.
+-- > X  ADC    Receiving facility limitations
+-- >              A measurement indicating limitations in relation to a
+-- >              receiving facility.
+-- > X  ADD    Property specification
+-- >              Indicates that the data to follow are target
+-- >              specifications.
+-- > X  ADE    Shipping tolerance
+-- >              A measurement indicating a tolerance in relation to the
+-- >              transport.
+-- > X  ADF    Shade
+-- >              A measurement in relation to the shade.
+-- > X  ADG    Storage limitation
+-- >              A measurement indicating limitation in relation to
+-- >              storage.
+-- > X  ADH    Surface roughness
+-- >              A measurement indicating surface roughness.
+-- > X  ADI    Surface treatment
+-- >              A measurement in relation to surface treatment.
+-- > X  ADJ    Surface
+-- >              A measurement in relation a surface.
+-- > X  ADK    Specification value
+-- >              A measurable item characteristic specified by the buyer,
+-- >              seller or third party.
+-- > X  ADL    Transportation equipment limitations
+-- >              A measurement indicating limitations in relation to
+-- >              transport equipment.
+-- > X  ADM    Test result
+-- >              Indicates that the data to follow is the test result
+-- >              measurements.
+-- > X  ADN    Time used in price extension
+-- >              Time value in relation to a price.
+-- > X  ADO    Observed value
+-- >              The reported test result which includes measurement
+-- >              variability.
+-- > X  ADP    True value
+-- >              The reported test result with the measurement
+-- >              variability removed.
+-- > X  ADQ    Weight used in price extension
+-- >              A weight measurement in relation to a price.
+-- >    ADR    Start position in the length
+-- >              The starting position from the beginning of an item
+-- >              located in the length direction.
+-- >    ADS    End position in the length
+-- >              The end position from the beginning of an item located in
+-- >              the length direction.
+-- >    ADT    Start position in the width
+-- >              The start position from the beginning of an item located
+-- >              in the width direction.
+-- >    ADU    End position in the width
+-- >              The end position from the beginning of an item located in
+-- >              the width direction.
+-- >    ADV    Start position in the thickness
+-- >              The start position from the beginning of an item located
+-- >              in the thickness direction.
+-- >    ADW    End position in the thickness
+-- >              The end position from the beginning of an item located in
+-- >              the thickness direction.
+-- > +  ADX    Transport container actual filling weight
+-- >              Actual filling weight of a transport container.
+-- > +  ADY    Transport container maximum capacity
+-- >              Maximum capacity of a transport container.
+-- > +  ADZ    Declared net weight
+-- >              The declared net weight of a product or products used for
+-- >              invoicing, customs or transport purposes.
+-- > +  AEA    Loading height
+-- >              Maximum height of products or packages loaded onto a
+-- >              given transportation device or equipment such as a
+-- >              pallet.
+-- > +  AEB    Stacking height
+-- >              Maximum height up to which the same product or package
+-- >              may be placed one upon the other for storage purposes.
+-- > +  AEC    Calculated weight
+-- >              The calculated weight of the item based on the ordered
+-- >              dimensions.
+-- > +  AED    Ferrite
+-- >              The chemical composition ferrite.
+-- > +  AEE    Impurity
+-- >              The impurity of the product i.e. the measurement of other
+-- >              chemical elements not normally appearing in a product.
+-- > +  AEF    Grain size
+-- >              The grain size.
+-- > +  AEG    Lanthanides
+-- >              The chemical element Lanthanides.
+-- > +  AEH    Elasticity
+-- >              The value of the elasticity.
+-- >    AF     Angle of bend
+-- >              Self explanatory.
+-- >    B      Billed weight
+-- >              Self explanatory.
+-- >    BL     Breaking load
+-- >              Description to be provided.
+-- >    BND    Bands
+-- >              Description to be provided.
+-- >    BR     Brightness
+-- >              Self explanatory.
+-- >    BRA    Brakes
+-- >              Description to be provided.
+-- >    BRE    Break
+-- >              Description to be provided.
+-- >    BS     Breaking strength
+-- >              Self explanatory.
+-- >    BSW    Breaking strength wet
+-- >              Self explanatory.
+-- >    BW     Basis weight
+-- >              Description to be provided.
+-- >    CHN    Change
+-- >              Description to be provided.
+-- >    CM     Color
+-- >              Self explanatory.
+-- >    CT     Contents of package
+-- >              In combination with the other data elements of the actual
+-- >              segment this code indicates the measured content of a
+-- >              package.
+-- >    CV     Commercial weight
+-- >              Item weight considering its maximum possible humidity.
+-- >    CZ     Core length
+-- >              To specify length of core (of spod/babbin etc.) on which
+-- >              product is to be placed.
+-- >    D      Destination weight agreement
+-- >              The agreed weight of despatched goods whose weight may
+-- >              change during transport.
+-- >    DI     Diameter
+-- >              Diameter of an article.
+-- >    DL     Delta value L
+-- >              Description to be provided.
+-- >    DN     Density
+-- >              Self explanatory.
+-- >    DP     Depth
+-- >              Self explanatory.
+-- >    DR     Denier
+-- >              Description to be provided.
+-- >    DS     Distance between points
+-- >              Self explanatory.
+-- >    DW     Width, boxcar door
+-- >              Self explanatory.
+-- >    E      Estimated new weight
+-- >              Self explanatory.
+-- >    EA     Elongation
+-- >              Self explanatory.
+-- >    F      Deficit weight
+-- >              Description to be provided.
+-- >    FI     Filament count
+-- >              Used e.g. in textile, print industries.
+-- >    FL     Longitudinal flatness
+-- >              Self explanatory.
+-- >    FN     Flatness
+-- >              Self explanatory.
+-- >    FV     Transverse flatness
+-- >              Self explanatory.
+-- >    G      Gross weight
+-- >              [6292] Weight (mass) of goods including packing but
+-- >              excluding the carrier's equipment.
+-- >    GG     Gauge
+-- >              Self explanatory.
+-- >    GW     Gross weight, maximum
+-- >              Self explanatory.
+-- >    HF     Hardness
+-- >              Self explanatory.
+-- >    HM     Height, maximum
+-- >              Self explanatory.
+-- >    HT     Height dimension
+-- >              Numeric value of height.
+-- >    IB     Impact energy
+-- >              Self explanatory.
+-- >    ID     Inside diameter
+-- >              Self explanatory.
+-- >    L      Legal weight
+-- >              Self explanatory.
+-- >    LM     Length, maximum
+-- >              Self explanatory.
+-- >    LN     Length dimension
+-- >              (6168) Length of pieces or packages stated for transport
+-- >              purposes.
+-- >    LND    Lost end
+-- >              Description to be provided.
+-- >    M      Minimum weight
+-- >              Self explanatory.
+-- >    MO     Moisture
+-- >              Measurement application is the moisture content of the
+-- >              item.
+-- >    MW     Maximum weight
+-- >              Self explanatory.
+-- >    N      Actual net weight
+-- >              Self explanatory.
+-- >    OD     Outside diameter
+-- >              Self explanatory.
+-- > |  PRS    Pre stretch
+-- >              Measurement identifying the amount an item has been
+-- >              streched prior to use.
+-- >    PTN    Per tonne
+-- >              Self explanatory.
+-- >    RA     Relative humidity
+-- >              Self explanatory.
+-- >    RF     Resistivity
+-- >              Description to be provided.
+-- >    RJ     Rockwell C
+-- >              Hardness in the Rockwell C scale.
+-- >    RMW    Ream weight
+-- >              Measurement indication for paper.
+-- >    RP     Reduction of area
+-- >              Self explanatory.
+-- >    RUN    Run (process)
+-- >              Description to be provided.
+-- >    RY     Ratio
+-- >              Self explanatory.
+-- >    SQ     Shipped quantity
+-- >              Self explanatory.
+-- >    T      Tare weight
+-- >              Self explanatory.
+-- >    TC     Temperature
+-- >              A measurement in relation to temperature.
+-- >    TH     Thickness
+-- >              Self explanatory.
+-- > |  TN     Time period
+-- >              Self explanatory.
+-- > |  TT     Time
+-- >              Self explanatory.
+-- >    U      Weight per unit
+-- >              [6150] Numeric value of weight.
+-- >    VH     Height, van door
+-- >              Self explanatory.
+-- >    VW     Width, van door
+-- >              Self explanatory.
+-- >    WA     Weight per unit of area
+-- >              Self explanatory.
+-- >    WD     Width dimension
+-- >              Numeric value of width.
+-- >    WM     Width, maximum
+-- >              Self explanatory.
+-- >    WT     Weight
+-- >              [6150] Numeric value of weight.
+-- >    WU     Weight per unit of length
+-- >              Self explanatory.
+-- >    XH     Side height, flat bed with removable sides
+-- >              Self explanatory.
+-- >    XQ     Squareness
+-- >              Self explanatory.
+-- >    XZ     Spool size
+-- >              Self explanatory.
+-- >    YS     Yield stress
+-- >              Self explanatory.
+-- >    ZAL    Aluminium
+-- >              Self explanatory.
+-- >    ZAS    Arsenic
+-- >              Self explanatory.
+-- >    ZB     Boron
+-- >              Self explanatory.
+-- >    ZBI    Bismuth
+-- >              Self explanatory.
+-- >    ZC     Carbon
+-- >              Self explanatory.
+-- >    ZCA    Calcium
+-- >              Self explanatory.
+-- >    ZCB    Columbium
+-- >              Self explanatory.
+-- >    ZCE    Cerium
+-- >              Self explanatory.
+-- >    ZCL    Chlorine
+-- >              Self explanatory.
+-- >    ZCO    Cobalt
+-- >              Self explanatory.
+-- >    ZCR    Chromium
+-- >              Self explanatory.
+-- >    ZCU    Copper
+-- >              Self explanatory.
+-- >    ZFE    Iron
+-- >              Self explanatory.
+-- >    ZFS    Iron plus silicon
+-- >              Self explanatory.
+-- >    ZGE    Germanium
+-- >              Self explanatory.
+-- >    ZH     Hydrogen
+-- >              Self explanatory.
+-- >    ZK     Potassium
+-- >              Self explanatory.
+-- >    ZMG    Magnesium
+-- >              Self explanatory.
+-- >    ZMN    Manganese
+-- >              Self explanatory.
+-- >    ZMO    Molybdenum
+-- >              Self explanatory.
+-- >    ZN     Nitrogen
+-- >              Self explanatory.
+-- >    ZNA    Sodium
+-- >              Self explanatory.
+-- >    ZNB    Niobium
+-- >              Self-explanatory.
+-- >    ZNI    Nickel
+-- >              Self explanatory.
+-- >    ZO     Oxygen
+-- >              Self explanatory.
+-- >    ZP     Phosphorus
+-- >              Self explanatory.
+-- >    ZPB    Lead
+-- >              Self explanatory.
+-- >    ZS     Sulphur
+-- >              Self explanatory.
+-- >    ZSB    Antimony
+-- >              Self explanatory.
+-- >    ZSE    Selenium
+-- >              Self explanatory.
+-- >    ZSI    Silicon
+-- >              Self explanatory.
+-- >    ZSL    Silicium oxyd
+-- >              Self explanatory.
+-- >    ZSN    Tin
+-- >              Self explanatory.
+-- >    ZTA    Tantalium
+-- >              Self explanatory.
+-- >    ZTE    Tellurium
+-- >              Self explanatory.
+-- >    ZTI    Titanium
+-- >              Self explanatory.
+-- >    ZV     Vanadium
+-- >              Self explanatory.
+-- >    ZW     Tungsten
+-- >              Self explanatory.
+-- >    ZWA    Waste content
+-- >              Self explanatory.
+-- >    ZZN    Zinc
+-- >              Self explanatory.
+-- >    ZZR    Zirconium
+-- >              Self explanatory.
+-- >    ZZZ    Mutually defined
+-- >              Self explanatory.
+simple6313 :: Parser Value
+simple6313 = simple "6313" (alphaNumeric `upTo` 3)

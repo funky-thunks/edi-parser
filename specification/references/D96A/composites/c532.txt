@@ -1,0 +1,10 @@
+
+      C532  RETURNABLE PACKAGE DETAILS
+
+      Desc: Indication of responsibility for payment and load contents
+            of returnable packages.
+
+010   8395   Returnable package freight payment            C  an..3
+             responsibility, coded
+020   8393   Returnable package load contents, coded       C  an..3
+

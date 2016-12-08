@@ -1,0 +1,10 @@
+
+      C556  STATUS REASON
+
+      Desc: To specify the reason behind a status event.
+
+010   9013   Status reason, coded                          M  an..3
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   9012   Status reason                                 C  an..35
+

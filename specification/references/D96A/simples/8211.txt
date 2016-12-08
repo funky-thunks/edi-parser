@@ -1,0 +1,11 @@
+
+   8211  Permission for transport, coded
+
+   Desc: Code giving evidence that transportation of particular
+         hazardous cargo is permitted and identifies the restrictions
+         being put upon a particular transport.
+
+   Repr: an..3
+
+   Note: Code values to be provided.
+

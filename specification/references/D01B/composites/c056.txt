@@ -1,0 +1,9 @@
+
+       C056 DEPARTMENT OR EMPLOYEE DETAILS
+
+       Desc: Code and/or name of a department or employee. Code
+             preferred.
+
+010    3413  Department or employee name code          C      an..17
+020    3412  Department or employee name               C      an..35
+

@@ -1,0 +1,48 @@
+
+       STS  STATUS
+
+       Function: To specify the status of an object or service,
+                 including its category and the reason(s) for the
+                 status.
+
+010    C601 STATUS CATEGORY                            C    1
+       9015  Status category code                      M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+
+020    C555 STATUS                                     C    1
+       4405  Status description code                   M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       4404  Status description                        C      an..35
+
+030    C556 STATUS REASON                              C    1
+       9013  Status reason description code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       9012  Status reason description                 C      an..256
+
+040    C556 STATUS REASON                              C    1
+       9013  Status reason description code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       9012  Status reason description                 C      an..256
+
+050    C556 STATUS REASON                              C    1
+       9013  Status reason description code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       9012  Status reason description                 C      an..256
+
+060    C556 STATUS REASON                              C    1
+       9013  Status reason description code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       9012  Status reason description                 C      an..256
+
+070    C556 STATUS REASON                              C    1
+       9013  Status reason description code            M      an..3
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       9012  Status reason description                 C      an..256
+

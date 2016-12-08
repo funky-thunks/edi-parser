@@ -1,0 +1,10 @@
+
+   7065  Type of packages identification
+
+   Desc: Coded description of the form in which goods are presented.
+
+   Repr: an..17
+
+   Note: See UN/ECE Recommendation No. 21 (See Vol. II of UNTDED). 
+         May be used in combination with 1131/3055.
+

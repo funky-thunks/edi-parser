@@ -1,0 +1,11 @@
+
+      C058  NAME AND ADDRESS
+
+      Desc: Unstructured name and address: one to five lines.
+
+010   3124   Name and address line                         M  an..35
+020   3124   Name and address line                         C  an..35
+030   3124   Name and address line                         C  an..35
+040   3124   Name and address line                         C  an..35
+050   3124   Name and address line                         C  an..35
+

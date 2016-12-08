@@ -1,0 +1,10 @@
+
+       QTY  QUANTITY
+
+       Function: To specify a pertinent quantity.
+
+010    C186 QUANTITY DETAILS                           M    1
+       6063  Quantity type code qualifier              M      an..3
+       6060  Quantity                                  M      an..35
+       6411  Measurement unit code                     C      an..3
+

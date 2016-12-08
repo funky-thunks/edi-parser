@@ -1,0 +1,7 @@
+
+   4000  Reference version number
+
+   Desc: To uniquely identify a reference by its revision number.
+
+   Repr: an..35
+

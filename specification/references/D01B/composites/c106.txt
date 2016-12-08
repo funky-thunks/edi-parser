@@ -1,0 +1,10 @@
+
+       C106 DOCUMENT/MESSAGE IDENTIFICATION
+
+       Desc: Identification of a document/message by its number
+             and eventually its version or revision.
+
+010    1004  Document identifier                       C      an..35
+020    1056  Version identifier                        C      an..9
+030    1060  Revision identifier                       C      an..6
+

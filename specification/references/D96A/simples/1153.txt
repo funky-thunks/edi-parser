@@ -1,0 +1,1187 @@
+
+* 1153  Reference qualifier
+
+  Desc: Code giving specific meaning to a reference segment or a
+        reference number.
+
+  Repr: an..3
+
+   AAA    Acknowledgement of order number
+             [1018] Reference number assigned by the seller to his
+             acknowledgement of an order.
+   AAB    Proforma invoice number
+             [1088] Reference number assigned by the seller to a
+             Proforma Invoice.
+   AAC    Documentary credit number
+             [1172] Reference number assigned by issuing bank to a
+             Documentary credit.
+   AAD    Contract addendum number
+             [1318] Reference number assigned by the issuer to a
+             Contract Addendum.
+   AAE    Goods declaration number
+             Reference number assigned to a goods declaration.
+   AAG    Offer number
+             Reference number assigned by issuing party to an offer.
+   AAJ    Delivery order number
+             Reference number assigned by issuer to a delivery order.
+   AAK    Despatch advice number
+             Reference number assigned by issuing party to a despatch
+             advice.
+   AAL    Drawing number
+             Reference number identifying a specific product drawing.
+   AAM    Waybill number
+             Reference number assigned to a waybill, see: 1001 = 700.
+   AAN    Delivery schedule number
+             Reference number assigned by buyer to a delivery
+             schedule.
+   AAO    Consignee's shipment reference number
+             [1362] Reference assigned by the consignee to a shipment.
+   AAP    Part consignment number
+             [1310] Reference to a specific consignment forming part
+             of a contract allowing part deliveries.
+   AAQ    Unit load device (e.g. container) identification number
+             [8260] Marks (letters and/or numbers) which identify a
+             unit load device e.g. freight container.
+   AAS    Transport document number
+             [1188] Reference assigned by the carrier or his agent to
+             the transport document.
+   AAT    Master label number
+             Identifies the master label number of any package type.
+   AAU    Despatch note number
+             [1128] Reference number assigned by the seller to a
+             Despatch Note.
+   AAV    Enquiry number
+             Reference number assigned to an enquiry.
+   AAY    Carrier's agent reference number
+             Reference number assigned by the carriers agent to a
+             transaction.
+   AAZ    Standard Carrier Alpha Code (SCAC) number
+             For maritime shipments, this code qualifies a Standard
+             Alpha Carrier Code (SCAC) as issued by the United Stated
+             National Motor Traffic Association Inc.
+   ABA    Customs valuation decision number
+             Reference by an importing party to a previous decision
+             made by a Customs administration regarding the valuation
+             of goods.
+   ABB    End use authorization number
+             Reference issued by a Customs administration authorizing
+             a preferential rate of duty if a product is used for a
+             specified purpose, see: 1001 = 990.
+   ABC    Anti-dumping case number
+             Reference issued by a Customs administration pertaining
+             to a past or current investigation of goods "dumped" at a
+             price lower than the exporter's domestic market price.
+   ABD    Customs tariff number
+             [7282] Code number of the goods in accordance with the
+             tariff nomenclature system of classification in use where
+             the Customs declaration is made.
+   ABE    Declarant's reference number
+             Unique reference number assigned to a document or a
+             message by the declarant for identification purposes.
+   ABG    Customs decision request number
+             Reference issued by Customs pertaining to a pending
+             tariff classification decision requested by an importer
+             or agent.
+   ABH    Sub-house bill of lading number
+             Reference assigned to a sub-house bill of lading.
+   ABI    Deferred payment reference
+             [1168] Reference or indication of the deferred payment of
+             duty/tax.
+   ABJ    Quota number
+             Reference number allocated by a government authority to
+             identify a quota.
+   ABK    Transit (onward carriage) guarantee (bond) number
+             Reference number to identify the guarantee or security
+             provided for Customs transit operation (CCC).
+   ABL    Customs guarantee number
+             Reference assigned to a Customs guarantee.
+   ABO    Originator's reference
+             Self explanatory.
+   ABP    Declarant's Customs identity number
+             Reference to the party whose posted bond or security is
+             being declared in order to accept responsibility for a
+             goods declaration and the applicable duties and taxes.
+   ABQ    Importer reference number
+             Reference number assigned by the importer to identify a
+             particular shipment for his own purposes.
+   ABR    Export clearance instruction reference number
+             Reference number of the clearance instructions given by
+             the consignor through different means.
+   ABS    Import clearance instruction reference number
+             Reference number of the import clearance instructions
+             given by the consignor/consignee through different means.
+   ABT    Customs declaration number
+             [1426] Number, assigned or accepted by Customs, to
+             identify a Goods declaration.
+   ABU    Article number
+             Self explanatory.
+   ABW    Stock keeping unit number
+             Self explanatory.
++  ABX    Text Element Identifier deletion reference
+             The reference used within a given TEI (Text Element
+             Identifier) which is to be deleted.
+   ABY    Allotment identification (Air)
+             Reference assigned to guarantied capacity on one or more
+             specific flights on specific date(s) to third parties as
+             agents and other airlines.
++  ABZ    Vehicle licence number
+             Number of the licence issued for a vehicle by an agency
+             of government.
+   AC     Air cargo transfer manifest
+             Description to be provided.
+   ACB    US government agency number
+             Description to be provided.
+   ACC    Shipping unit identification
+             Identifying marks on the outermost unit that is used to
+             transport merchandise.
+   ACD    Additional reference number
+             Reference number provided in addition to another given
+             reference.
+   ACE    Related document number
+             Description to be provided.
+   ACF    Addressee reference
+             Description to be provided.
+   ACG    ATA carnet number
+             Reference number assigned to an ATA carnet.
+   ACH    Packaging unit identification
+             Identifying marks on packing units.
+   ACI    Outerpackaging unit identification
+             (7070) Identifying marks on packing units contained
+             within an outermost shipping unit.
+   ACJ    Customer material specification number
+             Number for a material specification given by customer.
+   ACK    Bank reference
+             Cross reference issued by financial institution.
+   ACL    Principal reference number
+             Description to be provided.
+   ACM    Unique REINAC reference number of the sender
+             Description to be provided.
+   ACN    Advice of collection number
+             [1030] Number of the Advice of Collection attached to the
+             Rail Consignment Note (CIM 75).
+   ACO    Iron charge number
+             Number attributed to the iron charge for the production
+             of steel products.
+   ACP    Hot roll number
+             Number attributed to a hot roll coil.
+   ACQ    Cold roll number
+             Number attributed to a cold roll coil.
+   ACR    Railway wagon number
+             (8320) Registered identification initials and numbers of
+             railway wagon. Synonym: Rail car number.
+   ACS    Unique CURRAC reference number of the sender
+             Description to be provided.
+   ACT    Unique claims reference number of the sender
+             Description to be provided.
+   ACU    Loss/event number
+             To reference to the unique number that is assigned to
+             each major loss hitting the reinsurance industry.
+   ACW    Reference number to previous message
+             Reference number assigned to the message which was
+             previously issued (e.g. in the case of a cancellation,
+             the primary reference of the message to be cancelled will
+             be quoted in this element).
+   ACX    Banker's acceptance
+             Reference number for banker's acceptance issued by the
+             accepting financial institution.
++  ACY    Duty memo number
+             Reference number assigned by customs to a duty memo.
++  ACZ    Equipment transport charge number
+             Reference assigned to a specific equipment transportation
+             charge.
++  ADA    Buyer's item number
+             Reference number assigned by the buyer to an item.
+   ADB    Matured certificate of deposit
+             Reference number for certificate of deposit allocated by
+             issuing financial institution.
+   ADC    Loan
+             Reference number for loan allocated by lending financial
+             institution.
+   ADD    Analysis number/test number
+             Number given to a specific analysis or test operation.
+|  ADE    Account number
+             Identification number of an account.
+   ADF    Treaty number
+             Self explanatory.
+   ADG    Catastrophe number
+             Self explanatory.
+   ADH    PCS Catastrophe
+             Description to be provided.
+   ADI    Bureau signing (statement reference)
+             Description to be provided.
+   ADJ    Company / syndicate reference 1
+             Description to be provided.
+   ADK    Company / syndicate reference 2
+             Description to be provided.
+   ADP    Statement number
+             Description to be provided.
+   ADQ    Unique market reference
+             Description to be provided.
+   ADR    Bureau signing (original FDO reference)
+             Description to be provided.
+   ADS    Original FDO transaction reference
+             Description to be provided.
+   ADT    Group accounting
+             Description to be provided.
+   ADU    Broker reference 1
+             Description to be provided.
+   ADV    Broker reference 2
+             Description to be provided.
+   ADW    Lloyd's claims office reference
+             Self explanatory.
+   ADY    Report number
+             Reference to a report to Customs by a carrier at the
+             point of entry, encompassing both conveyance and
+             consignment information.
+   ADZ    Trader account number
+             Number assigned by a Customs authority which uniquely
+             identifies a trader (i.e. importer, exporter or
+             declarant) for Customs purposes.
+   AE     Authorization for expense (AFE) number
+             Description to be provided.
+   AEA    Government agency reference number
+             Coded reference number that pertains to the business of a
+             government agency.
+   AEB    Assembly number
+             Self explanatory.
+   AEC    Symbol number
+             Self explanatory.
+   AED    Commodity number
+             Self explanatory.
+   AEE    Eur 1 certificate number
+             Reference number assigned to a Eur 1 certificate.
+   AEF    Customer process specification number
+             Retrieval number for a process specification defined by
+             customer.
+   AEG    Customer specification number
+             Retrieval number for a specification defined by customer.
+   AEH    Applicable instructions or standards
+             Instructions or standards applicable for the whole
+             message or a message line item. These instructions or
+             standards may be published by a neutral organization or
+             authority or another party concerned.
+   AEI    Registration number of previous Customs declaration
+             Registration number of the Customs declaration lodged for
+             the previous Customs procedure.
+   AEJ    Post-entry reference
+             Reference to a message related to a post-entry.
+   AEK    Payment order number
+             Self explanatory.
+   AEL    Delivery number (transport)
+             Reference number by which a haulier/carrier will announce
+             himself at the container terminal or depot when
+             delivering equipment.
+   AEM    Transport route
+             A predefined and identified sequence of points where
+             goods are collected, agreed between partners, e.g. the
+             party in charge of organizing the transport and the
+             parties where goods will be collected. The same
+             collecting points may be included in different transport
+             routes, but in a different sequence.
+   AEN    Customer's unit inventory number
+             Number assigned by customer to a unique unit for
+             inventory purposes.
+   AEO    Product reservation number
+             Number assigned by seller to identify reservation of
+             specified products.
+   AEP    Project number
+             Reference number assigned to a project.
+   AEQ    Drawing list number
+             Reference number identifying a drawing list.
+   AER    Project specification number
+             Reference number identifying a project specification.
+   AES    Primary reference
+             Description to be provided.
+   AET    Request for cancellation number
+             Self explanatory.
+   AEU    Supplier's control number
+             Reference to a file regarding a control of the supplier
+             carried out on departure of the goods.
+   AEV    Shipping note number
+             Reference number assigned to a shipping note, see: 1001 =
+             630.
+   AEW    Empty container bill number
+             Reference number assigned to an empty container bill,
+             see: 1001 = 708.
+   AEX    Non-negotiable maritime transport document number
+             Reference number assigned to a sea waybill, see: 1001 =
+             712.
+   AEY    Substitute air waybill number
+             Reference number assigned to a substitute air waybill,
+             see: 1001 = 743.
+   AEZ    Despatch note (post parcels) number
+             (1128) Reference number assigned to a despatch note (post
+             parcels), see: 1001 = 750.
+   AF     Airlines flight identification number
+             (8110) Identification of a commercial flight by carrier
+             code and number as assigned by the airline (IATA).
+   AFA    Through bill of lading number
+             Reference number assigned to a through bill of lading,
+             see: 1001 = 761.
+   AFB    Cargo manifest number
+             Reference number assigned to a cargo manifest, see: 1001
+             = 785.
+   AFC    Bordereau number
+             Reference number assigned to a bordereau, see: 1001 =
+             787.
+   AFD    Customs item number
+             Number (1496 in CST) assigned by the declarant to an
+             item.
+   AFE    Export Control Commodity number (ECCN)
+             Reference number to relevant item within Commodity
+             Control List covering actual products change
+             functionality.
+   AFF    Marking/label reference
+             Reference where marking/label information derives from.
+   AFG    Tariff number
+             Self explanatory.
+   AFI    Immediate transportation no. for in bond movement
+             Self explanatory.
+   AFJ    Transportation exportation no. for in bond movement
+             Self explanatory.
+   AFK    Immediate exportation no. for in bond movement
+             Self explanatory.
+   AFL    Associated invoices
+             Self explanatory.
+   AFM    Secondary Customs reference
+             Self explanatory.
+   AFN    Account party's reference
+             Reference of the account party.
+   AFO    Beneficiary's reference
+             Reference of the beneficiary.
+   AFP    Second beneficiary's reference
+             Reference of the second beneficiary.
+   AFQ    Applicant's bank reference
+             Reference number of the applicant's bank.
+   AFR    Issuing bank's reference
+             Reference number of the issuing bank.
+   AFS    Beneficiary's bank reference
+             Reference number of the beneficiary's bank.
+   AFT    Direct payment valuation number
+             Reference number assigned to a direct payment valuation.
+   AFU    Direct payment valuation request number
+             Reference number assigned to a direct payment valuation
+             request.
+   AFV    Quantity valuation number
+             Reference number assigned to a quantity valuation.
+   AFW    Quantity valuation request number
+             Reference number assigned to a quantity valuation
+             request.
+   AFX    Bill of quantities number
+             Reference number assigned to a bill of quantities.
+   AFY    Payment valuation number
+             Reference number assigned to a payment valuation.
+   AFZ    Situation number
+             Common reference number given to documents concerning a
+             determined period of works.
+   AGA    Agreement to pay number
+             Self explanatory.
+   AGB    Contract party reference number
+             Reference number assigned to a party for a particular
+             contract.
+   AGC    Account party's bank reference
+             Reference number of the account party's bank.
+   AGD    Agent's bank reference
+             Reference number issued by the agent's bank.
+   AGE    Agent's reference
+             Reference number of the agent.
+   AGF    Applicant's reference
+             Reference number of the applicant.
+   AGG    Dispute number
+             Reference number to a dispute notice.
+   AGH    Credit rating agency's reference number
+             Reference number assigned by a credit rating agency to a
+             debtor.
+   AGI    Request number
+             Self explanatory.
+   AGJ    Single transaction sequence number
+             Self explanatory.
+   AGK    Application reference number
+             Self explanatory.
+   AGL    Delivery verification certificate
+             Formal identification of delivery verification
+             certificate which is a formal document from Customs etc.
+             confirming that physical goods have been delivered. It
+             may be needed to support a tax reclaim based on an
+             invoice.
+   AGM    Number of temporary importation document
+             Number assigned by customs to identify consignment in
+             transit.
+   AGN    Reference number quoted on statement
+             Reference number quoted on the statement sent to the
+             beneficiary for information purposes.
+   AGO    Sender's reference to the original message
+             The reference provided by the sender of the original
+             message.
+   AGP    Company issued equipment ID
+             Owner/operator, non-government issued equipment reference
+             number.
+   AGQ    Domestic flight number
+             Airline flight number assigned to a flight originating
+             and terminating within the same country.
+   AGR    International flight number
+             Airline flight number assigned to a flight originating
+             and terminating across national borders.
+   AGS    Employer identification number of service bureau
+             Reference number assigned by a service/processing bureau
+             to an employer.
+   AGT    Service group identification number
+             Identification used for a group of services.
+   AGU    Member number
+             Reference number assigned to a person as a member of a
+             group of persons or a service scheme.
+   AGV    Previous member number
+             Reference number previously assigned to a member.
+   AGW    Scheme/plan number
+             Reference number assigned to a service scheme or plan.
+   AGX    Previous scheme/plan number
+             Reference number previously assigned to a service scheme
+             or plan.
+   AGY    Receiving party's member identification
+             Identification used by the receiving party for a member
+             of a service scheme or group of persons.
+   AGZ    Payroll number
+             Reference number assigned to the payroll of an
+             organisation.
+   AHA    Packaging specification number
+             Reference number of documentation specifying the
+             technical detail of packaging requirements.
+   AHB    Authority issued equipment identification
+             Identification issued by an authority, e.g. government,
+             airport authority.
+   AHC    Training flight number
+             Non-revenue producing airline flight for training
+             purposes.
+   AHD    Fund code number
+             Reference number to identify appropriation and branch
+             chargeable for item.
+   AHE    Signal code number
+             Reference number to identify a signal.
+   AHF    Major force program number
+             Reference number according to Major Force Program (US).
+   AHG    Nomination number
+             Reference number assigned by a shipper to a request/
+             commitment-to-ship on a pipeline system.
+   AHH    Laboratory registration number
+             Reference number is the official registration number of
+             the laboratory.
+   AHI    Transport contract reference number
+             Reference number of a transport contract.
+   AHJ    Payee's reference number
+             Reference number of the party to be paid.
+   AHK    Payer's reference number
+             Reference number of the party who pays.
+   AHL    Creditor's reference number
+             Reference number of the party to whom a debt is owed.
+   AHM    Debtor's reference number
+             Reference number of the party who owes an amount of
+             money.
+   AHN    Joint venture reference number
+             Reference number assigned to a joint venture agreement.
+   AHO    Chamber of Commerce registration number
+             The registration number by which a company/organization
+             is known to the Chamber of Commerce.
+   AHP    Tax registration number
+             The registration number by which a company/organization
+             is identified with the tax administration.
+   AHQ    Wool identification number
+             Shipping Identification Mark (SIM) allocated to a wool
+             consignment by a shipping company.
+   AHR    Wool tax reference number
+             Reference or indication of the payment of wool tax.
+   AHS    Meat processing establishment registration number
+             Registration number allocated to a registered meat
+             packing establishment by the local quarantine and
+             inspection authority.
+   AHT    Quarantine/treatment status reference number
+             Coded quarantine/treatment status of a container and its
+             cargo and packing materials, generated by a shipping
+             company based upon declarations presented by a shipper.
+   AHU    Request for quote number
+             Reference number assigned by the requestor to a request
+             for quote.
+   AHV    Manual processing authority number
+             Number allocated to allow the manual processing of an
+             entity.
+   AHW    Import permit number
+             Reference number assigned by the issuing authority to an
+             import permit for goods.
+   AHX    Rate note number
+             Reference assigned to a specific rate.
+   AHY    Freight Forwarder number
+             An identification code of a Freight Forwarder.
+   AHZ    Customs release code
+             A code associated to a requirement that must be presented
+             to gain the release of goods by Customs.
+   AIA    Compliance code number
+             Number assigned to indicate regulatory compliance.
+   AIB    Department of transportation bond number
+             Number of a bond assigned by the department of
+             transportation.
+   AIC    Export establishment number
+             Number to identify export establishment.
+   AID    Certificate of conformity
+             Certificate certifying the conformity to predefined
+             definitions.
+   AIE    Ministerial certificate of homologation
+             Certificate of approval for components which are subject
+             to legal restrictions and must be approved by the
+             government.
+   AIF    Previous delivery instruction number
+             The identification of a previous delivery instruction.
+   AIG    Passport number
+             Number assigned to a passport.
+   AIH    Common transaction reference number
+             Reference number applicable to different underlying
+             individual transactions.
+   AII    Bank's common transaction reference number
+             Bank's reference number allocated by the bank to
+             different underlying individual transactions.
+   AIJ    Customer's individual transaction reference number
+             Customer's reference number allocated by the customer to
+             one specific transaction.
+   AIK    Bank's individual transaction reference number
+             Bank's reference number allocated by the bank to one
+             specific transaction.
+   AIL    Customer's common transaction reference number
+             Customer's reference number allocated by the customer to
+             different underlying individual transactions.
+   AIM    Individual transaction reference number
+             Reference number applying to one specific transaction.
+   AIN    Product sourcing agreement number
+             Reference number assigned to a product sourcing
+             agreement.
+   AIO    Customs transhipment number
+             Approval number issued by Customs for cargo to be
+             transhipped under Customs control.
+   AIP    Customs preference inquiry number
+             The number assigned by Customs to a preference inquiry.
+   AIQ    Packing plant number
+             Number to identify packing establishment.
+   AIR    Original certificate number
+             Number giving reference to an original certificate
+             number.
+   AIS    Processing plant number
+             Number to identify processing plant.
+   AIT    Slaughter plant number
+             Number to identify slaughter plant.
+   AIU    Charge card account number
+             Number to identify charge card account.
+   AIV    Event reference number
+             A number identifying an event.
+   AIW    Transport section reference number
+             A number identifying a transport section.
+   AIX    Referred product for mechanical analysis
+             A product number identifying the product which is used
+             for mechanical analysis considered valid for a group of
+             products.
+   AIY    Referred product for chemical analysis
+             A product number identifying the product which is used
+             for chemical analysis considered valid for a group of
+             products.
++  ALA    Procurement budget number
+             The number which identifies the budget to which a
+             purchase is allocated.
++  ALB    Domestic inventory management code
+             Code to identify the management of domestic inventory.
++  ALC    Previous balance of payment information customer reference
+          number
+             Identification number of the previous balance of payments
+             information from customer message.
++  ALD    Previous credit advice reference number
+             Reference number of the previous "Credit advice" message.
++  ALE    Reporting form number
+             Reference number assigned to the reporting form.
++  ALF    Authorization number for exception to dangerous goods
+          regulations
+             Reference number allocated by an authority. This number
+             contains an approval concerning exceptions on the
+             existing dangerous goods regulations.
++  ALG    Dangerous goods security number
+             Reference number allocated by an authority in order to
+             control the dangerous goods on board of a specific means
+             of transport for dangerous goods security purposes.
++  ALH    Dangerous goods transport licence number
+             Licence number allocated by an authority as to the
+             permission of carrying dangerous goods by a specific
+             means of transport.
++  ALI    Previous rental agreement number
+             Number to identify the previous rental agreement number.
++  ALJ    Next rental agreement reason number
+             Number to identify the reason for the next rental
+             agreement.
++  ALK    Consignee's invoice number
+             The invoice number assigned by a consignee.
++  ALL    Message batch number
+             A batch number identifying a batch of messages.
++  ALM    Previous delivery schedule number
+             A reference number identifying a previous delivery
+             schedule number.
++  ALN    Physical inventory recount reference number
+             A reference to a re-count of physically held inventory.
++  ALO    Receiving advice number
+             A reference number to a receiving advice.
++  ALP    Returnable container reference number
+             A reference number identifying a returnable container.
++  ALQ    Returns notice number
+             A reference number to a returns notice.
++  ALR    Sales forecast number
+             A reference number identifying a sales forecast.
++  ALS    Sales report number
+             A reference number identifying a sales report.
++  ALT    Previous tax control number
+             A reference number identifying a previous tax control
+             number.
++  ALU    AGERD (Aerospace Ground Equipment Requirement Data) number
+             Identifies the equipment required to conduct maintenance.
++  ALV    Registered capital reference
+             Registered capital reference of a company.
++  ALW    Standard number of inspection document
+             Code identifying the standard number of the inspection
+             document supplied.
++  ALX    Model
+             A reference used to identify a model.
++  ALY    Financial management reference
+             A financial management reference.
++  ALZ    NOTIfication for COLlection number (NOTICOL)
+             A reference assigned by a consignor to a notification
+             document which indicates the availability of goods for
+             collection.
++  AMA    Previous request for metered reading reference number
+             Number to identify a previous request for a recording or
+             reading of a measuring device (e.g. meter).
++  AMB    Next rental agreement number
+             Number to identify the next rental agreement.
++  AMC    Reference number of a request for metered reading
+             Number to identify a request for a recording or reading
+             of a measuring device (e.g. meter) to be taken.
+   AP     Accounts receivable number
+             Reference number assigned by accounts receivable
+             department to the account of a specific debtor.
+   ASC    Assuming company
+             Description to be provided.
+   AU     Authorization to meet competition No.
+             A number assigned by a requestor to an offer incoming
+             following request for quote.
+   AV     Account payable number
+             Reference number assigned by accounts payable department
+             to the account of a specific creditor.
+   AWB    Air waybill number
+             Reference number assigned to an air waybill, see: 1001 =
+             740.
+   BA     Beginning meter reading actual
+             Meter reading at the beginning of an invoicing period.
+   BC     Buyer's contract number
+             Reference number assigned by buyer to a contract.
+   BD     Bid number
+             Number assigned by a submitter of a bid to his bid.
+   BE     Beginning meter reading estimated
+             Meter reading at the beginning of an invoicing period
+             where an actual reading is not available.
+   BH     House bill of lading number
+             Reference number assigned to a house bill of lading, see:
+             1001 = 714.
+   BM     Bill of lading number
+             Reference number assigned to a bill of lading, see: 1001
+             = 705.
+   BN     Booking reference number
+             [1016] Reference number assigned by the carrier or his
+             agent when cargo space is reserved prior to loading.
+   BO     Blanket order number
+             Reference number assigned by the order issuer to a
+             blanket order.
+   BR     Broker or sales office number
+             Self explanatory.
+   BT     Batch number/lot number
+             Reference number assigned by manufacturer to a series of
+             similar products or goods produced under similar
+             conditions.
+   BW     Blended with number
+             The batch/lot/package number a product is blended with.
+   CAS    IATA Cargo Agent CASS Address number
+             Code issued by IATA to identify agent locations for CASS
+             billing purposes.
+   CD     Credit note number
+             Reference number assigned to a credit note.
+   CEC    Ceding company
+             Company selling obligations to a third party.
+   CFE    Consignee's further order
+             Reference of an order given by the consignee after
+             departure of the means of transport.
+   CFO    Consignor's further order
+             Reference of an order given by the consignor after
+             departure of the means of transport.
+   CG     Consignee's order number
+             Self explanatory.
+#  CH     Customer catalogue number
+             Number identifying a catalogue for customer's usage.
+   CK     Cheque number
+             Unique number assigned to one specific cheque.
+   CKN    Checking number
+             Number assigned by checking party to one specific check
+             action.
+   CM     Credit memo number
+             Reference number assigned by issuer to a credit memo.
+   CMR    Road consignment note number
+             Reference number assigned to a road consignment note,
+             see: 1001 = 730.
+   CN     Carrier's reference number
+             Reference number assigned by carrier to a consignment.
+   CNO    Charge note reference number
+             [1070] Indication in pre-printed form that a Charges note
+             has been established and is attached to the Rail
+             Consignment Note (CIM 76).
+   CO     Buyers order number
+             [1022] Reference number assigned by the buyer to an
+             order.
+   COF    Call off order number
+             Self explanatory.
+   CP     Condition of purchase document number
+             Reference number identifying the conditions of purchase
+             relevant to a purchase.
+   CR     Customer reference number
+             Reference number assigned by the customer to a
+             transaction.
+   CRN    Conveyance reference number
+             [8028] Unique reference given by the carrier to a certain
+             journey or departure of a means of transport (generic
+             term).
+   CS     Condition of sale document number
+             Reference number identifying the conditions of sale
+             relevant to a sale.
+   CST    Team assignment number
+             Team number assigned to a group that is responsible for
+             working a particular transaction.
+   CT     Contract number
+             Reference number of a contract concluded between parties.
+   CU     Consignor's reference number
+             [1140] Reference number assigned by a consignor to a
+             particular shipment for his own purposes or for those of
+             the consignee.
+   CV     Container operators reference number
+             Reference number assigned by the party operating or
+             controlling the transport container to a transaction or
+             consignment.
+   CW     Package number
+             (7070) Reference number identifying a package or carton
+             within a consignment.
+   CZ     Cooperation contract number
+             Number issued by a party concerned given to a contract on
+             cooperation of two or more parties.
+   DA     Deferment approval number
+             Number assigned by authorities to a party to approve
+             deferment of payment of tax or duties.
+   DAN    Debit account number
+             Reference number assigned by issuer to a debit account.
+   DB     Buyer's debtor number
+             Reference number assigned to a debtor.
+   DI     Distributor invoice number
+             Reference number assigned by issuer to a distributor
+             invoice.
+   DL     Debit note number
+             Reference number assigned by issuer to a debit note.
+   DM     Document number
+             [1004] Reference number assigned to the document by the
+             issuer.
+   DQ     Delivery note number
+             Reference number assigned by the issuer to a delivery
+             note.
+   DR     Dock receipt number
+             Number of the cargo receipt submitted when cargo is
+             delivered to a marine terminal.
+   EA     Ending meter reading actual
+             Meter reading at the end of an invoicing period.
+   EB     Embargo permit number
+             Reference number assigned by issuer to an embargo permit.
+   ED     Export declaration
+             Number assigned by the exporter to his export declaration
+             number submitted to an authority.
+   EE     Ending meter reading estimated
+             Meter reading at the end of an invoicing period where an
+             actual reading is not available.
+   EI     Employer's identification number
+             Number issued by an authority to identify an employer.
+   EN     Embargo number
+             Number assigned to specific goods or a family of goods in
+             a classification of embargo measures.
+   EP     Export permit number
+             Reference number assigned by issuing authority to an
+             export permit for products.
+   EQ     Equipment number
+             Number assigned by the manufacturer to specific
+             equipment.
+   ER     Container/equipment receipt number
+             Number of the Equipment Interchange Receipt issued for
+             full or empty equipment received.
+   ERN    Exporter's reference number
+             Reference to a party exporting goods.
+   ET     Excess transportation number
+             Number assigned to excess transport.
+   EX     Export licence number
+             [1208] Reference number assigned by issuing authority to
+             an Export Licence.
+   FC     Fiscal number
+             Tax payer's number. Number assigned to individual persons
+             as well as to corporates by a public institution; this
+             number is different from the VAT registration number.
+   FF     Freight forwarder's reference number
+             [1460] Reference number assigned to the consignment by
+             the freight forwarder.
+   FI     File line identifier
+             Number assigned by the file issuer or sender to identify
+             a specific line.
+   FLW    Flow reference number
+             Number given to a usual sender which has regular
+             expeditions of the same goods, to the same destination,
+             defining all general conditions of the transport.
+   FN     Freight bill number
+             Reference number assigned by issuing party to a freight
+             bill.
+   FO     Foreign exchange
+             Exchange of two currencies at an agreed rate.
+   FS     Final sequence number
+             Self explanatory.
+   FT     Free zone identifier
+             Identifier to specify the territory of a State where any
+             goods introduced are generally regarded, insofar as
+             import duties and taxes are concerned, as being outside
+             the Customs territory and are not subject to usual
+             Customs control (CCC).
+   FV     File version number
+             Number given to a version of an identified file.
+   FX     Foreign exchange contract number
+             Reference number identifying a foreign exchange contract.
+   GA     Standard's number
+             Number to identify a standardization description (e.g.
+             ISO 9375).
+   GC     Government contract number
+             Number assigned to a specific government/public contract.
+   GD     Standard's code number
+             Number to identify a specific parameter within a
+             standardization description (e.g. M5 for screws or DIN A4
+             for paper).
+   GDN    General declaration number
+             Number of the declaration of incoming goods out of a
+             vessel.
+   GN     Government reference number
+             Description to be provided.
+   HS     Harmonised system number
+             Number specifying the goods classification under the
+             Harmonised Commodity Description and Coding System of the
+             Customs Co-operation Council (CCC).
+   HWB    House waybill number
+             Reference number assigned to a house waybill, see: 1001 =
+             703.
+   IA     Internal vendor number
+             Number identifying the company-internal vending
+             department/unit.
+   IB     In bond number
+             Customs assigned number that is used to control the
+             movement of imported cargo prior to its formal Customs
+             clearing.
+   ICA    IATA cargo agent code number
+             Code issued by IATA identify each IATA Cargo Agent whose
+             name is entered on the Cargo Agency List.
+   ICE    Insurance certificate reference number
+             Self explanatory.
+   ICO    Insurance contract reference number
+             Self explanatory.
+   II     Initial sample inspection report number
+             Inspection report number given to the initial sample
+             inspection.
+   IL     Internal order number
+             Number assigned to an order for internal handling/follow
+             up.
+   INB    Intermediary broker
+             Description to be provided.
+   INN    Interchange number new
+             Number assigned by the interchange sender to identify one
+             specific interchange. This number points to the actual
+             interchange.
+   INO    Interchange number old
+             Number assigned by the interchange sender to identify one
+             specific interchange. This number points to the previous
+             interchange.
+   IP     Import licence number
+             [1106] Reference number assigned by the issuing authority
+             to an Import Licence.
+   IS     Invoice number suffix
+             An invoice number add on to split for detailed
+             specification purposes.
+   IT     Internal customer number
+             Number assigned by a seller, supplier etc. to identify a
+             customer within his enterprise.
+   IV     Invoice number
+             [1334] Reference number assigned by the seller to a
+             Commercial Invoice.
+   JB     Job number
+             Identifies a piece of work.
+   JE     Ending job sequence number
+             Description to be provided.
+   LA     Shipping label serial number
+             Self explanatory.
+   LAN    Loading authorization number
+             [4092] A number assigned to the loading authorization
+             granted by the forwarding station when the consignment is
+             subject to traffic limitations (CIM 43).
+   LAR    Lower article number of range
+             Lower serial number in a range for declaration of
+             incoming goods.
+   LB     Lockbox
+             Type of cash management system offered by financial
+             institutions to provide for collection of customers
+             'receivables'.
+   LC     Letter of credit number
+             Reference number identifying the letter of credit
+             document.
+   LI     Line item reference number
+             (1156) Reference number identifying a particular line in
+             a document.
+   LO     Load planning number
+             Self explanatory.
+   LS     Bar coded label serial number
+             Self explanatory.
+   MA     Ship notice/manifest number
+             Self explanatory.
+   MB     Master bill of lading number
+             Reference number assigned to a master bill of lading,
+             see: 1001 = 704.
+   MF     Manufacturer's part number
+             Reference number assigned by the manufacturer to his
+             product or part.
+   MG     Meter unit number
+             Number identifying a unique meter unit.
+   MH     Manufacturing order number
+             Reference number assigned by manufacturer for a given
+             production quantity of products.
+   MR     Message recipient
+             Self explanatory.
+   MRN    Mailing reference number
+             Identifies the party designated by the importer to
+             receive certain customs correspondence in lieu of its
+             being mailed directly to the importer.
+   MS     Message sender
+             Self explanatory.
+   MSS    Manufacturer's material safety data sheet number
+             Self explanatory.
+   MWB    Master air waybill number
+             Reference number assigned to a master air waybill, see:
+             1001 = 741.
+   NA     North American hazardous goods classification number
+             Reference to materials designated as hazardous for
+             purposes of transportation in North American commerce.
+   OH     Current invoice number
+             Reference number identifying the current invoice.
+   OI     Previous invoice number
+             Reference number identifying a previously issued invoice.
+   ON     Order number (purchase)
+             [1022] Reference number assigned by the buyer to an
+             order.
+   OP     Original purchase order
+             Reference to the order previously sent.
+   OR     General order number
+             Customs number assigned to imported merchandise that has
+             been left unclaimed and subsequently moved to a Customs
+             bonded warehouse for storage.
+   PB     Payer's financial institution account number
+             Originated company account number (ACH transfer), check,
+             draft or wire.
+   PC     Production code
+             Number assigned by the manufacturer to a specified
+             article or batch to identify the manufacturing date etc.
+             for subsequent reference.
+   PD     Promotion deal number
+             Number assigned by a vendor to a special promotion
+             activity.
+   PE     Plant number
+             Description to be provided.
+   PF     Prime contractor contract number
+             Reference number assigned by the client to the contract
+             of the prime contractor.
+   PI     Price list version number
+             Self explanatory.
+   PK     Packing list number
+             (1014) Reference number assigned to a packing list, see:
+             1001 = 271.
+   PL     Price list number
+             Reference number assigned to a price list.
+   POR    Purchase order response number
+             Reference number assigned by the seller to an order
+             response.
+   PP     Purchase order change number
+             Reference number assigned by a buyer for a revision of a
+             purchase order.
+   PQ     Payment reference
+             Reference number assigned to a payment.
+   PR     Price quote number
+             Reference number assigned by the seller to a quote.
+   PS     Purchase order number suffix
+             Purchase order number add on to split for detailed
+             specification purposes.
+   PW     Prior purchase order number
+             Reference number of a purchase order previously sent to
+             the supplier.
+   PY     Payee's financial institution account number
+             Receiving company account number (ACH transfer), check,
+             draft or wire.
+   RA     Remittance advice number
+             Self explanatory.
+   RC     Rail/road routing code
+             International Western and Eastern European route code
+             used in all rail organizations and specified in the
+             international tariffs (rail tariffs) known by the
+             customers.
+   RCN    Railway consignment note number
+             Reference number assigned to a rail consignment note,
+             see: 1001 = 720.
+   RE     Release number
+             Reference number assigned to identify a release of a set
+             of rules, conventions, conditions, etc.
+   REN    Received number
+             [1150] Number assigned to a rail consignment upon its
+             arrival at its destination station (CIM 84).
+   RF     Export reference number
+             Reference number given to an export shipment.
+   RR     Payer's financial institution transit routing No.(ACH
+          transfers)
+             ODFI (ACH transfer).
+   RT     Payee's financial institution transit routing No.
+             RDFI Transit routing number (ACH transfer).
+   SA     Sales person number
+             Identification number of a sales person.
+   SB     Sales region number
+             Description to be provided.
+   SD     Sales department number
+             Description to be provided.
+   SE     Serial number
+             Identification number of an item which distinguishes this
+             specific item out of an number of identical items.
+   SF     Ship from
+             Description to be provided.
+   SH     Previous highest schedule number
+             Number of the latest schedule of a previous period
+             (ODETTE DELINS).
+   SI     SID (Shipper's identifying number for shipment)
+             Description to be provided.
+   SM     Sales office number
+             Description to be provided.
+   SN     Seal number
+             [9308] Identification number on Customs or other seals
+             affixed to containers or other transport units.
+   SP     Scan line
+             Description to be provided.
+   SQ     Container sequence number
+             Description to be provided.
+   SRN    Shipment reference number
+             [1140] Reference number assigned by a consignor to a
+             particular shipment for his own purposes or for those of
+             the consignee.
+   SS     Sellers reference number
+             Reference number assigned to a transaction by the seller.
+   STA    Station reference number
+             International UIC code assigned to every European rail
+             station (CIM convention).
+   SW     Swap order number
+             Number assigned by the seller to a swap order (see
+             definition of DE 1001, code 229).
+   SZ     Specification number
+             Number assigned by the issuer to his specification.
+   TB     Trucker's bill of lading
+             A cargo list/description issued by a motor carrier of
+             freight.
+   TE     Telex message number
+             Reference number identifying a telex message.
+   TF     Transfer number
+             An extra number assigned to goods or a container which
+             functions as a reference number or as an authorization
+             number to get the goods or container released from a
+             certain party.
+   TI     TIR carnet number
+             Reference number assigned to a TIR carnet.
+   TL     Tax exemption licence number
+             Number assigned by the tax authorities to a party
+             indicating its tax exemption authorization. This number
+             could relate to a specified business type, a specified
+             local area or a class of products.
+   TN     Transaction reference number
+             Reference applied to a transaction between two or more
+             parties over a defined life cycle; e.g. number applied by
+             importer or broker to obtain release from Customs, may
+             then used to control declaration through final accounting
+             (synonyms: declaration, entry number).
+   TP     Test report number
+             Reference number identifying a test report document
+             relevant to the product.
+   UAR    Upper serial number of range
+             Upper serial number in a range for declaration of
+             incoming goods.
+   UC     Ultimate customer's reference number
+             The originator's reference number as forwarded in a
+             sequence of parties involved.
+   UCN    Unique consignment reference number
+             (1202) Unique reference of a consignment (UCRN) used for
+             identification purposes in documents and messages
+             exchanged between parties in international trade. See
+             also: Unique Identifier Code (UNIC) in UN/ECE
+             Recommendation No. 8, March 1992.
+   UN     United Nations dangerous goods (UNDG) number
+             [7124] Unique serial number assigned within the United
+             Nations to substances and articles contained in a list of
+             the dangerous goods most commonly carried.
+   UO     Ultimate customer's order number
+             The originator's order number as forwarded in a sequence
+             of parties involved.
+   VA     VAT registration number
+             Unique number assigned by the relevant tax authority to
+             identify a party for use in relation to Value Added Tax
+             (VAT).
+   VC     Vendor contract number
+             Number assigned by the vendor to a contract.
+   VM     Vessel identification
+             (8123) Reference identifying a vessel (UN/ECE
+             Recommendation No 10).
+   VN     Order number (vendor)
+             Reference number assigned by supplier to a buyer's
+             purchase order.
+   VON    Voyage number
+             [8228] Reference number assigned by the carrier or his
+             agent to the voyage of the vessel.
+   VP     Vendor product number
+             Number assigned by vendor to another manufacturer's
+             product.
+   VR     Vendor ID number
+             Description to be provided.
+   VS     Vendor order number suffix
+             Description to be provided.
+   VT     Motor vehicle identification number
+             (Reference identifying a motor vehicle used for
+             transport) normally is the vehicle registration number.
+   VV     Voucher number
+             Reference number identifying a voucher.
+   WE     Warehouse entry number
+             Entry number under which imported merchandise was placed
+             in a Customs bonded warehouse.
+   WM     Weight agreement number
+             Description to be provided.
+   WN     Well number
+             Description to be provided.
+   WR     Warehouse receipt number
+             Self explanatory.
+   WS     Warehouse storage location number
+             Self explanatory.
+   WY     Rail waybill number
+             Self explanatory.
+   XA     Company/place registration number
+             Company registration and place as legally required.
+   XC     Cargo control number
+             Reference used to identify and control a carrier and
+             consignment from initial entry into a country until
+             release of the cargo by Customs.
+   XP     Previous cargo control number
+             Where a consignment is deconsolidated and/or transferred
+             to the control of another carrier or freight forwarder
+             (e.g. housebill, abstract) this references the previous
+             (e.g. master) cargo control number.
+   ZZZ    Mutually defined reference number
+             Number based on party agreement.
+

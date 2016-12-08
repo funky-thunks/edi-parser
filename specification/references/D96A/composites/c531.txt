@@ -1,0 +1,9 @@
+
+      C531  PACKAGING DETAILS
+
+      Desc: Packaging level and details, terms and conditions.
+
+010   7075   Packaging level, coded                        C  an..3
+020   7233   Packaging related information, coded          C  an..3
+030   7073   Packaging terms and conditions, coded         C  an..3
+

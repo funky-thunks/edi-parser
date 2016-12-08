@@ -1,0 +1,11 @@
+
+       C002 DOCUMENT/MESSAGE NAME
+
+       Desc: Identification of a type of document/message by code
+             or name. Code preferred.
+
+010    1001  Document name code                        C      an..3
+020    1131  Code list identification code             C      an..17
+030    3055  Code list responsible agency code         C      an..3
+040    1000  Document name                             C      an..35
+

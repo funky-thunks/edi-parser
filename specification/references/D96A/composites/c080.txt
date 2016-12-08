@@ -1,0 +1,13 @@
+
+      C080  PARTY NAME
+
+      Desc: Identification of a transaction party by name, one to five
+            lines. Party name may be formatted.
+
+010   3036   Party name                                    M  an..35
+020   3036   Party name                                    C  an..35
+030   3036   Party name                                    C  an..35
+040   3036   Party name                                    C  an..35
+050   3036   Party name                                    C  an..35
+060   3045   Party name format, coded                      C  an..3
+

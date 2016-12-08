@@ -1,0 +1,9 @@
+
+   8067  Mode of transport, coded
+
+   Desc: Coded method of transport used for the carriage of the goods.
+
+   Repr: an..3
+
+   Note: Use UN/ECE Recommendation No 19.
+

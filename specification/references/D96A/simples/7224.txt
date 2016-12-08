@@ -1,0 +1,9 @@
+
+   7224  Number of packages
+
+   Desc: Number of individual parts of a shipment either unpacked, or
+         packed in such a way that they cannot be divided without
+         first undoing the packing.
+
+   Repr: n..8
+

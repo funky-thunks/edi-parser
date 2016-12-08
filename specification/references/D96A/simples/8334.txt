@@ -1,0 +1,7 @@
+
+   8334  Movement type
+
+   Desc: Description of the type of movement.
+
+   Repr: an..35
+

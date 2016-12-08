@@ -1,0 +1,68 @@
+4.3    Message structure
+
+4.3.1  Segment table
+
+Pos    Tag Name                                      S   R
+
+0010   UNH Message header                            M   1     
+0020   BGM Beginning of message                      M   1     
+0030   DTM Date/time/period                          C   9     
+0040   FTX Free text                                 C   99    
+
+0050 +     ----- Segment group 1  ------------------ C   9-----------+
+0060 * RFF Reference                                 M   1           |
+0070 + DTM Date/time/period                          C   9-----------+
+
+0080       ----- Segment group 2  ------------------ C   9-----------+
+0090   LOC Place/location identification             M   1           |
+0100   DTM Date/time/period                          C   9-----------+
+
+0110       ----- Segment group 3  ------------------ C   9-----------+
+0120   EQD Equipment details                         M   1           |
+0130   EQN Number of units                           C   9           |
+0140   MEA Measurements                              C   9           |
+0150   DIM Dimensions                                C   9           |
+0160   FTX Free text                                 C   9-----------+
+
+0170       ----- Segment group 4  ------------------ C   999---------+
+0180   TDT Details of transport                      M   1           |
+0190   DTM Date/time/period                          C   9           |
+0200   TSR Transport service requirements            C   9           |
+0210   FTX Free text                                 C   9           |
+0220   EQD Equipment details                         C   99          |
+0230   QTY Quantity                                  C   9           |
+0240   MEA Measurements                              C   9           |
+                                                                     |
+0250       ----- Segment group 5  ------------------ C   99---------+|
+0260   LOC Place/location identification             M   1          ||
+0270   DTM Date/time/period                          C   9----------++
+
+0280       ----- Segment group 6  ------------------ C   9-----------+
+0290   NAD Name and address                          M   1           |
+0300   LOC Place/location identification             C   9           |
+                                                                     |
+0310       ----- Segment group 7  ------------------ C   9----------+|
+0320   CTA Contact information                       M   1          ||
+0330   COM Communication contact                     C   9----------++
+
+0340       ----- Segment group 8  ------------------ C   9-----------+
+0350   GID Goods item details                        M   1           |
+0360   HAN Handling instructions                     C   9           |
+0370   FTX Free text                                 C   9           |
+                                                                     |
+0380       ----- Segment group 9  ------------------ C   9----------+|
+0390   GDS Nature of cargo                           M   1          ||
+0400   FTX Free text                                 C   9----------+|
+                                                                     |
+0410       ----- Segment group 10 ------------------ C   9----------+|
+0420   MEA Measurements                              M   1          ||
+0430   EQN Number of units                           C   9----------+|
+                                                                     |
+0440       ----- Segment group 11 ------------------ C   9----------+|
+0450   DIM Dimensions                                M   1          ||
+0460   EQN Number of units                           C   9----------+|
+                                                                     |
+0470       ----- Segment group 12 ------------------ C   9----------+|
+0480   DGS Dangerous goods                           M   1          ||
+0490   FTX Free text                                 C   9----------++
+0500   UNT Message trailer                           M   1     

@@ -1,0 +1,1383 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+---- Machine generated code.
+---- Output of edi-parser-scaffolder
+
+module Text.Edifact.D96A.Simples.S1001
+  ( simple1001
+  ) where
+
+import           Text.Edifact.Parsing
+import           Text.Edifact.Types   (Value)
+
+-- | Derived from this specification:
+--
+-- > * 1001  Document/message name, coded
+-- >
+-- >   Desc: Document/message identifier expressed in code.
+-- >
+-- >   Repr: an..3
+-- >
+-- >         1 Certificate of analysis
+-- >              Certificate providing the values of an analysis.
+-- >         2 Certificate of conformity
+-- >              Certificate certifying the conformity to predefined
+-- >              definitions.
+-- >         3 Certificate of quality
+-- >              Certificate certifying the quality of goods, services
+-- >              etc.
+-- >         4 Test report
+-- >              Report providing the results of a test session.
+-- >         5 Product performance report
+-- >              Report specifying the performance values of products.
+-- >         6 Product specification report
+-- >              Report providing specification values of products.
+-- >         7 Process data report
+-- >              Reports on events during production process.
+-- >         8 First sample test report
+-- >              Self explanatory.
+-- >         9 Price/sales catalogue
+-- >              Self explanatory.
+-- >        10 Party information
+-- >              Document/message providing basic data concerning a party.
+-- > +      11 Federal label approval
+-- >              A pre-approved document relating to federal label
+-- >              approval requirements.
+-- >        12 Mill certificate
+-- >              Certificate certifying a specific quality of agricultural
+-- >              products.
+-- >        13 Post receipt
+-- >              Document/message which evidences the transport of goods
+-- >              by post (e.g. mail, parcel, etc.).
+-- >        14 Weight certificate
+-- >              Certificate certifying the weight of goods.
+-- >        15 Weight list
+-- >              Document/message specifying the weight of goods.
+-- >        16 Certificate
+-- >              Document by means of which the documentary credit
+-- >              applicant specifies the conditions for the certificate
+-- >              and by whom the certificate is to be issued.
+-- >        17 Combined certificate of value and origin
+-- >              Document identifying goods, in which the authority
+-- >              empowered to issue it certifies expressly that the goods
+-- >              to which the respective goods originate in a specific
+-- >              (part of or group of) country(ies). It also states the
+-- >              price and/or costs of the goods with the purpose of
+-- >              determining the Customs value.
+-- >        18 Movement certificate A.TR.1
+-- >              Specific form of transit declaration issued by the
+-- >              exporter (movement certificate).
+-- >        19 Certificate of quantity
+-- >              Certificate certifying the quantity of goods, services
+-- >              etc.
+-- >        20 Quality data  message
+-- >              Usage of QALITY-message.
+-- >        21 Query
+-- >              Self-explanatory.
+-- >        22 Response to query
+-- >              Self-explanatory.
+-- >        23 Status information
+-- >              Information regarding the status of a related message.
+-- >        24 Restow
+-- >              Message/document identifying containers that have been
+-- >              unloaded and then reloaded onto the same means of
+-- >              transport.
+-- >        25 Container discharger list
+-- >              Message/document itemising containers to be discharged
+-- >              from vessel.
+-- >        26 Corporate superannuation contributions advice
+-- >              Document/message providing contributions advice used for
+-- >              corporate superannuation schemes.
+-- >        27 Industry superannuation contributions advice
+-- >              Document/message providing contributions advice used for
+-- >              superannuation schemes which are industry wide.
+-- >        28 Corporate superannuation member maintenance message
+-- >              Member maintenance message used for corporate
+-- >              superannuation schemes.
+-- >        29 Industry superannuation member maintenance message
+-- >              Member maintenance message used for industry wide
+-- >              superannuation schemes.
+-- >        30 Life insurance payroll deductions advice
+-- >              Payroll deductions advice used in the life insurance
+-- >              industry.
+-- >        31 Underbond request
+-- >              A Message/document requesting to move cargo from one
+-- >              Customs control point to another.
+-- >        32 Underbond approval
+-- >              A message/document issuing Customs approval to move cargo
+-- >              from one Customs control point to another.
+-- >        33 Certificate of sealing of export meat lockers
+-- >              Document / message issued by the authority in the
+-- >              exporting country evidencing the sealing of export meat
+-- >              lockers.
+-- >        34 Cargo status
+-- >              Message identifying the status of cargo.
+-- >        35 Inventory report
+-- >              A message specifying information relating to held
+-- >              inventories.
+-- > +      36 Identity card
+-- >              Official document to identify a person.
+-- >        37 Response to a trade statistics message
+-- >              Document/message in which the competent national
+-- >              authorities provide a declarant with an acceptance or a
+-- >              rejection about a received declaration for European
+-- >              statistical purposes.
+-- > +      38 Vaccination certificate
+-- >              Official document proving immunisation against certain
+-- >              diseases.
+-- > +      39 Passport
+-- >              An official document giving permission to travel in
+-- >              foreign countries.
+-- > +      40 Driving licence (national)
+-- >              An official document giving permission to drive a car in
+-- >              a given country.
+-- > +      41 Driving licence (international)
+-- >              An official document giving a native of one country
+-- >              permission to drive a vehicle in certain other countries.
+-- > +      42 Free pass
+-- >              A document giving free access to a service.
+-- > +      43 Season ticket
+-- >              A document giving access to a service for a determined
+-- >              period of time.
+-- >        59 Treatment - nil outturn
+-- >              No shortage, surplus or damaged outturn resulting from
+-- >              container vessel unpacking.
+-- >        60 Treatment - time-up underbond
+-- >              Movement type indicator: goods are moved under customs
+-- >              control for warehousing due to being time-up.
+-- >        61 Treatment - underbond by sea
+-- >              Movement type indicator: goods are to move by sea under
+-- >              customs control to a customs office where formalities
+-- >              will be completed.
+-- >        62 Treatment - personal effect
+-- >              Cargo consists of personal effects.
+-- >        63 Treatment - timber
+-- >              Cargo consists of timber.
+-- >        64 Preliminary credit assessment
+-- >              Document/message issued either by a factor to indicate
+-- >              his preliminary credit assessment on a buyer, or by a
+-- >              seller to request a factor's preliminary credit
+-- >              assessment on a buyer.
+-- >        65 Credit cover
+-- >              Document/message issued either by a factor to give a
+-- >              credit cover on a buyer, or by a seller to request a
+-- >              factor's credit cover.
+-- >        66 Current account
+-- >              Document/message issued by a factor to indicate the money
+-- >              movements of a seller's or another factor's account with
+-- >              him.
+-- >        67 Commercial dispute
+-- >              Document/message issued by a party (usually the buyer) to
+-- >              indicate that one or more invoices or one or more credit
+-- >              notes are disputed for payment.
+-- >        68 Chargeback
+-- >              Document/message issued by a factor to a seller or to
+-- >              another factor to indicate that the rest of the amounts
+-- >              of one or more invoices uncollectable from buyers are
+-- >              charged back to clear the invoice(s) off the ledger.
+-- >        69 Reassignment
+-- >              Document/message issued by a factor to a seller or to
+-- >              another factor to reassign an invoice or credit note
+-- >              previously assigned to him.
+-- >        70 Collateral account
+-- >              Document message issued by a factor to indicate the
+-- >              movements of invoices, credit notes and payments of a
+-- >              seller's account.
+-- >        71 Request for payment
+-- >              Document/message issued by a creditor to a debtor to
+-- >              request payment of one or more invoices past due.
+-- >        72 Unship permit
+-- >              A message or document issuing permission to unship cargo.
+-- >        73 Statistical definitions
+-- >              Transmission of one or more statistical definitions.
+-- >        74 Statistical data
+-- >              Transmission of one or more items of data or data sets.
+-- >        75 Request for statistical data
+-- >              Request for one or more items or data sets of statistical
+-- >              data.
+-- >        76 Call-off delivery
+-- >              Document/message to provide split quantities and delivery
+-- >              dates referring to a previous delivery instruction.
+-- >        77 Status report
+-- >              Message covers information about the consignment status.
+-- >        78 Inventory movement advice
+-- >              Advice of inventory movements.
+-- >        79 Inventory status advice
+-- >              Advice of stock on hand.
+-- >        80 Debit note related to goods or services
+-- >              Debit information related to a transaction for goods or
+-- >              services to the relevant party.
+-- >        81 Credit note related to goods or services
+-- >              Document message used to provide credit information
+-- >              related to a transaction for goods or services to the
+-- >              relevant party.
+-- >        82 Metered services invoice
+-- >              Document/message claiming payment for the supply of
+-- >              metered services (e.g., gas, electricity, etc.) supplied
+-- >              to a fixed meter whose consumption is measured over a
+-- >              period of time.
+-- >        83 Credit note related to financial adjustments
+-- >              Document message for providing credit information related
+-- >              to financial adjustments to the relevant party, e.g.,
+-- >              bonuses.
+-- >        84 Debit note related to financial adjustments
+-- >              Document/message for providing debit information related
+-- >              to financial adjustments to the relevant party.
+-- >        85 Customs manifest
+-- >              Message/document identifying a customs manifest. The
+-- >              document itemises a list of cargo prepared by shipping
+-- >              companies from bills of landing and presented to customs
+-- >              for formal report of cargo.
+-- >        86 Vessel unpack report
+-- >              A document code to indicate that the message being
+-- >              transmitted identifies all short and surplus cargoes off-
+-- >              loaded from a vessel at a specified discharging port.
+-- >        87 General cargo summary manifest report
+-- >              A document code to indicate that the message being
+-- >              transmitted is summary manifest information for general
+-- >              cargo.
+-- >        88 Consignment unpack report
+-- >              A document code to indicate that the message being
+-- >              transmitted is a consignment unpack report only.
+-- >        89 Meat and meat by-products sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that meat or meat by-
+-- >              products comply with the requirements set by the
+-- >              importing country.
+-- >        90 Meat food products sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that meat food products
+-- >              comply with the requirements set by the importing
+-- >              country.
+-- >        91 Poultry sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that poultry products
+-- >              comply with the requirements set by the importing
+-- >              country.
+-- >        92 Horsemeat sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that horsemeat products
+-- >              comply with the requirements set by the importing
+-- >              country.
+-- >        93 Casing sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that casing products
+-- >              comply with the requirements set by the importing
+-- >              country.
+-- >        94 Pharmaceutical sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that pharmaceutical
+-- >              products comply with the requirements set by the
+-- >              importing country.
+-- >        95 Inedible sanitary certificate
+-- >              Document or message issued by the competent authority in
+-- >              the exporting country evidencing that inedible products
+-- >              comply with the requirements set by the importing
+-- >              country.
+-- >        96 Impending arrival
+-- >              Notification of impending arrival details for vessel.
+-- >        97 Means of transport advice
+-- >              Message reporting the means of transport used to carry
+-- >              goods or cargo.
+-- >        98 Arrival information
+-- >              Message reporting the arrival details of goods or cargo.
+-- >        99 Cargo release notification
+-- >              Message/document sent by the cargo handler indicating
+-- >              that the cargo has moved from a Customs controlled
+-- >              premise.
+-- > +     100 Excise certificate
+-- >              Certificate asserting that the goods have been submitted
+-- >              to the excise authorities before departure from the
+-- >              exporting country or before delivery in case of import
+-- >              traffic.
+-- > +     101 Registration document
+-- >              An official document providing registration details.
+-- >       105 Purchase order
+-- >              Document/message issued within an enterprise to initiate
+-- >              the purchase of articles, materials or services required
+-- >              for the production or manufacture of goods to be offered
+-- >              for sale or otherwise supplied to customers.
+-- >       110 Manufacturing instructions
+-- >              Document/message issued within an enterprise to initiate
+-- >              the manufacture of goods to be offered for sale.
+-- >       120 Stores requisition
+-- >              Document/message issued within an enterprise ordering the
+-- >              taking out of stock of goods.
+-- >       130 Invoicing data sheet
+-- >              Document/message issued within an enterprise containing
+-- >              data about goods sold, to be used as the basis for the
+-- >              preparation of an invoice.
+-- >       140 Packing instructions
+-- >              Document/message within an enterprise giving instructions
+-- >              on how goods are to be packed.
+-- >       150 Internal transport order
+-- >              Document/message giving instructions about the transport
+-- >              of goods within an enterprise.
+-- >       190 Statistical and other administrative internal documents
+-- >              Documents/messages issued within an enterprise for the
+-- >              for the purpose of collection of production and other
+-- >              internal statistics, and for other administration
+-- >              purposes.
+-- >       201 Direct payment valuation request
+-- >              Request to establish a direct payment valuation.
+-- >       202 Direct payment valuation
+-- >              Document/message addressed, for instance, by a general
+-- >              contractor to the owner, in order that a direct payment
+-- >              be made to a subcontractor.
+-- >       203 Provisional payment valuation
+-- >              Document/message establishing a provisional payment
+-- >              valuation.
+-- >       204 Payment valuation
+-- >              Document/message establishing the financial elements of a
+-- >              situation of works.
+-- >       205 Quantity valuation
+-- >              Document/message providing a confirmed assessment, by
+-- >              quantity, of the completed work for a construction
+-- >              contract.
+-- >       206 Quantity valuation request
+-- >              Document/message providing an initial assessment, by
+-- >              quantity, of the completed work for a construction
+-- >              contract.
+-- >       207 Contract bill of quantities - BOQ
+-- >              Document/message providing a formal specification
+-- >              identifying quantities and prices that are the basis of a
+-- >              contract for a construction project. BOQ means: Bill of
+-- >              quantity.
+-- >       208 Unpriced tender BOQ
+-- >              Document/message providing a detailed, quantity based
+-- >              specification, issued in an unpriced form to invite
+-- >              tender prices. BOQ means: Bill of quantity.
+-- >       209 Priced tender BOQ
+-- >              Document/message providing a detailed, quantity based
+-- >              specification, updated with prices to form a tender
+-- >              submission for a construction contract. BOQ means: Bill
+-- >              of quantity.
+-- >       210 Enquiry
+-- >              Document/message issued by a party interested in the
+-- >              purchase of goods specified therein and indicating
+-- >              particular, desirable conditions regarding delivery
+-- >              terms, etc., addressed to a prospective supplier with a
+-- >              view to obtaining an offer.
+-- >       211 Interim application for payment
+-- >              Document/message containing a provisional assessment in
+-- >              support of a request for payment for completed work for a
+-- >              construction contract.
+-- >       212 Agreement to pay
+-- >              Document/message in which the debtor expresses the
+-- >              intention to pay.
+-- >       215 Letter of intent
+-- >              Document/message by means of which a buyer informs a
+-- >              seller that the buyer intends to enter into contractual
+-- >              negotiations.
+-- >       220 Order
+-- >              Document/message by means of which a buyer initiates a
+-- >              transaction with a seller involving the supply of goods
+-- >              or services as specified, according to conditions set out
+-- >              in an offer, or otherwise known to the buyer.
+-- >       221 Blanket order
+-- >              Usage of document/message for general order purposes with
+-- >              later split into quantities and delivery dates and maybe
+-- >              delivery locations.
+-- >       222 Spot order
+-- >              Document/message ordering the remainder of a production's
+-- >              batch.
+-- >       223 Lease order
+-- >              Document/message for goods in leasing contracts.
+-- >       224 Rush order
+-- >              Document/message for urgent ordering.
+-- >       225 Repair order
+-- >              Document/message to order repair of goods.
+-- >       226 Call off order
+-- >              Document/message to provide split quantities and delivery
+-- >              dates referring to a previous blanket order.
+-- >       227 Consignment order
+-- >              Order to deliver goods into stock with agreement on
+-- >              payment when goods are sold out of this stock.
+-- >       228 Sample order
+-- >              Document/message to order samples.
+-- >       229 Swap order
+-- >              Document/message informing buyer or seller of the
+-- >              replacement of goods previously ordered.
+-- >       230 Purchase order change request
+-- >              Change to an purchase order already sent.
+-- >       231 Purchase order response
+-- >              Response to an purchase order already received.
+-- >       232 Hire order
+-- >              Document/message for hiring human resources or renting
+-- >              goods or equipment.
+-- >       233 Spare parts order
+-- >              Document/message to order spare parts.
+-- >       240 Delivery instructions
+-- >              Document/message issued by a buyer giving instructions
+-- >              regarding the details of the delivery of goods ordered.
+-- >       241 Delivery schedule
+-- >              Usage of DELFOR-message.
+-- >       242 Delivery just-in-time
+-- >              Usage of DELJIT-message.
+-- >       245 Delivery release
+-- >              Document/message issued by a buyer releasing the despatch
+-- >              of goods after receipt of the Ready for despatch advice
+-- >              from the seller.
+-- >       270 Delivery note
+-- >              Paper document attached to a consignment informing the
+-- >              receiving party about contents of this consignment.
+-- >       271 Packing list
+-- >              Document/message specifying the distribution of goods in
+-- >              individual packages (in trade environment the despatch
+-- >              advice message is used for the packing list).
+-- >       310 Offer/quotation
+-- >              Document/message which , with a view to concluding a
+-- >              contract, sets out the conditions under which the goods
+-- >              are offered.
+-- >       311 Request for quote
+-- >              Document/message requesting a quote on specified goods or
+-- >              services.
+-- >       315 Contract
+-- >              Document/message evidencing an agreement between the
+-- >              seller and the buyer for the supply of goods or services;
+-- >              its effects are equivalent to those of an order followed
+-- >              by an acknowledgement of order.
+-- >       320 Acknowledgement of order
+-- >              Document/message acknowledging an undertaking to fulfil
+-- >              an order and confirming conditions or acceptance of
+-- >              conditions.
+-- >       325 Proforma invoice
+-- >              Document/message serving as a preliminary invoice,
+-- >              containing - on the whole - the same information as the
+-- >              final invoice, but not actually claiming payment.
+-- >       326 Partial invoice
+-- >              Self explanatory.
+-- >       327 Operating instructions
+-- >              Self explanatory.
+-- >       328 Name/product plate
+-- >              Plates on goods identifying and describing an article.
+-- >       330 Request for delivery instructions
+-- >              Document/message issued by a supplier requesting
+-- >              instructions from the buyer regarding the details of the
+-- >              delivery of goods ordered.
+-- >       335 Booking request
+-- >              Document/message issued by a supplier to a carrier
+-- >              requesting space to be reserved for a specified
+-- >              consignment, indicating desirable conveyance, despatch
+-- >              time, etc.
+-- >       340 Shipping instructions
+-- >              Document/message advising details of cargo and exporter's
+-- >              requirements for its physical movement.
+-- >       341 Shipper's letter of instructions (air)
+-- >              Document/message issued by a consignor in which he gives
+-- >              details of a consignment of goods that enables an airline
+-- >              or its agent to prepare an air waybill.
+-- >       343 Cartage order (local transport)
+-- >              Document/message giving instructions regarding local
+-- >              transport of goods, e.g. from the premises of an
+-- >              enterprise to those of a carrier undertaking further
+-- >              transport.
+-- >       345 Ready for despatch advice
+-- >              Document/message issued by a supplier informing a buyer
+-- >              that goods ordered are ready for despatch.
+-- >       350 Despatch order
+-- >              Document/message issued by a supplier initiating the
+-- >              despatch of goods to a buyer (consignee).
+-- >       351 Despatch advice
+-- >              Document/message by means of which the seller or
+-- >              consignor informs the consignee about the despatch of
+-- >              goods.
+-- >       370 Advice of distribution of documents
+-- >              Document/message in which the party responsible for the
+-- >              issue of a set of trade documents specifies the various
+-- >              recipients of originals and copies of these documents,
+-- >              with an indication of the number of copies distributed to
+-- >              each of them.
+-- >       380 Commercial invoice
+-- >              Document/message claiming payment for goods or services
+-- >              supplied under conditions agreed between seller and
+-- >              buyer.
+-- >       381 Credit note
+-- >              Document/message for providing credit information to the
+-- >              relevant party.
+-- >       382 Commission note
+-- >              Document/message in which a seller specifies the amount
+-- >              of commission, the percentage of the invoice amount, or
+-- >              some other basis for the calculation of the commission to
+-- >              which a sales agent is entitled.
+-- >       383 Debit note
+-- >              Document/message for providing debit information to the
+-- >              relevant party.
+-- >       384 Corrected invoice
+-- >              Commercial invoice that includes revised information
+-- >              differing from an earlier submission of the same invoice.
+-- >       385 Consolidated invoice
+-- >              Commercial invoice that covers multiple transactions
+-- >              involving more than one vendor.
+-- >       386 Prepayment invoice
+-- >              An invoice to pay amounts for goods and services in
+-- >              advance; these amounts will be subtracted from the final
+-- >              invoice.
+-- >       387 Hire invoice
+-- >              Document/message for invoicing the hiring of human
+-- >              resources or renting goods or equipment.
+-- >       388 Tax invoice
+-- >              An invoice for tax purposes.
+-- >       389 Self-billed invoice
+-- >              An invoice the invoicee is producing instead of the
+-- >              seller.
+-- >       390 Delcredere invoice
+-- >              An invoice sent to the party paying for a number of
+-- >              buyers.
+-- >       393 Factored invoice
+-- >              Invoice assigned to a third party for collection.
+-- >       394 Lease invoice
+-- >              Usage of INVOIC-message for goods in leasing contracts.
+-- >       395 Consignment invoice
+-- >              Commercial invoice that covers a transaction other than
+-- >              one involving a sale.
+-- >       396 Factored credit note
+-- >              Credit note related to assigned invoice(s).
+-- >       409 Instructions for bank transfer
+-- >              Document/message containing instructions from a customer
+-- >              to his bank to pay an amount in a specified currency to a
+-- >              nominated party in another country by a method either
+-- >              specified (e.g. teletransmission, air mail) or left to
+-- >              the discretion of the bank.
+-- >       412 Application for banker's draft
+-- >              Application by a customer to his bank to issue a banker's
+-- >              draft stating the amount and currency of the draft, the
+-- >              name of the payee and the place and country of payment.
+-- >       425 Collection payment advice
+-- >              Document/message whereby a bank advises that a collection
+-- >              has been paid, giving details and methods of funds
+-- >              disposal.
+-- >       426 Documentary credit payment advice
+-- >              Document/message whereby a bank advises payment under a
+-- >              documentary credit.
+-- >       427 Documentary credit acceptance advice
+-- >              Document/message whereby a bank advises acceptance under
+-- >              a documentary credit.
+-- >       428 Documentary credit negotiation advice
+-- >              Document/message whereby a bank advises negotiation under
+-- >              a documentary credit.
+-- >       429 Application for banker's guarantee
+-- >              Document/message whereby a customer requests his bank to
+-- >              issue a guarantee in favour of a nominated party in
+-- >              another country, stating the amount and currency and the
+-- >              specific conditions of the guarantee.
+-- >       430 Banker's guarantee
+-- >              Document/message in which a bank undertakes to pay out a
+-- >              limited amount of money to a designated party, on
+-- >              conditions stated therein (other than those laid down in
+-- >              the Uniform Customs Practice).
+-- >       431 Documentary credit letter of indemnity
+-- >              Document/message in which a beneficiary of a documentary
+-- >              credit accepts responsibility for non-compliance with the
+-- >              terms and conditions of the credit, and undertakes to
+-- >              refund the money received under the credit, with interest
+-- >              and charges accrued.
+-- >       435 Preadvice of a credit
+-- >              Preadvice indicating a credit to happen in the future.
+-- >       447 Collection order
+-- >              Document/message whereby a bank is instructed (or
+-- >              requested) to handle financial and/or commercial
+-- >              documents in order to obtain acceptance and/or payment,
+-- >              or to deliver documents on such other terms and
+-- >              conditions as may be specified.
+-- >       448 Documents presentation form
+-- >              Document/message whereby a draft or similar instrument
+-- >              and/or commercial documents are presented to a bank for
+-- >              acceptance, discounting, negotiation, payment or
+-- >              collection, whether or not against a documentary credit.
+-- >       450 Payment order
+-- >              Document/message containing information needed to
+-- >              initiate the payment. It may cover the financial
+-- >              settlement for one or more commercial trade transactions.
+-- >              A payment order is an instruction to the ordered bank to
+-- >              arrange for the payment of one specified amount to the
+-- >              beneficiary.
+-- >       451 Extended payment order
+-- >              Document/message containing information needed to
+-- >              initiate the payment. It may cover the financial
+-- >              settlement for several commercial trade transactions,
+-- >              which it is possible to specify in a special payments
+-- >              detail part. It is an instruction to the ordered bank to
+-- >              arrange for the payment of one specified amount to the
+-- >              beneficiary.
+-- >       452 Multiple payment order
+-- >              Document/message containing a payment order with one
+-- >              debit account and several credit accounts.
+-- >       454 Credit advice
+-- >              Document/message sent by an account servicing institution
+-- >              to one of its account owners, to inform the account owner
+-- >              of an entry which has been or will be credited to its
+-- >              account for a specified amount on the date indicated.
+-- >       455 Extended credit advice
+-- >              Document/message sent by an account servicing institution
+-- >              to one of its account owners, to inform the account owner
+-- >              of an entry that has been or will be credited to its
+-- >              account for a specified amount on the date indicated. It
+-- >              provides extended commercial information concerning the
+-- >              relevant remittance advice.
+-- >       456 Debit advice
+-- >              Advice on a debit.
+-- >       457 Reversal of debit
+-- >              Reversal of debit accounting entry by bank.
+-- >       458 Reversal of credit
+-- >              Reversal of credit accounting entry by bank.
+-- >       460 Documentary credit application
+-- >              Document/message whereby a bank is requested to issue a
+-- >              documentary credit on the conditions specified therein.
+-- >       465 Documentary credit
+-- >              Document/message in which a bank states that it has
+-- >              issued a documentary credit under which the beneficiary
+-- >              is to obtain payment, acceptance or negotiation on
+-- >              compliance with certain terms and conditions and against
+-- >              presentation of stipulated documents and such drafts as
+-- >              may be specified. The credit may or may not be confirmed
+-- >              by another bank.
+-- >       466 Documentary credit notification
+-- >              Document/message issued by an advising bank in order to
+-- >              transmit a documentary credit to a beneficiary, or to
+-- >              another advising bank.
+-- >       467 Documentary credit transfer advice
+-- >              Document/message whereby a bank advises that (part of) a
+-- >              documentary credit is being or has been transferred in
+-- >              favour of a second beneficiary.
+-- >       468 Documentary credit amendment notification
+-- >              Document/message whereby a bank advises that the terms
+-- >              and conditions of a documentary credit have been amended.
+-- >       469 Documentary credit amendment
+-- >              Document/message whereby a bank notifies a beneficiary of
+-- >              the details of an amendment to the terms and conditions
+-- >              of a documentary credit.
+-- >       481 Remittance advice
+-- >              Document/message advising of the remittance of payment.
+-- >       485 Banker's draft
+-- >              Draft drawn in favour of a third party either by one bank
+-- >              on another bank, or by a branch of a bank on its head
+-- >              office (or vice versa) or upon another branch of the same
+-- >              bank. In either case, the draft should comply with the
+-- >              specifications laid down for cheques in the country in
+-- >              which it is to be payable.
+-- >       490 Bill of exchange
+-- >              Document/message, issued and signed in conformity with
+-- >              the applicable legislation, which contains an
+-- >              unconditional order whereby the drawer directs the drawee
+-- >              to pay a definite sum of money to the payee or to his
+-- >              order, on demand or at a definite time, against the
+-- >              surrender of the document itself.
+-- >       491 Promissory note
+-- >              Document/message, issued and signed in conformity with
+-- >              the applicable legislation, which contains an
+-- >              unconditional promise whereby the maker undertakes to pay
+-- >              a definite sum of money to the payee or to his order, on
+-- >              demand or at a definite time, against the surrender of
+-- >              the document itself.
+-- >       492 Financial statement of account
+-- >              Statement giving the status of a financial account.
+-- >       493 Statement of account message
+-- >              Usage of STATAC-message.
+-- >       520 Insurance certificate
+-- >              Document/message issued to the insured certifying that
+-- >              insurance has been effected and that a policy has been
+-- >              issued. Such a certificate for a particular cargo is
+-- >              primarily used when good are insured under the terms of a
+-- >              floating or an open policy; at the request of the insured
+-- >              it can be exchanged for a policy.
+-- >       530 Insurance policy
+-- >              Document/message issued by the insurer evidencing an
+-- >              agreement to insure and containing the conditions of the
+-- >              agreement concluded whereby the insurer undertakes for a
+-- >              specific fee to indemnify the insured for the losses
+-- >              arising out of the perils and accidents specified in the
+-- >              contract.
+-- >       550 Insurance declaration sheet (bordereau)
+-- >              A document/message used when an insured reports to his
+-- >              insurer details of individual shipments which are covered
+-- >              by an insurance contract - an open cover or a floating
+-- >              policy - between the parties.
+-- >       575 Insurer's invoice
+-- >              Document/message issued by an insurer specifying the cost
+-- >              of an insurance which has been effected and claiming
+-- >              payment therefore.
+-- >       580 Cover note
+-- >              Document/message issued by an insurer (insurance broker,
+-- >              agent, etc.) to notify the insured that his insurance
+-- >              have been carried out.
+-- >       610 Forwarding instructions
+-- >              Document/message issued to a freight forwarder, giving
+-- >              instructions regarding the action to be taken by the
+-- >              forwarder for the forwarding of goods described therein.
+-- >       621 Forwarder's advice to import agent
+-- >              Document/message issued by a freight forwarder in an
+-- >              exporting country advising his counterpart in an
+-- >              importing country about the forwarding of goods described
+-- >              therein.
+-- >       622 Forwarder's advice to exporter
+-- >              Document/message issued by a freight forwarder informing
+-- >              an exporter of the action taken in fulfilment of
+-- >              instructions received.
+-- >       623 Forwarder's invoice
+-- >              Invoice issued by a freight forwarder specifying services
+-- >              rendered and costs incurred and claiming payment
+-- >              therefore.
+-- >       624 Forwarder's certificate of receipt
+-- >              Non-negotiable document issued by a forwarder to certify
+-- >              that he has assumed control of a specified consignment,
+-- >              with irrevocable instructions to send it to the consignee
+-- >              indicated in the document or to hold it at his disposal.
+-- >              E.g. FIATA-FCR.
+-- >       630 Shipping note
+-- >              Document/message provided by the shipper or his agent to
+-- >              the carrier, multimodal transport operator, terminal or
+-- >              other receiving authority, giving information about
+-- >              export consignments offered for transport, and providing
+-- >              for the necessary receipts and declarations of liability.
+-- >              (Sometimes a multipurpose cargo handling document also
+-- >              fulfilling the functions of document 632, 633, 650 and
+-- >              655).
+-- >       631 Forwarder's warehouse receipt
+-- >              Document/message issued by a forwarder acting as
+-- >              Warehouse Keeper acknowledging receipt of goods placed in
+-- >              a warehouse, and stating or referring to the conditions
+-- >              which govern the warehousing and the release of goods.
+-- >              The document contains detailed provisions regarding the
+-- >              rights of holders-by-endorsement, transfer of ownership,
+-- >              etc. E.g. FIATA-FWR.
+-- >       632 Goods receipt
+-- >              Document/message issued by a port, warehouse/shed, or
+-- >              terminal operator acknowledging receipt of goods
+-- >              specified therein on conditions stated or referred to in
+-- >              the document.
+-- >       633 Port charges documents
+-- >              Documents/messages specifying services rendered, storage
+-- >              and handling costs, demurrage and other charges due to
+-- >              the owner of goods described therein.
+-- >       635 Warehouse warrant
+-- >              Negotiable receipt document, issued by a Warehouse Keeper
+-- >              to a person placing goods in a warehouse and conferring
+-- >              title to the goods stored.
+-- >       640 Delivery order
+-- >              Document/message issued by a party entitled to authorize
+-- >              the release of goods specified therein to a named
+-- >              consignee, to be retained by the custodian of the goods.
+-- >       650 Handling order
+-- >              Document/message issued by a cargo handling organization
+-- >              (port administration, terminal operator, etc.) for the
+-- >              removal or other handling of goods under their care.
+-- >       655 Gate pass
+-- >              Document/message authorizing goods specified therein to
+-- >              be brought out of a fenced-in port or terminal area.
+-- >       700 Waybill
+-- >              Non-negotiable document evidencing the contract for the
+-- >              transport of cargo.
+-- >       701 Universal (multipurpose) transport document
+-- >              Document/message evidencing a contract of carriage
+-- >              covering the movement of goods by any mode of transport,
+-- >              or combination of modes, for national as well as
+-- >              international transport, under any applicable
+-- >              international convention or national law and under the
+-- >              conditions of carriage of any carrier or transport
+-- >              operator undertaking or arranging the transport referred
+-- >              to in the document.
+-- >       702 Goods receipt, carriage
+-- >              Document/message issued by a carrier or a carrier's
+-- >              agent, acknowledging receipt for carriage of goods
+-- >              specified therein on conditions stated or referred to in
+-- >              the document, enabling the carrier to issue a transport
+-- >              document.
+-- >       703 House waybill
+-- >              The document made out by an agent/consolidator which
+-- >              evidences the contract between the shipper and the
+-- >              agent/consolidator for the arrangement of carriage of
+-- >              goods.
+-- >       704 Master bill of lading
+-- >              A bill of lading issued by the master of a vessel (in
+-- >              actuality the owner or charterer of the vessel). It could
+-- >              cover a number of house bills.
+-- >       705 Bill of lading
+-- >              Negotiable document/message which evidences a contract of
+-- >              carriage by sea and the taking over or loading of goods
+-- >              by carrier, and by which carrier undertakes to deliver
+-- >              goods against surrender of the document. A provision in
+-- >              the document that goods are to be delivered to the order
+-- >              of a named person, or to order, or to bearer, constitutes
+-- >              such an undertaking.
+-- >       706 Bill of lading original
+-- >              The original of the bill of lading issued by a transport
+-- >              company. When issued by the maritime industry it could
+-- >              signify ownership of the cargo.
+-- >       707 Bill of lading copy
+-- >              A copy of the bill of lading issued by a transport
+-- >              company.
+-- >       708 Empty container bill
+-- >              Bill of lading indicating an empty container.
+-- >       709 Tanker bill of lading
+-- >              Document which evidences a transport of liquid bulk
+-- >              cargo.
+-- >       710 Sea waybill
+-- >              Non-negotiable document which evidences a contract for
+-- >              the carriage of goods by sea and the taking over of the
+-- >              goods by the carrier, and by which the carrier undertakes
+-- >              to deliver the goods to the consignee named in the
+-- >              document.
+-- >       711 Inland waterway bill of lading
+-- >              Negotiable transport document made out to a named person,
+-- >              to order or to bearer, signed by the carrier and handed
+-- >              to the sender after receipt of the goods.
+-- >       712 Non-negotiable maritime transport document (generic)
+-- >              Non-negotiable document which evidences a contract for
+-- >              the carriage of goods by sea and the taking over or
+-- >              loading of the goods by the carrier, and by which the
+-- >              carrier undertakes to deliver the goods to the consignee
+-- >              named in the document. E.g. Sea waybill. Remark:
+-- >              Synonymous with "straight" or "non-negotiable Bill of
+-- >              lading" used in certain countries, e.g. Canada.
+-- >       713 Mate's receipt
+-- >              Document/message issued by a ship's officer to
+-- >              acknowledge that a specified consignment has been
+-- >              received on board a vessel, and the apparent condition of
+-- >              the goods; enabling the carrier to issue a Bill of
+-- >              lading.
+-- >       714 House bill of lading
+-- >              The bill of lading issued not by the carrier but by the
+-- >              freight forwarder/consolidator known by the carrier.
+-- >       715 Letter of indemnity for non-surrender of bill of lading
+-- >              Document/message issued by a commercial party or a bank
+-- >              of an insurance company accepting responsibility to the
+-- >              beneficiary of the indemnity in accordance with the terms
+-- >              thereof.
+-- >       716 Forwarder's bill of lading
+-- >              Non-negotiable document issued by a freight forwarder
+-- >              evidencing a contract for the carriage of goods by sea
+-- >              and the taking over or loading of the goods by the
+-- >              freight forwarder, and by which the freight forwarder
+-- >              undertakes to deliver the goods to the consignee named in
+-- >              the document.
+-- >       720 Rail consignment note (generic term)
+-- >              Transport document constituting a contract for the
+-- >              carriage of goods between the sender and the carrier (the
+-- >              railway). For international rail traffic, this document
+-- >              must conform to the model prescribed by the international
+-- >              conventions concerning carriage of goods by rail, e.g.
+-- >              CIM Convention, SMGS Convention.
+-- >       722 Road list-SMGS
+-- >              Accounting document, one copy of which is drawn up for
+-- >              each consignment note; it accompanies the consignment
+-- >              over the whole route and is a rail transport document.
+-- >       723 Escort official recognition
+-- >              Document/message which gives right to the owner to exert
+-- >              all functions normally transferred to a guard in a train
+-- >              by which an escorted consignment is transported.
+-- >       724 Recharging document
+-- >              Fictitious transport document regarding a previous
+-- >              transport, enabling a carrier's agent to give to another
+-- >              carrier's agent (in a different country) the possibility
+-- >              to collect charges relating to the original transport
+-- >              (rail environment).
+-- >       730 Road consignment note
+-- >              Transport document/message which evidences a contract
+-- >              between a carrier and a sender for the carriage of goods
+-- >              by road (generic term). Remark: For international road
+-- >              traffic, this document must contain at least the
+-- >              particulars prescribed by the convention on the contract
+-- >              for the international carriage of goods by road (CMR).
+-- >       740 Air waybill
+-- >              Document/message made out by or on behalf of the shipper
+-- >              which evidences the contract between the shipper and
+-- >              carrier(s) for carriage of goods over routes of the
+-- >              carrier(s) and which is identified by the airline prefix
+-- >              issuing the document plus a serial (IATA).
+-- >       741 Master air waybill
+-- >              Document/message made out by or on behalf of the
+-- >              agent/consolidator which evidences the contract between
+-- >              the agent/consolidator and carrier(s) for carriage of
+-- >              goods over routes of the carrier(s) for a consignment
+-- >              consisting of goods originated by more than one shipper
+-- >              (IATA).
+-- >       743 Substitute air waybill
+-- >              A temporary air waybill which contains only limited
+-- >              information because of the absence of the original.
+-- >       744 Crew's effects declaration
+-- >              Declaration to Customs regarding the personal effects of
+-- >              crew members aboard the conveyance; equivalent to IMO FAL
+-- >              4.
+-- >       745 Passenger list
+-- >              Declaration to Customs regarding passengers aboard the
+-- >              conveyance; equivalent to IMO FAL 6.
+-- >       746 Delivery notice (rail transport)
+-- >              Document/message created by the consignor or by the
+-- >              departure station, joined to the transport or sent to the
+-- >              consignee, giving the possibility to the consignee or the
+-- >              arrival station to attest the delivery of the goods. The
+-- >              document must be returned to the consignor or to the
+-- >              departure station.
+-- >       750 Despatch note (post parcels)
+-- >              Document/message which, according to Article 106 of the
+-- >              "Agreement concerning Postal Parcels" under the UPU
+-- >              convention, is to accompany post parcels.
+-- >       760 Multimodal/combined transport document (generic)
+-- >              A transport document used when more than one mode of
+-- >              transportation is involved in the movement of cargo. It
+-- >              is a contract of carriage and receipt of the cargo for a
+-- >              multimodal transport. It indicates the place where the
+-- >              responsible transport company in the move takes
+-- >              responsibility for the cargo, the place where the
+-- >              responsibility of this transport company in the move ends
+-- >              and the conveyances involved.
+-- >       761 Through bill of lading
+-- >              Bill of lading which evidences a contract of carriage
+-- >              from one place to another in separate stages of which at
+-- >              least one stage is a sea transit, and by which the
+-- >              issuing carrier accepts responsibility for the carriage
+-- >              as set forth in the Through bill of lading.
+-- >       763 Forwarder's certificate of transport
+-- >              Negotiable document/message issued by a forwarder to
+-- >              certify that he has taken charge of a specified
+-- >              consignment for despatch and delivery in accordance with
+-- >              the consignor's instructions, as indicated in the
+-- >              document, and that he accepts responsibility for delivery
+-- >              of the goods to the holder of the document through the
+-- >              intermediary of a delivery agent of his choice. E.g.
+-- >              FIATA-FCT.
+-- >       764 Combined transport document (generic)
+-- >              Negotiable or non-negotiable document evidencing a
+-- >              contract for the performance and/or procurement of
+-- >              performance of combined transport of goods and bearing on
+-- >              its face either the heading "Negotiable combined
+-- >              transport document issued subject to Uniform Rules for a
+-- >              Combined Transport Document (ICC Brochure No. 298)" or
+-- >              the heading "Non-negotiable Combined Transport Document
+-- >              issued subject to Uniform Rules for a Combined Transport
+-- >              Document (ICC Brochure No. 298)".
+-- >       765 Multimodal transport document (generic)
+-- >              Document/message which evidences a multimodal transport
+-- >              contract, the taking in charge of the goods by the
+-- >              multimodal transport operator, and an undertaking by him
+-- >              to deliver the goods in accordance with the terms of the
+-- >              contract. (International Convention on Multimodal
+-- >              Transport of Goods).
+-- >       766 Combined transport bill of lading/multimodal bill of lading
+-- >              Document which evidences a multimodal transport contract,
+-- >              the taking in charge of the goods by the multimodal
+-- >              transport operator, and an undertaking by him to deliver
+-- >              the goods in accordance with the terms of the contract.
+-- >       770 Booking confirmation
+-- >              Document/message issued by a carrier to confirm that
+-- >              space has been reserved for a consignment in means of
+-- >              transport.
+-- >       775 Calling forward notice
+-- >              Instructions for release or delivery of goods.
+-- >       780 Freight invoice
+-- >              Document/message issued by a transport operation
+-- >              specifying freight costs and charges incurred for a
+-- >              transport operation and stating conditions of payment.
+-- >       781 Arrival notice (goods)
+-- >              Notification from the carrier to the consignee in
+-- >              writing, by telephone or by any other means (express
+-- >              letter, message, telegram, etc.) informing him that a
+-- >              consignment addressed to him is being or will shortly be
+-- >              held at his disposal at a specified point in the place of
+-- >              destination.
+-- >       782 Notice of circumstances preventing delivery (goods)
+-- >              Request made by the carrier to the sender, or, as the
+-- >              case may be, the consignee, for instructions as to the
+-- >              disposal of the consignment when circumstances prevent
+-- >              delivery and the return of the goods has not been
+-- >              requested by the consignor in the transport document.
+-- >       783 Notice of circumstances preventing transport (goods)
+-- >              Request made by the carrier to the sender, or, the
+-- >              consignee as the case may be, for instructions as to the
+-- >              disposal of the goods when circumstances prevent
+-- >              transport before departure or en route, after acceptance
+-- >              of the consignment concerned.
+-- >       784 Delivery notice (goods)
+-- >              Notification in writing, sent by the carrier to the
+-- >              sender, to inform him at his request of the actual date
+-- >              of delivery of the goods.
+-- >       785 Cargo manifest
+-- >              Listing of goods comprising the cargo carried in a means
+-- >              of transport or in a transport-unit. The cargo manifest
+-- >              gives the commercial particulars of the goods, such as
+-- >              transport document numbers, consignors, consignees,
+-- >              shipping marks, number and kind of packages and
+-- >              descriptions and quantities of the goods.
+-- >       786 Freight manifest
+-- >              Document/message containing the same information as a
+-- >              cargo manifest, and additional details on freight
+-- >              amounts, charges, etc.
+-- >       787 Bordereau
+-- >              Document/message used in road transport, listing the
+-- >              cargo carried on a road vehicle, often referring to
+-- >              appended copies of Road consignment note.
+-- >       788 Container manifest (unit packing list)
+-- >              Document/message specifying the contents of particular
+-- >              freight containers or other transport units, prepared by
+-- >              the party responsible for their loading into the
+-- >              container or unit.
+-- >       789 Charges note
+-- >              Document used by the rail organization to indicate
+-- >              freight charges or additional charges in each case where
+-- >              the departure station is not able to calculate the
+-- >              charges for the total voyage (e.g. tariff not yet
+-- >              updated, part of voyage not covered by the tariff). This
+-- >              document must be considered as joined to the transport.
+-- >       790 Advice of collection
+-- >              Document that is joined to the transport or sent by
+-- >              separate means, giving to the departure rail organization
+-- >              the proof that the cash-on delivery amount has been
+-- >              encashed by the arrival rail organization before
+-- >              reimbursement of the consignor.
+-- >       791 Safety of ship certificate
+-- >              Document certifying a ship's safety to a specified date.
+-- >       792 Safety of radio certificate
+-- >              Document certifying the safety of a ship's radio
+-- >              facilities to a specified date.
+-- >       793 Safety of equipment certificate
+-- >              Document certifying the safety of a ship's equipment to a
+-- >              specified date.
+-- >       794 Civil liability for oil certificate
+-- >              Document declaring a ship owner's liability for oil
+-- >              propelling or carried on a vessel.
+-- >       795 Loadline document
+-- >              Document specifying the limit of a ship's legal
+-- >              submersion under various conditions.
+-- >       796 Derat document
+-- >              Document certifying that a ship is free of rats, valid to
+-- >              a specified date.
+-- >       797 Maritime declaration of health
+-- >              Document certifying the health condition on board a
+-- >              vessel, valid to a specified date.
+-- >       798 Certificate of registry
+-- >              Official certificate stating the vessel's registry.
+-- >       799 Ship's stores declaration
+-- >              Declaration to Customs regarding the contents of the
+-- >              ship's stores (equivalent to IMO FAL 3) i.e. goods
+-- >              intended for consumption by passengers/crew on board
+-- >              vessels, aircraft or trains, whether or not sold or
+-- >              landed; goods necessary for operation/maintenance of
+-- >              conveyance, incl. fuel/lubricants, excl. spare
+-- >              parts/equipment (IMO).
+-- >       810 Export licence, application for
+-- >              Application for a permit issued by a government authority
+-- >              permitting exportation of a specified commodity subject
+-- >              to specified conditions as quantity, country of
+-- >              destination, etc.
+-- >       811 Export licence
+-- >              Permit issued by a government authority permitting
+-- >              exportation of a specified commodity subject to specified
+-- >              conditions as quantity, country of destination, etc.
+-- >              Synonym: Embargo permit.
+-- >       812 Exchange control declaration, export
+-- >              Document/message completed by an exporter/seller as a
+-- >              means whereby the competent body may control that the
+-- >              amount of foreign exchange accrued from a trade
+-- >              transaction is repatriated in accordance with the
+-- >              conditions of payment and exchange control regulations in
+-- >              force.
+-- >       820 Despatch note model T
+-- >              European community transit declaration.
+-- >       821 Despatch note model T1
+-- >              Transit declaration for goods circulating under internal
+-- >              community transit procedures (between ECE countries).
+-- >       822 Despatch note model T2
+-- >              Ascertainment that the declared goods were originally
+-- >              produced in an ECE country.
+-- >       823 Control document T5
+-- >              Control document (export declaration) used particularly
+-- >              in case of re-sending without use with only VAT
+-- >              collection, refusal, unconformity with contract etc.
+-- >       824 Re-sending consignment note
+-- >              Rail consignment note prepared by the consignor for the
+-- >              facilitation of an eventual return to the origin of the
+-- >              goods.
+-- >       825 Despatch note model T2L
+-- >              Ascertainment that the declared goods were originally
+-- >              produced in an EC country. May only be used for goods
+-- >              that are loaded on one single means of transport in one
+-- >              single departure point for one single delivery point.
+-- >       830 Goods declaration for exportation
+-- >              Document/message by which goods are declared for export
+-- >              Customs clearance, conforming to the layout key set out
+-- >              at Appendix I to Annex C.1 concerning outright
+-- >              exportation to the Kyoto convention (CCC). Within a
+-- >              Customs union, "for despatch" may have the same meaning
+-- >              as "for exportation".
+-- >       833 Cargo declaration (departure)
+-- >              Generic term, sometimes referred to as Freight
+-- >              declaration, applied to the documents providing the
+-- >              particulars required by the Customs concerning the cargo
+-- >              (freight) carried by commercial means of transport (CCC).
+-- >       840 Application for goods control certificate
+-- >              Document/message submitted to a competent body by party
+-- >              requesting a Goods control certificate to be issued in
+-- >              accordance with national or international standards, or
+-- >              conforming to legislation in the importing country, or as
+-- >              specified in the contract.
+-- >       841 Goods control certificate
+-- >              Document/message issued by a competent body evidencing
+-- >              the quality of the goods described therein, in accordance
+-- >              with national or international standards, or conforming
+-- >              to legislation in the importing country, or as specified
+-- >              in the contract.
+-- >       850 Application for phytosanitary certificate
+-- >              Document/message submitted to a competent body by party
+-- >              requesting a Phytosanitary certificate to be issued.
+-- >       851 Phytosanitary certificate
+-- >              Document/message issued by the competent body in the
+-- >              exporting country evidencing that plants, fruit, or
+-- >              vegetables are free from disease and fit for consumption
+-- >              and giving details on fumigation or other treatment to
+-- >              which they may have been subjected.
+-- >       852 Sanitary certificate
+-- >              Document/message issued by the competent authority in the
+-- >              exporting country evidencing that alimentary and animal
+-- >              products, including dead animals, are fit for human
+-- >              consumption, and giving details, when relevant, of
+-- >              controls undertaken.
+-- >       853 Veterinary certificate
+-- >              Document/message issued by the competent authority in the
+-- >              exporting country evidencing that live animals or birds
+-- >              are not infested or infected with disease, and giving
+-- >              details regarding their provenance, and of vaccinations
+-- >              and other treatment to which they have been subjected.
+-- >       855 Application for inspection certificate
+-- >              Document/message submitted to a competent body by a party
+-- >              requesting an Inspection certificate to be issued in
+-- >              accordance with national or international standards, or
+-- >              conforming to legislation in the country in which it is
+-- >              required, or as specified in the contract.
+-- >       856 Inspection certificate
+-- >              Document/message issued by a competent body evidencing
+-- >              that the goods described therein have been inspected in
+-- >              accordance with national or international standards, in
+-- >              conformity with legislation in the country in which the
+-- >              inspection is required, or as specified in the contract.
+-- >       860 Certificate of origin, application for
+-- >              Document/message submitted to a competent body by an
+-- >              interested party requesting a Certificate of origin to be
+-- >              issued in accordance with relevant criteria, and on the
+-- >              basis of evidence of the origin of the goods.
+-- >       861 Certificate of origin
+-- >              Document/message identifying goods, in which the
+-- >              authority or body authorized to issue it certifies
+-- >              expressly that the goods to which the certificate relates
+-- >              originate in a specific country. The word "country" may
+-- >              include a group of countries, a region or a part of a
+-- >              country. This certificate may also include a declaration
+-- >              by the manufacturer, producer, supplier, exporter or
+-- >              other competent person.
+-- >       862 Declaration of origin
+-- >              Appropriate statement as to the origin of the goods, made
+-- >              in connection with their exportation by the manufacturer,
+-- >              producer, supplier, exporter or other competent person on
+-- >              the Commercial invoice or any other document relating to
+-- >              the goods (CCC).
+-- >       863 Regional appellation certificate
+-- >              Certificate drawn up in accordance with the rules laid
+-- >              down by an authority or approved body, certifying that
+-- >              the goods described therein qualify for a designation
+-- >              specific to the given region (e.g. champagne, port wine,
+-- >              Parmesan cheese).
+-- >       864 Preference certificate of origin
+-- >              Description to be provided.
+-- >       865 Certificate of origin form GSP
+-- >              Specific form of certificate of origin for goods
+-- >              qualifying for preferential treatment under the
+-- >              generalized system of preferences (includes a combined
+-- >              declaration of origin and certificate, form A).
+-- >       870 Consular invoice
+-- >              Document/message to be prepared by an exporter in his
+-- >              country and presented to a diplomatic representation of
+-- >              the importing country for endorsement and subsequently to
+-- >              be presented by the importer in connection with the
+-- >              import of the goods described therein.
+-- >       890 Dangerous goods declaration
+-- >              Document/message issued by a consignor in accordance with
+-- >              applicable conventions or regulations, describing
+-- >              hazardous goods or materials for transport purposes, and
+-- >              stating that the latter have been packed and labelled in
+-- >              accordance with the provisions of the relevant
+-- >              conventions or regulations.
+-- >       895 Statistical document, export
+-- >              Document/message in which an exporter provides
+-- >              information about exported goods required by the body
+-- >              responsible for the collection of international trade
+-- >              statistics.
+-- >       896 INTRASTAT declaration
+-- >              Document/message in which a declarant provides
+-- >              information about goods required by the body responsible
+-- >              for the collection of trade statistics.
+-- >       901 Delivery verification certificate
+-- >              Document/message whereby an official authority (Customs
+-- >              or governmental) certifies that goods have been
+-- >              delivered.
+-- >       910 Import licence, application for
+-- >              Document/message in which an interested party applies to
+-- >              the competent body for authorization to import either a
+-- >              limited quantity of articles subject to import
+-- >              restrictions, or an unlimited quantity of such articles
+-- >              during a limited period, and specifies the kind of
+-- >              articles, their origin and value, etc.
+-- >       911 Import licence
+-- >              Document/message issued by the competent body in
+-- >              accordance with import regulations in force, by which
+-- >              authorization is granted to a named party to import
+-- >              either a limited quantity of designated articles or an
+-- >              unlimited quantity of such articles during a limited
+-- >              period, under conditions specified in the document.
+-- >       913 Customs declaration without commercial detail
+-- >              CUSDEC transmission that does not include data from the
+-- >              commercial detail section of the message.
+-- >       914 Customs declaration with commercial and item detail
+-- >              CUSDEC transmission that includes data from both the
+-- >              commercial detail and item detail sections of the
+-- >              message.
+-- >       915 Customs declaration without item detail
+-- >              CUSDEC transmission that does not include data from the
+-- >              item detail section of the message.
+-- >       916 Related document
+-- >              Description to be provided.
+-- >       917 Receipt (Customs)
+-- >              Receipt for Customs duty/tax/fee paid.
+-- >       925 Application for exchange allocation
+-- >              Document/message whereby an importer/buyer requests the
+-- >              competent body to allocate an amount of foreign exchange
+-- >              to be transferred to an exporter/seller in payment for
+-- >              goods.
+-- >       926 Foreign exchange permit
+-- >              Document/message issued by the competent body authorizing
+-- >              an importer/buyer to transfer an amount of foreign
+-- >              exchange to an exporter/seller in payment for goods.
+-- >       927 Exchange control declaration (import)
+-- >              Document/message completed by an importer/buyer as a
+-- >              means for the competent body to control that a trade
+-- >              transaction for which foreign exchange has been allocated
+-- >              has been executed and that money has been transferred in
+-- >              accordance with the conditions of payment and the
+-- >              exchange control regulations in force.
+-- >       929 Goods declaration for importation
+-- >              Document/message by which goods are declared for import
+-- >              Customs clearance [sister entry of 830].
+-- >       930 Goods declaration for home use
+-- >              Document/message by which goods are declared for import
+-- >              Customs clearance according to Annex B.1 (concerning
+-- >              clearance for home use) to the Kyoto convention (CCC).
+-- >       931 Customs immediate release declaration
+-- >              Document/message issued by an importer notifying Customs
+-- >              that goods have been removed from an importing means of
+-- >              transport to the importer's premises under a Customs-
+-- >              approved arrangement for immediate release, or requesting
+-- >              authorization to do so.
+-- >       932 Customs delivery note
+-- >              Document/message whereby a Customs authority releases
+-- >              goods under its control to be placed at the disposal of
+-- >              the party concerned. Synonym: Customs release note.
+-- >       933 Cargo declaration (arrival)
+-- >              Generic term, sometimes referred to as Freight
+-- >              declaration, applied to the documents providing the
+-- >              particulars required by the Customs concerning the cargo
+-- >              (freight) carried by commercial means of transport (CCC).
+-- >       934 Value declaration
+-- >              Document/message in which a declarant (importer) states
+-- >              the invoice or other price (e.g. selling price, price of
+-- >              identical goods), and specifies costs for freight,
+-- >              insurance and packing, etc., terms of delivery and
+-- >              payment, any relationship with the trading partner, etc.,
+-- >              for the purpose of determining the Customs value of goods
+-- >              imported.
+-- >       935 Customs invoice
+-- >              Document/message required by the Customs in an importing
+-- >              country in which an exporter states the invoice or other
+-- >              price (e.g. selling price, price of identical goods), and
+-- >              specifies costs for freight, insurance and packing, etc.,
+-- >              terms of delivery and payment, for the purpose of
+-- >              determining the Customs value in the importing country of
+-- >              goods consigned to that country.
+-- >       936 Customs declaration (post parcels)
+-- >              Document/message which, according to Article 106 of the
+-- >              "Agreement concerning Postal Parcels" under the UPU
+-- >              Convention, must accompany post parcels and in which the
+-- >              contents of such parcels are specified.
+-- >       937 Tax declaration (value added tax)
+-- >              Document/message in which an importer states the
+-- >              pertinent information required by the competent body for
+-- >              assessment of value-added tax.
+-- >       938 Tax declaration (general)
+-- >              Document/message containing a general tax declaration.
+-- >       940 Tax demand
+-- >              Document/message containing the demand of tax.
+-- >       941 Embargo permit
+-- >              Document/message giving the permission to export
+-- >              specified goods.
+-- >       950 Goods declaration for Customs transit
+-- >              Document/message by which the sender declares goods for
+-- >              Customs transit according to Annex E.1 (concerning
+-- >              Customs transit) to the Kyoto convention (CCC).
+-- >       951 TIF form
+-- >              International Customs transit document by which the
+-- >              sender declares goods for carriage by rail in accordance
+-- >              with the provisions of the 1952 International Convention
+-- >              to facilitate the crossing of frontiers for goods carried
+-- >              by rail (TIF Convention of UIC).
+-- >       952 TIR carnet
+-- >              International Customs document (International Transit by
+-- >              Road), issued by a guaranteeing association approved by
+-- >              the Customs authorities, under the cover of which goods
+-- >              are carried, in most cases under Customs seal, in road
+-- >              vehicles and/or containers in compliance with the
+-- >              requirements of the Customs TIR Convention of the
+-- >              International Transport of Goods under cover of TIR
+-- >              Carnets (UN/ECE).
+-- >       953 EC carnet
+-- >              EC customs transit document issued by EC customs
+-- >              authorities for transit and/or temporary user of goods
+-- >              within the EC.
+-- >       954 EUR 1 certificate of origin
+-- >              Customs certificate used in preferential goods
+-- >              interchanges between EC countries and EC external
+-- >              countries.
+-- >       955 ATA carnet
+-- >              International Customs document (Admission Temporaire /
+-- >              Temporary Admission) which, issued under the terms of the
+-- >              ATA Convention (1961), incorporates an internationally
+-- >              valid guarantee and may be used, in lieu of national
+-- >              Customs documents and as security for import duties and
+-- >              taxes, to cover the temporary admission of goods and,
+-- >              where appropriate, the transit of goods. If accepted for
+-- >              controlling the temporary export and reimport of goods,
+-- >              international guarantee does not apply (CCC).
+-- >       960 Single administrative document
+-- >              A set of documents, replacing the various (national)
+-- >              forms for Customs declaration within the EC, implemented
+-- >              on 01-01-1988.
+-- >       961 General response (Customs)
+-- >              General response message to permit the transfer of data
+-- >              from Customs to the transmitter of the previous message.
+-- >       962 Document response (Customs)
+-- >              Document response message to permit the transfer of data
+-- >              from Customs to the transmitter of the previous message.
+-- >       963 Error response (Customs)
+-- >              Error response message to permit the transfer of data
+-- >              from Customs to the transmitter of the previous message.
+-- >       964 Package response (Customs)
+-- >              Package response message to permit the transfer of data
+-- >              from Customs to the transmitter of the previous message.
+-- >       965 Tax calculation/confirmation response (Customs)
+-- >              Tax calculation/confirmation response message to permit
+-- >              the transfer of data from Customs to the transmitter of
+-- >              the previous message.
+-- >       966 Quota prior allocation certificate
+-- >              Document/message issued by the competent body for prior
+-- >              allocation of a quota.
+-- >       990 End use authorization
+-- >              Description to be provided.
+-- >       991 Government contract
+-- >              Description to be provided.
+-- >       995 Statistical document, import
+-- >              Description to be provided.
+-- >       996 Application for documentary credit
+-- >              Message with application for opening of a documentary
+-- >              credit.
+-- >       998 Previous Customs document/message
+-- >              Indication of the previous Customs document/message
+-- >              concerning the same transaction.
+simple1001 :: Parser Value
+simple1001 = simple "1001" (alphaNumeric `upTo` 3)

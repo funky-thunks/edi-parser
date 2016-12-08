@@ -1,0 +1,7 @@
+
+   6154  Measurement attribute
+
+   Desc: To specify non-discrete measurement values.
+
+   Repr: an..70
+

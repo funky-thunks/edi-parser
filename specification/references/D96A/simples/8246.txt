@@ -1,0 +1,9 @@
+
+   8246  Dangerous goods label marking
+
+   Desc: Marking identifying the type of hazardous goods (substance),
+         Loading/Unloading instructions and advising actions in case
+         of emergency.
+
+   Repr: an..4
+

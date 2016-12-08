@@ -1,0 +1,9 @@
+
+      C218  HAZARDOUS MATERIAL
+
+      Desc: Hazardous material code from a specified source.
+
+010   7419   Hazardous material class code, identification C  an..4
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

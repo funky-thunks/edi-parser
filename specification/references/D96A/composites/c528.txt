@@ -1,0 +1,9 @@
+
+      C528  COMMODITY/RATE DETAIL
+
+      Desc: Identification of commodity/rates.
+
+010   7357   Commodity/rate identification                 C  an..18
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+

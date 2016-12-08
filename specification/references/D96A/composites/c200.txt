@@ -1,0 +1,12 @@
+
+    * C200  CHARGE
+
+      Desc: Identification of a charge by code and/or by name.
+
+010   8023   Freight and charges identification            C  an..17
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   8022   Freight and charges                           C  an..26
+050   4237   Prepaid/collect indicator, coded              C  an..3
+060 + 7140   Item number                                   C  an..35
+

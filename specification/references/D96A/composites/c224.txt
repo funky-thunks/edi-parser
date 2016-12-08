@@ -1,0 +1,11 @@
+
+      C224  EQUIPMENT SIZE AND TYPE
+
+      Desc: Code and/or name identifying size and type of equipment
+            used in transport. Code preferred.
+
+010   8155   Equipment size and type identification        C  an..10
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   8154   Equipment size and type                       C  an..35
+

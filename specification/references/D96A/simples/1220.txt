@@ -1,0 +1,8 @@
+
+   1220  Number of copies of document required
+
+   Desc: Number of originals or copies of a document stipulated or
+         referred to as being required.
+
+   Repr: n..2
+

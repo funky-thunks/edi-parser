@@ -1,0 +1,17 @@
+
+       CNI  CONSIGNMENT INFORMATION
+
+       Function: To identify one consignment.
+
+010    1490 CONSOLIDATION ITEM NUMBER                  C    1 n..4
+
+020    C503 DOCUMENT/MESSAGE DETAILS                   C    1
+       1004  Document identifier                       C      an..35
+       1373  Document status code                      C      an..3
+       1366  Document source description               C      an..70
+       3453  Language name code                        C      an..3
+       1056  Version identifier                        C      an..9
+       1060  Revision identifier                       C      an..6
+
+030    1312 CONSIGNMENT LOAD SEQUENCE IDENTIFIER       C    1 n..4
+

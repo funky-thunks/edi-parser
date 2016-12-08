@@ -1,0 +1,7 @@
+
+   6314  Measurement value
+
+   Desc: Value of the measured unit.
+
+   Repr: n..18
+

@@ -1,0 +1,10 @@
+
+   6345  Currency, coded
+
+   Desc: Identification of the name or symbol of the monetary unit
+         involved in the transaction.
+
+   Repr: an..3
+
+   Note: Use ISO 4217 three alpha code.
+

@@ -1,0 +1,10 @@
+
+      C186  QUANTITY DETAILS
+
+      Desc: Quantity information in a transaction, qualified when
+            relevant.
+
+010   6063   Quantity qualifier                            M  an..3
+020   6060   Quantity                                      M  n..15
+030   6411   Measure unit qualifier                        C  an..3
+

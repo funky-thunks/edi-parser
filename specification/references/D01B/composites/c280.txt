@@ -1,0 +1,9 @@
+
+       C280 RANGE
+
+       Desc: Range minimum and maximum limits.
+
+010    6411  Measurement unit code                     M      an..3
+020    6162  Range minimum value                       C      n..18
+030    6152  Range maximum value                       C      n..18
+

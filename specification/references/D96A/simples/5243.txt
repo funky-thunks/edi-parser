@@ -1,0 +1,32 @@
+
+* 5243  Rate/tariff class identification
+
+  Desc: Identification of the rate/tariff class.
+
+  Repr: an..9
+
++  A      Senior person rate
+             Rate class applies to senior persons.
+   B      Basic
+             Self explanatory.
+   C      Specific commodity rate
+             Self explanatory.
++  D      Teenager rate
+             Rate class applies to teenagers.
++  E      Child rate
+             Rate class applies to children.
++  F      Adult rate
+             Rate class applies to adults.
+   K      Rate per kilogram
+             Self explanatory.
+   M      Minimum charge rate
+             Self explanatory.
+   N      Normal rate
+             Self explanatory.
+   Q      Quantity rate
+             Self explanatory.
+   R      Class rate (Reduction on normal rate)
+             Description to be provided.
+   S      Class rate (Surcharge on normal rate)
+             Description to be provided.
+

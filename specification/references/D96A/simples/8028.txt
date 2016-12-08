@@ -1,0 +1,8 @@
+
+   8028  Conveyance reference number
+
+   Desc: Unique reference given by the carrier to a certain journey or
+         departure of a means of transport (generic term).
+
+   Repr: an..17
+

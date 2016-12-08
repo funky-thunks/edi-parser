@@ -1,0 +1,11 @@
+
+      C402  PACKAGE TYPE IDENTIFICATION
+
+      Desc: Identification of the form in which goods are described.
+
+010   7077   Item description type, coded                  M  an..3
+020   7064   Type of packages                              M  an..35
+030   7143   Item number type, coded                       C  an..3
+040   7064   Type of packages                              C  an..35
+050   7143   Item number type, coded                       C  an..3
+

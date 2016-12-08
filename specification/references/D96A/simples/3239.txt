@@ -1,0 +1,14 @@
+
+   3239  Country of origin, coded
+
+   Desc: Country in which the goods have been produced or
+         manufactured, according to criteria laid down for the
+         purposes of application of the Customs tariff, of
+         quantitative restrictions, or of any other measure related to
+         trade.
+
+   Repr: an..3
+
+   Note: See Country and currency codes (UNTDED) or ISO 3166 two alpha
+         country code (Code set 3207).
+

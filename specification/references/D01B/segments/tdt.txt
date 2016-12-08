@@ -1,0 +1,46 @@
+
+       TDT  DETAILS OF TRANSPORT
+
+       Function: To specify the transport details such as mode of
+                 transport, means of transport, its conveyance
+                 reference number and the identification of the
+                 means of transport.
+                 The segment may be pointed to by the TPL
+                 segment.
+
+010    8051 TRANSPORT STAGE CODE QUALIFIER             M    1 an..3
+
+020    8028 MEANS OF TRANSPORT JOURNEY IDENTIFIER      C    1 an..17
+
+030    C220 MODE OF TRANSPORT                          C    1
+       8067  Transport mode name code                  C      an..3
+       8066  Transport mode name                       C      an..17
+
+040    C228 TRANSPORT MEANS                            C    1
+       8179  Transport means description code          C      an..8
+       8178  Transport means description               C      an..17
+
+050    C040 CARRIER                                    C    1
+       3127  Carrier identifier                        C      an..17
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       3128  Carrier name                              C      an..35
+
+060    8101 TRANSIT DIRECTION INDICATOR CODE           C    1 an..3
+
+070    C401 EXCESS TRANSPORTATION INFORMATION          C    1
+       8457  Excess transportation reason code         M      an..3
+       8459  Excess transportation responsibility code M      an..3
+       7130  Customer shipment authorisation
+             identifier                                C      an..17
+
+080    C222 TRANSPORT IDENTIFICATION                   C    1
+       8213  Transport means identification name
+             identifier                                C      an..9
+       1131  Code list identification code             C      an..17
+       3055  Code list responsible agency code         C      an..3
+       8212  Transport means identification name       C      an..35
+       8453  Transport means nationality code          C      an..3
+
+090    8281 TRANSPORT MEANS OWNERSHIP INDICATOR CODE   C    1 an..3
+

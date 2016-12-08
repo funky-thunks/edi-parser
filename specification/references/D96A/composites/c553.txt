@@ -1,0 +1,10 @@
+
+      C553  RELATED LOCATION TWO IDENTIFICATION
+
+      Desc: Identification of second related location by code or name.
+
+010   3233   Related place/location two identification     C  an..25
+020   1131   Code list qualifier                           C  an..3
+030   3055   Code list responsible agency, coded           C  an..3
+040   3232   Related place/location two                    C  an..70
+

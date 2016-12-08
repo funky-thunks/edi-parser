@@ -1,0 +1,8 @@
+
+   8092  Hazard code version number
+
+   Desc: The version/revision number of date of issuance of the code
+         used.
+
+   Repr: an..10
+
