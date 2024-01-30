@@ -10,7 +10,7 @@ then
 fi
 
 function specification {
-  stack exec edi-parser-scaffolder -- \
+  nix run .#edi-parser-scaffolder -- \
     scaffold --revision "$REVISION" \
       --src "$HERE/../src" \
       --specification "$HERE/../specification"
