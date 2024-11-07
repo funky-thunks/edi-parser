@@ -1,28 +1,22 @@
-cabal-version: 1.12
-
--- This file has been generated from package.yaml by hpack version 0.31.2.
---
--- see: https://github.com/sol/hpack
---
--- hash: ac9aca9d28ed9aecc58673e920756536a610462adfc7c396aac1a00fa8ea526c
+cabal-version: 3.0
 
 name:           edi-parser-core
 version:        20190607
 synopsis:       Example parser for EDI files
 description:    Please see README.md
 category:       Text
-homepage:       https://github.com/fretlink/edi-parser#readme
-bug-reports:    https://github.com/fretlink/edi-parser/issues
-author:         FretLink
+homepage:       https://github.com/funky-thinks/edi-parser#readme
+bug-reports:    https://github.com/funky-thinks/edi-parser/issues
+author:         FretLink, Funky Thunks
 maintainer:     example@example.com
-copyright:      2019 FretLink
+copyright:      2019 FretLink, 2024 Funky Thunks
 build-type:     Simple
 extra-source-files:
     README.md
 
 source-repository head
   type: git
-  location: https://github.com/fretlink/edi-parser
+  location: https://github.com/funky-thunks/edi-parser
 
 library
   exposed-modules:

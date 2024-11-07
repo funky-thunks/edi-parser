@@ -14,7 +14,7 @@ from the revisions supported here.
 ## Companion tool
 
 ```
-$ stack exec edi-parser-specification -- --help
+$ nix run .#edi-parser-specification -- --help
 ifcsum <file> : inspect IFCSUM file for revision D96A
 -h|--help     : this message
 ```

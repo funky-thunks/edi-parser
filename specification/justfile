@@ -1,0 +1,5 @@
+lint:
+	hlint app/ src/
+
+code:
+	nix develop -c $EDITOR .

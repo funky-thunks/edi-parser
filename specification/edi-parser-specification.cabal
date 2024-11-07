@@ -1,28 +1,22 @@
-cabal-version: 1.12
-
--- This file has been generated from package.yaml by hpack version 0.33.0.
---
--- see: https://github.com/sol/hpack
---
--- hash: ca2371944ac1d1d4e7d17dd3868ab6fd81007edb5ebe4fb71b55af9a667d7a67
+cabal-version: 3.0
 
 name:           edi-parser-specification
 version:        20190607
 synopsis:       Support for subset of the Edifact specification
 description:    Please see README.md
 category:       Text
-homepage:       https://github.com/fretlink/edi-parser#readme
-bug-reports:    https://github.com/fretlink/edi-parser/issues
-author:         FretLink
+homepage:       https://github.com/funky-thunks/edi-parser#readme
+bug-reports:    https://github.com/funky-thunks/edi-parser/issues
+author:         FretLink, Funky Thunks
 maintainer:     example@example.com
-copyright:      2019 FretLink
+copyright:      2019 FretLink, 2024 Funky Thunks
 build-type:     Simple
 extra-source-files:
     README.md
 
 source-repository head
   type: git
-  location: https://github.com/fretlink/edi-parser
+  location: https://github.com/funky-thunks/edi-parser
 
 library
   exposed-modules:
